@@ -56,14 +56,29 @@
             {{-- gradient --}}
             <div class="absolute inset-0 bg-gradient-to-tr from-slate-800 to-gray-700 opacity-80 backdrop-blur-sm"></div>
             {{-- text --}}
-            <div class="relative w-7/12">
+            <div class="history-slider relative w-11/12">
+                <div class="lex flex-col justify-center items-center">
+                    <h1 class="text-8xl font-bold uppercase text-center text-white mb-10">1985</h1>
+                    <p class="text-center text-white text-3xl text-wrap">Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit.</p>
+                </div>
                 <div class="flex flex-col justify-center items-center">
-                    <h1 class="text-8xl font-bold uppercase text-white mb-10">1985</h1>
-                    <p class="text-center text-white text-3xl text-wrap">Lorem ipsum, dolor sit amet consectetur
-                        adipisicing elit.
-                        Fugiat, facere.</p>
+                    <h1 class="text-8xl font-bold uppercase text-white text-center mb-10">1995</h1>
+                    <p class="text-center text-white text-3xl text-wrap">Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit.</p>
+                </div>
+                <div class="flex flex-col justify-center items-center">
+                    <h1 class="text-8xl font-bold uppercase text-center text-white mb-10">2005</h1>
+                    <p class="text-center text-white text-3xl text-wrap">Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit.</p>
+                </div>
+                <div class="flex flex-col justify-center items-center">
+                    <h1 class="text-8xl font-bold uppercase text-center text-white mb-10">2020</h1>
+                    <p class="text-center text-white text-3xl text-wrap">Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit.</p>
                 </div>
             </div>
+
         </div>
         </div>
     </section>
@@ -145,7 +160,7 @@
                 Achievements & Recognition
             </h1>
 
-            <div class="flex flex-col md:flex-row justify-center gap-12">
+            <div class="flex flex-col md:flex-row justify-center gap-12" data-aos="fade-up" data-aos-duration="2000">
                 <div class="flex flex-col">
                     <img src="{{ asset('images/ministry-of-toursim.png') }}" alt="" class="w-36 h-36 rounded-full">
                     <h2 class="text-semibold">Ministy of Education</h2>
@@ -175,8 +190,8 @@
     </section>
 
     {{-- call to action --}}
-    <section class="py-12">
-        <div class="w-full bg-green-800 py-28">
+    <section class="">
+        <div class="w-full bg-green-900 py-12">
             <div class="w-11/12 mx-auto flex flex-col justify-center items-center py-12">
                 <h1 class="text-white font-semibold text-4xl">Join Us in Shaping the Future</h1>
                 {{-- admission button --}}

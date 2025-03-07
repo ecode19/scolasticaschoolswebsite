@@ -9,6 +9,18 @@ Route::get('/', [HomeController::class, 'index'])->name('index');
 
 Route::controller(HomeController::class)->group(function () {
     Route::get('our-history', 'ourHistory')->name('our-history');
+    Route::get('our-mission-and-vision', 'missionVision')->name('mission-vision');
+    Route::get('administration-staff', 'administration')->name('administration');
+
+    Route::get('admission-process', 'admissionProcess')->name('admission-process');
+    Route::get('admission-requirements', 'admissionRequirements')->name('admission-requirements');
+    Route::get('tuitions-and-fees', 'tuitionsFees')->name('tuitions-fees');
+    Route::get('scholarship/aids', 'scholarshipAids')->name('scholarship-aids');
+    Route::get('student-achievements', 'studentAchievements')->name('student-achievements');
+    Route::get('school/events', 'schoolEvents')->name('school-events');
+
+
+
 });
 
 Route::get('/dashboard', function () {
