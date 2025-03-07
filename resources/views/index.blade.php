@@ -4,7 +4,7 @@
 
     <div class="w-full lg:h-[500px] overflow-hidden relative">
         <img src={{ asset('images/school4.jpg') }} alt="" class="w-full object-cover">
-        <div class="overlay">
+        <div class="dark-overlay">
             <div class="center-div">
                 <div class="text-white text-center">
                     <h1 class="oswald text-3xl md:text-6xl uppercase text-green-300">Scolastica Schools</h1>
@@ -14,10 +14,8 @@
         </div>
     </div>
 
-    <section class="w-full md:w-11/12 mx-auto">
-
         {{-- Welcome --}}
-        <section class="w-full p-2 flex flex-col md:flex-row my-8">
+        <section class="w-full md:w-11/12 mx-auto p-2 flex flex-col md:flex-row my-8">
             <div class="w-full md:w-1/2 p-2 md:p-4 lg:p-8 overflow-hidden order-2 md:order-1">
                 <img src={{ asset('images/students2.jpg') }} alt="students photo" class="w-full object-cover rounded-md">
             </div>
@@ -39,31 +37,31 @@
         </section>
 
         {{-- Stats --}}
-        <section class="w-full md:w-11/12 mx-auto p-2 flex flex-wrap items-center">
+        <section class="w-full  mx-auto p-6 flex flex-wrap items-center bg-green-100">
             <div class="w-full md:w-1/2 lg:w-1/4 my-2">
                 <div
-                    class="w-11/12 mx-auto p-4 flex flex-col items-center shadow-sm shadow-orange-300 rounded-md  bg-gradient-to-br from-green-50 to-green-200">
+                    class="w-11/12 mx-auto p-4 flex flex-col items-center  rounded-md  ">
                     <span class="text-3xl text-green-900">500+</span>
                     <span class="mt-2 text-xl  text-orange-700">Students</span>
                 </div>
             </div>
             <div class="w-full md:w-1/2 lg:w-1/4 my-2">
                 <div
-                    class="w-11/12 mx-auto p-4 flex flex-col items-center shadow-sm shadow-orange-300 rounded-md  bg-gradient-to-br from-green-50 to-green-200">
+                    class="w-11/12 mx-auto p-4 flex flex-col items-center  rounded-md  ">
                     <span class="text-3xl text-green-900">50</span>
                     <span class="mt-2 text-xl  text-orange-700">Teachers</span>
                 </div>
             </div>
             <div class="w-full md:w-1/2 lg:w-1/4 my-2">
                 <div
-                    class="w-11/12 mx-auto p-4 flex flex-col items-center shadow-sm shadow-orange-300 rounded-md  bg-gradient-to-br from-green-50 to-green-200">
+                    class="w-11/12 mx-auto p-4 flex flex-col items-center  rounded-md  ">
                     <span class="text-3xl text-green-900">95%</span>
                     <span class="mt-2 text-xl  text-orange-700">Pass Rate</span>
                 </div>
             </div>
             <div class="w-full md:w-1/2 lg:w-1/4 my-2">
                 <div
-                    class="w-11/12 mx-auto p-4 flex flex-col items-center shadow-sm shadow-orange-300 rounded-md  bg-gradient-to-br from-green-50 to-green-200">
+                    class="w-11/12 mx-auto p-4 flex flex-col items-center  rounded-md  ">
                     <span class="text-3xl text-green-900">2005</span>
                     <span class="mt-2 text-xl  text-orange-700">Founded On</span>
                 </div>
@@ -71,7 +69,7 @@
         </section>
 
         {{-- Academic Levels --}}
-        <section class="w-full my-2 md:my-10">
+        <section class="w-full md:w-11/12 mx-auto my-2 md:my-10">
             <div class="w-max mx-4">
                 <h1 class="oswald text-4xl text-green-900">Academic Levels</h1>
                 <div class="w-2/5 border-2 border-green-800 mt-2"></div>
@@ -87,9 +85,11 @@
                             <h5 class="text-green-800 text-center text-3xl my-2">Kindergarten</h5>
                         </div>
                         <div class="my-2 w-max mx-auto mt-4">
+                           <a href="#">
                             <button
-                                class="merryFont w-fit py-1 px-4 border-2 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-green-950 font-semibold rounded-full">Read
-                                More</button>
+                            class="merryFont w-fit py-1 px-4 border-2 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-green-950 font-semibold rounded-full">Read
+                            More</button>
+                           </a>
                         </div>
                     </div>
                 </div>
@@ -102,9 +102,11 @@
                             <h5 class="text-green-800 text-center text-3xl my-2">Primary School</h5>
                         </div>
                         <div class="my-2 w-max mx-auto mt-4">
-                            <button
+                            <a href="#">
+                                <button
                                 class="merryFont w-fit py-1 px-4 border-2 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-green-950 font-semibold rounded-full">Read
                                 More</button>
+                               </a>
                         </div>
                     </div>
                 </div>
@@ -117,9 +119,11 @@
                             <h5 class="text-green-800 text-center text-3xl my-2">Secondary School</h5>
                         </div>
                         <div class="my-2 w-max mx-auto mt-4">
-                            <button
+                            <a href="#">
+                                <button
                                 class="merryFont w-fit py-1 px-4 border-2 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-green-950 font-semibold rounded-full">Read
                                 More</button>
+                               </a>
                         </div>
                     </div>
                 </div>
@@ -127,7 +131,7 @@
         </section>
 
         {{-- why choose --}}
-        <section class="w-full my-2 md:my-8">
+        <section class="w-full md:w-11/12 mx-auto my-2 md:my-8">
             <div class="w-max mx-4">
                 <h1 class="oswald text-4xl text-green-900">Why Choose Scolastica Schools</h1>
                 <div class="w-2/5 border-2 border-green-800 mt-2"></div>
@@ -184,7 +188,7 @@
         </section>
 
         {{-- News & Highlights --}}
-        <section class="w-full my-2 md:my-8 md:py-4">
+        <section class="w-full md:w-11/12 mx-auto my-2 md:my-8 md:py-4">
             <div class="w-max mx-4">
                 <h1 class="oswald text-4xl text-green-900">News & School highlights</h1>
                 <div class="w-2/5 border-2 border-green-800 mt-2"></div>
@@ -247,7 +251,6 @@
                 </div>
             </div>
         </section>
-    </section>
 
     {{-- testimonials --}}
     <section class="w-full p-8 bg-green-100">
