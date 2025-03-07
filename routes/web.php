@@ -6,6 +6,13 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('index');
+Route::get('/curriculum', [HomeController::class, 'curriculum'])->name('curriculum');
+Route::get('/subjects-offered', [HomeController::class, 'subjectsOffered'])->name('subjects-offered');
+Route::get('/study-levels', [HomeController::class, 'studyLevels'])->name('study-levels');
+Route::get('/study-levels/level', [HomeController::class, 'studyLevel'])->name('study-level');
+Route::get('/teaching-methods', [HomeController::class, 'teachingMethods'])->name('teaching-methods');
+Route::get('/contact-us', [HomeController::class, 'contactUs'])->name('contact-us');
+Route::get('/extracurricular-activities', [HomeController::class, 'extracurricularActivities'])->name('extracurricular-activities');
 
 Route::controller(HomeController::class)->group(function () {
     Route::get('our-history', 'ourHistory')->name('our-history');

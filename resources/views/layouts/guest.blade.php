@@ -50,7 +50,7 @@
 
             <div class="merryFont w-max mx-auto">
                 <ul class="w-full flex items-center">
-                    <a href="#">
+                    <a href="{{ route('index') }}">
                         <li class="py-1 px-2 text-lg text-white hover:border-b hover:border-green-400">Home</li>
                     </a>
                     <div x-data="{ open: false }" class="relative group">
@@ -69,16 +69,16 @@
 
                     <div x-data="{ open: false }" class="relative group">
                         <x-dropdown title="Academics">
-                            <li><a href="#"
+                            <li><a href="{{ route('curriculum') }}"
                                     class="block px-4 py-2 hover:bg-green-100 transition text-green-950">Curriculum</a>
                             </li>
-                            <li><a href="#"
+                            <li><a href="{{ route('subjects-offered') }}"
                                     class="block px-4 py-2 hover:bg-green-100 transition text-green-950">Subjects
                                     Offered</a></li>
-                            <li><a href="#"
+                            <li><a href="{{ route('study-levels') }}"
                                     class="block px-4 py-2 hover:bg-green-100 transition text-green-950">Study
                                     Levels</a></li>
-                            <li><a href="#"
+                            <li><a href="{{ route('teaching-methods') }}"
                                     class="block px-4 py-2 hover:bg-green-100 transition text-green-950">Teaching
                                     methods</a></li>
                         </x-dropdown>
@@ -103,7 +103,7 @@
 
                     <div x-data="{ open: false }" class="relative group">
                         <x-dropdown title="Student Life">
-                            <li><a href="#"
+                            <li><a href="{{ route('extracurricular-activities') }}"
                                     class="block px-4 py-2 hover:bg-green-100 transition text-green-950">Clubs &
                                     Extracurricular Activities</a></li>
                             <li><a href="#"
@@ -118,7 +118,7 @@
                         </x-dropdown>
                     </div>
 
-                    <a href="#">
+                    <a href="{{ route('contact-us') }}">
                         <li class="py-1 px-2 text-lg text-white hover:border-b hover:border-green-400">Contact us</li>
                     </a>
                 </ul>
