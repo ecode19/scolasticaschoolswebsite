@@ -35,6 +35,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.css"
         integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    {{-- aos Master --}}
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -51,13 +55,13 @@
                     </a>
                     <div x-data="{ open: false }" class="relative group">
                         <x-dropdown title="About Us">
-                            <li><a href="#"
+                            <li><a href="{{ route('our-history') }}"
                                     class="block px-4 py-2 hover:bg-green-100 transition text-green-950">Our History</a>
                             </li>
-                            <li><a href="#"
+                            <li><a href="{{ route('mission-vision') }}"
                                     class="block px-4 py-2 hover:bg-green-100 transition text-green-950">Mission &
                                     Vision</a></li>
-                            <li><a href="#"
+                            <li><a href="{{ route('administration') }}"
                                     class="block px-4 py-2 hover:bg-green-100 transition text-green-950">Administration
                                     & Staff</a></li>
                         </x-dropdown>
@@ -82,16 +86,16 @@
 
                     <div x-data="{ open: false }" class="relative group">
                         <x-dropdown title="Admissions">
-                            <li><a href="#"
+                            <li><a href="{{ asset(route('admission-process')) }}"
                                     class="block px-4 py-2 hover:bg-green-100 transition text-green-950">How to
                                     Apply</a></li>
-                            <li><a href="#"
+                            <li><a href="{{ route('admission-requirements') }}"
                                     class="block px-4 py-2 hover:bg-green-100 transition text-green-950">Admission
                                     Requirements</a></li>
-                            <li><a href="#"
+                            <li><a href="{{ route('tuitions-fees') }}"
                                     class="block px-4 py-2 hover:bg-green-100 transition text-green-950">Tuition &
                                     Fees</a></li>
-                            <li><a href="#"
+                            <li><a href="{{ route('scholarship-aids') }}"
                                     class="block px-4 py-2 hover:bg-green-100 transition text-green-950">Scholarship &
                                     Financial aid</a></li>
                         </x-dropdown>
@@ -105,10 +109,10 @@
                             <li><a href="#"
                                     class="block px-4 py-2 hover:bg-green-100 transition text-green-950">Sports &
                                     Competitions</a></li>
-                            <li><a href="#"
+                            <li><a href="{{ route('student-achievements') }}"
                                     class="block px-4 py-2 hover:bg-green-100 transition text-green-950">Student
                                     Achievements</a></li>
-                            <li><a href="#"
+                            <li><a href="{{ route('school-events') }}"
                                     class="block px-4 py-2 hover:bg-green-100 transition text-green-950">School
                                     Events</a></li>
                         </x-dropdown>
@@ -144,8 +148,12 @@
             <div class="w-full md:w-1/4 p-4 order-3 md:order-3">
                 <h1 class="text-2xl mb-2">Popular Links</h1>
                 <div class="flex flex-col space-y-2 text-lg text-green-100">
-                    <a href="https://www.moe.go.tz/"><p class="hover:text-green-200">Ministry of Education, Science, and Technology</p></a>
-                    <a href="https://www.necta.go.tz/"><p class="hover:text-green-200">NECTA</p></a>
+                    <a href="https://www.moe.go.tz/">
+                        <p class="hover:text-green-200">Ministry of Education, Science, and Technology</p>
+                    </a>
+                    <a href="https://www.necta.go.tz/">
+                        <p class="hover:text-green-200">NECTA</p>
+                    </a>
                 </div>
             </div>
             <div class="w-full md:w-1/4 p-4 order-2 md:order-4">
@@ -155,10 +163,12 @@
                     <p>P.O.BOX 159,</p>
                     <p>Himo - Kilimanjaro, Tanzania</p>
                     <div class="flex items-center">
-                        <i class="fa fa-phone"></i><p class="mx-2">+255 754 783 311</p>
+                        <i class="fa fa-phone"></i>
+                        <p class="mx-2">+255 754 783 311</p>
                     </div>
                     <div class="flex items-center">
-                        <i class="fa fa-envelope"></i><p class="mx-2">info@scolasticaschools.sc.tz</p>
+                        <i class="fa fa-envelope"></i>
+                        <p class="mx-2">info@scolasticaschools.sc.tz</p>
                     </div>
                 </div>
             </div>
@@ -169,6 +179,12 @@
     </footer>
 
     <script src={{ asset('js/index.js') }}></script>
+
+    {{-- aos --}}
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
