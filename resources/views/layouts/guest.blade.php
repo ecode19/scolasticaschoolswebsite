@@ -86,10 +86,10 @@
 
                     <div x-data="{ open: false }" class="relative group">
                         <x-dropdown title="Admissions">
-                            <li><a href="#"
+                            <li><a href="{{ asset(route('admission-process')) }}"
                                     class="block px-4 py-2 hover:bg-green-100 transition text-green-950">How to
                                     Apply</a></li>
-                            <li><a href="{{ route('admission-process') }}"
+                            <li><a href="{{ route('admission-requirements') }}"
                                     class="block px-4 py-2 hover:bg-green-100 transition text-green-950">Admission
                                     Requirements</a></li>
                             <li><a href="{{ route('tuitions-fees') }}"
