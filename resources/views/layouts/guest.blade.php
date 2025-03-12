@@ -115,6 +115,8 @@
                             <li><a href="{{ route('school-events') }}"
                                     class="block px-4 py-2 hover:bg-green-100 transition text-green-950">School
                                     Events</a></li>
+                            <li><a href="{{ route('blog') }}"
+                                    class="block px-4 py-2 hover:bg-green-100 transition text-green-950">Blog</a></li>
                         </x-dropdown>
                     </div>
 

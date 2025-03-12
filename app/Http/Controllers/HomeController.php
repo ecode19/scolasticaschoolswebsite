@@ -74,4 +74,20 @@ class HomeController extends Controller
     public function extracurricularActivities() {
         return view('extracurricular-activities');
     }
+
+    public function blog() {
+        return view('blog.blog');
+    }
+
+    public function blogPost() {
+        return view('blog.blog-post');
+    }
+
+    public function searchPost() {
+        return view('blog.search-result');
+    }
+
+    public function categoryPosts() {
+        return view('blog.category-posts');
+    }
 }
