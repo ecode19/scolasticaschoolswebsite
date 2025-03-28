@@ -3,12 +3,12 @@
 @section('content')
 
     <div class="w-full lg:h-[500px] overflow-hidden relative">
-        <img src={{ asset('images/school4.jpg') }} alt="" class="w-full object-cover">
-        <div class="dark-overlay">
-            <div class="center-div">
+        <img src={{ asset('images/students/students-1.jpg') }} alt="" class="w-full object-cover">
+        <div class="w-full">
+            <div class="absolute bottom-10 left-10 transparent-bg">
                 <div class="text-white text-center">
-                    <h1 class="oswald text-3xl md:text-6xl uppercase text-green-300">Scolastica Schools</h1>
-                    <p class="text-lg md:text-2xl italic my-2 text-orange-200">Equal Education to All</p>
+                    <h1 class="oswald text-3xl md:text-6xl uppercase text-green-200">Scolastica Schools</h1>
+                    <p class="text-lg md:text-2xl italic my-2 text-orange-200">Nurturing Excellence, Inspiring Leaders</p>
                 </div>
             </div>
         </div>
@@ -17,22 +17,15 @@
         {{-- Welcome --}}
         <section class="w-full md:w-11/12 mx-auto p-2 flex flex-col md:flex-row my-8">
             <div class="w-full md:w-1/2 p-2 md:p-4 lg:p-8 overflow-hidden order-2 md:order-1">
-                <img src={{ asset('images/students2.jpg') }} alt="students photo" class="w-full object-cover rounded-md">
+                <img src={{ asset('images/students/students-2.jpg') }} alt="students photo" class="w-full object-cover rounded-md">
             </div>
             <div class="w-full md:w-1/2 p-2 md:p-4 lg:p-8 order-1 md:order-2">
                 <div class="w-full">
                     <h1 class="oswald text-4xl text-green-900">Welcome to Scolastica Schools</h1>
                     <div class="w-2/5 border-2 border-green-800 mt-2"></div>
                 </div>
-                <p class="text-justify text-lg text-gray-800 my-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Officia asperiores earum odit corrupti fuga delectus perferendis omnis doloribus accusamus temporibus,
-                    architecto eveniet? Qui ratione sint tempora quisquam pariatur ab eius!
-                    Odit esse omnis beatae animi doloribus amet culpa eos repellendus ullam similique! Distinctio aliquid
-                    illo laborum velit debitis quas, odit, vitae repellendus quo, nisi dolorum rem modi voluptas! Minima,
-                    suscipit.
-                    Aliquam, delectus. Nihil, vero sapiente perspiciatis voluptatem architecto optio in obcaecati vitae
-                    autem laudantium quasi, qui odio magni consequuntur aliquam voluptates quis provident, omnis maxime
-                    blanditiis pariatur ut ipsum nisi.</p>
+                <p class="font-semibold text-justify text-lg my-4 text-gray-800">Dear Esteemed Parents, Students, and the Scolastica Community,</p>
+                <p class="text-justify text-lg text-gray-800">Education is the foundation upon which great legacies are built, minds are ignited, and futures are shaped. At Scolastica Schools, we are not merely educators—we are architects of excellence, sculptors of character, and pioneers of boundless potential. It is with profound honor and unwavering dedication that we, Mr. and Mrs. Edward Shayo, welcome you to an institution where aspirations take flight, and every learner is nurtured to lead, innovate, and excel. <a href="{{route('welcome-message')}}"><button class="bg-orange-600 hover:bg-orange-700 text-orange-100 p-2 rounded-md mx-2 text-sm">Read More <i class="fa fa-arrow-right"></i></button></a></p>
             </div>
         </section>
 
@@ -76,7 +69,7 @@
             </div>
 
             <div class="w-full flex flex-col md:flex-row mt-8">
-                <div class="w-full md:w-1/3 my-2">
+                <div class="w-full md:w-1/4 my-2">
                     <div class="w-11/12 mx-auto">
                         <div class="w-full h-58 overflow-hidden hover:rotate-3">
                             <img src={{ asset('images/kindergarten.jpg') }} alt="level photo" class="object-cover w-full">
@@ -93,7 +86,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-full md:w-1/3 my-2">
+                <div class="w-full md:w-1/4 my-2">
                     <div class="w-11/12 mx-auto">
                         <div class="w-full h-58 overflow-hidden hover:rotate-3">
                             <img src={{ asset('images/kindergarten.jpg') }} alt="level photo" class="object-cover w-full">
@@ -110,13 +103,30 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-full md:w-1/3 my-2">
+                <div class="w-full md:w-1/4 my-2">
                     <div class="w-11/12 mx-auto">
                         <div class="w-full h-58 overflow-hidden hover:rotate-3">
                             <img src={{ asset('images/kindergarten.jpg') }} alt="level photo" class="object-cover w-full">
                         </div>
                         <div class="my-2">
                             <h5 class="text-green-800 text-center text-3xl my-2">Secondary School</h5>
+                        </div>
+                        <div class="my-2 w-max mx-auto mt-4">
+                            <a href="#">
+                                <button
+                                class="merryFont w-fit py-1 px-4 border-2 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-green-950 font-semibold rounded-full">Read
+                                More</button>
+                               </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/4 my-2">
+                    <div class="w-11/12 mx-auto">
+                        <div class="w-full h-58 overflow-hidden hover:rotate-3">
+                            <img src={{ asset('images/kindergarten.jpg') }} alt="level photo" class="object-cover w-full">
+                        </div>
+                        <div class="my-2">
+                            <h5 class="text-green-800 text-center text-3xl my-2">High School</h5>
                         </div>
                         <div class="my-2 w-max mx-auto mt-4">
                             <a href="#">
