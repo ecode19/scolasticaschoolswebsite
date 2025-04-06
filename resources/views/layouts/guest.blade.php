@@ -54,6 +54,9 @@
                     </a>
                     <div x-data="{ open: false }" class="relative group">
                         <x-dropdown title="About Us">
+                            <li><a href="{{ route('welcome-message') }}"
+                                    class="block px-4 py-2 hover:bg-green-100 transition text-green-950">Welcome Message</a>
+                            </li>
                             <li><a href="{{ route('our-history') }}"
                                     class="block px-4 py-2 hover:bg-green-100 transition text-green-950">Our History</a>
                             </li>
@@ -105,9 +108,6 @@
                             <li><a href="{{ route('extracurricular-activities') }}"
                                     class="block px-4 py-2 hover:bg-green-100 transition text-green-950">Clubs &
                                     Extracurricular Activities</a></li>
-                            <li><a href="#"
-                                    class="block px-4 py-2 hover:bg-green-100 transition text-green-950">Sports &
-                                    Competitions</a></li>
                             <li><a href="{{ route('student-achievements') }}"
                                     class="block px-4 py-2 hover:bg-green-100 transition text-green-950">Student
                                     Achievements</a></li>

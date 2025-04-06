@@ -1,11 +1,12 @@
 <?php
-
+use App\Http\Controllers\AcademicLevels;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NewsEvent\NewsEventController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SubjectsController;
 use Illuminate\Support\Facades\Route;
 
 Route::controller(HomeController::class)->group(function () {
@@ -17,6 +18,15 @@ Route::controller(HomeController::class)->group(function () {
     Route::get('/teaching-methods', [HomeController::class, 'teachingMethods'])->name('teaching-methods');
     Route::get('/contact-us', [HomeController::class, 'contactUs'])->name('contact-us');
     Route::get('/extracurricular-activities', [HomeController::class, 'extracurricularActivities'])->name('extracurricular-activities');
+    Route::get('/', 'index')->name('index');
+    Route::get('/curriculum', 'curriculum')->name('curriculum');
+    Route::get('/welcome-message', 'welcomeMessage')->name('welcome-message');
+    Route::get('/subjects-offered', 'subjectsOffered')->name('subjects-offered');
+    Route::get('/study-levels', 'studyLevels')->name('study-levels');
+    Route::get('/study-levels/level', 'studyLevel')->name('study-level');
+    Route::get('/teaching-methods', 'teachingMethods')->name('teaching-methods');
+    Route::get('/contact-us', 'contactUs')->name('contact-us');
+    Route::get('/extracurricular-activities', 'extracurricularActivities')->name('extracurricular-activities');
     Route::get('our-history', 'ourHistory')->name('our-history');
     Route::get('our-mission-and-vision', 'missionVision')->name('mission-vision');
     Route::get('administration-staff', 'administration')->name('administration');
@@ -52,6 +62,17 @@ Route::controller(NewsEventController::class)->prefix('admin/news/event')->name(
     Route::get('edit/{newsEvent}', 'newsEventEdit')->name('edit');
     Route::put('update/{newsEvent}', 'newsEventUpdate')->name('update');
     Route::delete('destroy/{newsEvent}', 'newsEventDestroy')->name('destroy');
+    Route::get('/blog', 'blog')->name('blog');
+    Route::get('/blog/{post}', 'blogPost')->name('blog-post');
+    Route::get('/blog/category/{category}', 'categoryPosts')->name('blog-category-posts');
+    Route::post('/blog/search', 'searchPostStore')->name('blog-post-search');
+});
+
+Route::prefix('admin')->as('admin.')->group(function () {
+    Route::resource('/blog/post', BlogController::class);
+    Route::resource('/academic-levels', AcademicLevels::class);
+    Route::resource('/subjects', SubjectsController::class);
+    Route::get('/dashboard', [AdminController::class, 'Dashboard'])->name('dashboard');
 });
 
 Route::get('/dashboard', function () {
