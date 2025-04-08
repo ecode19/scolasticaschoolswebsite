@@ -14,8 +14,8 @@
         <div class="w-11/12 md:w-9/12 mx-auto my-4">
             <h3 class="text-2xl md:text-4xl text-green-800 my-4">{{ $post->title }}</h3>
 
-            <p class="text-gray-600 text-justify text-lg">{!! $post->description !!}</p>
-        </div>
+       <div class="text-gray-600 text-justify text-lg">{!! $post->description !!}</div>
+    </div>
 
         <div class="w-fit mx-auto flex my-4">
             <button class="py-1 px-2 mx-2 bg-green-700 hover:bg-gray-700 text-white rounded-md"><i

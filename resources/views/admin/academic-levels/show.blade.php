@@ -11,11 +11,11 @@
             </div>
             <div class="text-lg text-gray-600 flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 my-2"><span
                     class="font-semibold">Description: </span>
-                <p>{!! $academic_level->description !!}</p>
+                <div>{!! $academic_level->description !!}</div>
             </div>
             <div class="text-lg text-gray-600 flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 my-2"><span
                     class="font-semibold">Curriculum: </span>
-                <p>{!! $academic_level->curriculum !!}</p>
+                <div>{!! $academic_level->curriculum !!}</div>
             </div>
         </div>
 

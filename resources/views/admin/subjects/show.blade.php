@@ -19,7 +19,7 @@
             </div>
             <div class="text-lg text-gray-600 flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 my-2"><span
                     class="font-semibold">Category: </span>
-                <p>{{ $subject->category ?? '-' }}</p>
+                <p>{{ $subject->category->category }}</p>
             </div>
             <div class="text-lg text-gray-600 flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 my-2"><span
                     class="font-semibold">Status: </span>

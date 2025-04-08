@@ -11,6 +11,9 @@
         </div>
 
         <div class="w-full overflow-x-auto my-4">
+            @php
+            $count = 1;
+        @endphp
             <table class="w-full">
                 <thead class="w-full bg-green-200 text-green-800">
                     <tr>
@@ -26,11 +29,11 @@
                 <tbody>
                     @foreach ($subjects as $subject)
                          <tr class="text-gray-600">
-                        <td class="p-2 border border-gray-400">1</td>
+                        <td class="p-2 border border-gray-400">{{ $count++ }}</td>
                         <td class="p-2 border border-gray-400">{{$subject->name}}</td>
                         <td class="p-2 border border-gray-400">{!!Str::words($subject->description, 20, '...') !!}</td>
                         <td class="p-2 border border-gray-400">{{$subject->academicLevel->name}}</td>
-                        <td class="p-2 border border-gray-400">{{$subject->category ?? '-'}}</td>
+                        <td class="p-2 border border-gray-400">{{$subject->category->category}}</td>
                         <td class="p-2 border border-gray-400">{{$subject->status ?? '-'}}</td>
                         <td class="p-2 border border-gray-400"><a href="{{ route('admin.subjects.show', $subject) }}"><button class="merryFont w-fit py-1 px-2 border-2 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white font-semibold rounded-md">view</button></a></td>
                     </tr>

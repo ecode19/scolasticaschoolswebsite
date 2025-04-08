@@ -31,9 +31,9 @@ class AcademicLevels extends Controller
             'name' => 'required|string',
             'description' => 'required',
             'curriculum' => 'required',
-            'primary_img' => 'required|file|mimes:png,jpg,jpeg,avif,webp|max:3072',
-            'image_2' => 'required|file|mimes:png,jpg,jpeg,avif,webp|max:3072',
-            'image_3' => 'required|file|mimes:png,jpg,jpeg,avif,webp|max:3072',
+            'primary_img' => 'file|mimes:png,jpg,jpeg,avif,webp|max:3072',
+            'image_2' => 'file|mimes:png,jpg,jpeg,avif,webp|max:3072',
+            'image_3' => 'file|mimes:png,jpg,jpeg,avif,webp|max:3072',
         ]);
 
         $imageFields = ['primary_img', 'image_2', 'image_3'];

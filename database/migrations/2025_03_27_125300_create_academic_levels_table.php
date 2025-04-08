@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('academic_levels', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('short_name');
             $table->text('description');
             $table->text('curriculum');
             $table->string('primary_img');
