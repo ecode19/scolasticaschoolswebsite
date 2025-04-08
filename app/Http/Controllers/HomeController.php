@@ -3,15 +3,23 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\AcademicLevel;
+use App\Models\Accreditation;
 use App\Models\BlogPost;
+use App\Models\Club;
+use App\Models\LearningApproach;
 use App\Models\PostCategory;
+use App\Models\Testimonial;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        return view('index');
+        $academicLevels = AcademicLevel::all();
+        $testimonials = Testimonial::all();
+        $accreditations = Accreditation::all();
+        return view('index', ['academicLevels' => $academicLevels, 'testimonials' => $testimonials, 'accreditations' => $accreditations]);
     }
     public function welcomeMessage() {
         return view('welcome-message');
@@ -53,23 +61,27 @@ class HomeController extends Controller
         return view('school-events');
     }
     public function curriculum() {
-        return view('curriculum');
+        $academicLevels = AcademicLevel::all();
+        return view('curriculum', ['academicLevels' => $academicLevels]);
     }
 
     public function subjectsOffered() {
-        return view('subjects-offered');
+        $academicLevels = AcademicLevel::with('subjects')->get();
+        return view('subjects-offered', ['academicLevels' => $academicLevels]);
     }
 
     public function studyLevels() {
-        return view('study-levels');
+        $academicLevels = AcademicLevel::all();
+        return view('study-levels', ['academicLevels' => $academicLevels]);
     }
 
-    public function studyLevel() {
-        return view('study-level');
+    public function studyLevel(AcademicLevel $level) {
+        return view('study-level', ['level' => $level]);
     }
 
     public function teachingMethods() {
-        return view('teaching-methods');
+        $methods = LearningApproach::all();
+        return view('teaching-methods', ['methods' => $methods]);
     }
 
     public function contactUs() {
@@ -77,7 +89,8 @@ class HomeController extends Controller
     }
 
     public function extracurricularActivities() {
-        return view('extracurricular-activities');
+        $clubs = Club::all();
+        return view('extracurricular-activities', ['clubs' => $clubs]);
     }
 
     public function blog() {

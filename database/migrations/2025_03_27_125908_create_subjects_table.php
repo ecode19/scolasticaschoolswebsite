@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->text('description');
             $table->foreignId('academic_level_id')->constrained('academic_levels')->onDelete('cascade');
-            $table->string('category')->nullable();
+            $table->foreignId('category_id')->constrained('subject_categories');
             $table->string('status')->nullable();
             $table->string('primary_img');
             $table->timestamps();

@@ -33,7 +33,7 @@
             <div class="w-full flex flex-col md:p-4">
                 <label for="description" class="w-full text-lg font-semibold text-gray-600">Post Description:</label>
                 <textarea name="description" rows="5"
-                    class="w-full md:w-10/12 p-2 focus:outline-none focus:border focus:border-green-600 rounded-md">
+                    class="editor w-full md:w-10/12 p-2 focus:outline-none focus:border focus:border-green-600 rounded-md">
                 {{ old('description') }}
                 </textarea>
                 @error('description')

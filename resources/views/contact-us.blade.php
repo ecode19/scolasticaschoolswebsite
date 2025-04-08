@@ -4,11 +4,11 @@
 
 
 <div class="w-full lg:h-[500px] overflow-hidden relative">
-    <img src={{ asset('images/school_library2.jpg') }} alt="" class="w-full object-cover">
-    <div class="dark-overlay">
-        <div class="center-div">
+    <img src={{ asset('images/environment/school-bus.jpg') }} alt="" class="w-full object-cover">
+    <div class="w-full">
+        <div class="absolute bottom-10 left-10 transparent-bg">
             <div class="text-white text-center">
-                <h1 class="oswald text-3xl md:text-6xl uppercase text-green-300">Contact Us</h1>
+                <h1 class="oswald text-3xl md:text-6xl uppercase text-green-200">Contact Us</h1>
             </div>
         </div>
     </div>

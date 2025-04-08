@@ -1,12 +1,18 @@
 <?php
 
 use App\Http\Controllers\AcademicLevels;
+use App\Http\Controllers\AccreditationController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AssessmentMethodsController;
 use App\Http\Controllers\BlogController;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\ClubController;
+use App\Http\Controllers\CocurricularActivitiesController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LearnigApproachController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SubjectCategoryController;
 use App\Http\Controllers\SubjectsController;
+use App\Http\Controllers\TestimonialController;
 use Illuminate\Support\Facades\Route;
 
 Route::controller(HomeController::class)->group(function () {
@@ -15,7 +21,7 @@ Route::controller(HomeController::class)->group(function () {
     Route::get('/welcome-message',  'welcomeMessage')->name('welcome-message');
     Route::get('/subjects-offered',  'subjectsOffered')->name('subjects-offered');
     Route::get('/study-levels',  'studyLevels')->name('study-levels');
-    Route::get('/study-levels/level',  'studyLevel')->name('study-level');
+    Route::get('/study-levels/{level}',  'studyLevel')->name('study-level');
     Route::get('/teaching-methods',  'teachingMethods')->name('teaching-methods');
     Route::get('/contact-us',  'contactUs')->name('contact-us');
     Route::get('/extracurricular-activities',  'extracurricularActivities')->name('extracurricular-activities');
@@ -39,6 +45,13 @@ Route::prefix('admin')->as('admin.')->group(function() {
     Route::resource('/blog/post', BlogController::class);
     Route::resource('/academic-levels', AcademicLevels::class);
     Route::resource('/subjects', SubjectsController::class);
+    Route::resource('/subject-categories', SubjectCategoryController::class);
+    Route::resource('/learning-approach', LearnigApproachController::class);
+    Route::resource('/assessment-method', AssessmentMethodsController::class);
+    Route::resource('/cocurricular', CocurricularActivitiesController::class);
+    Route::resource('/testimonials', TestimonialController::class);
+    Route::resource('/accreditations', AccreditationController::class);
+    Route::resource('/clubs', ClubController::class);
     Route::get('/dashboard', [AdminController::class, 'Dashboard'])->name('dashboard');
 });
 

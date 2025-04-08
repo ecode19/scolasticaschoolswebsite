@@ -13,7 +13,7 @@
     <div class="w-11/12 md:w-9/12 mx-auto my-4">
        <h3 class="text-2xl md:text-4xl text-green-800 my-4">{{ $post->title }}</h3>
 
-       <p class="text-gray-600 text-justify text-lg">{!! $post->description !!}</p>
+       <div class="text-gray-600 text-justify text-lg">{!! $post->description !!}</div>
     </div>
 
     <div class="w-fit mx-auto flex my-4">
