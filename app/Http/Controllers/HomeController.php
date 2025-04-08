@@ -3,10 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Models\AcademicLevel;
 use App\Models\NewsEvent\NewsEvent;
+use App\Models\AcademicLevel;
+use App\Models\Accreditation;
 use App\Models\BlogPost;
+use App\Models\Club;
+use App\Models\LearningApproach;
 use App\Models\PostCategory;
+use App\Models\Testimonial;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -15,7 +19,10 @@ class HomeController extends Controller
     {
         $academicLevels = AcademicLevel::all();
         $news = NewsEvent::where('type', 'news')->orderBy('created_at', 'desc')->limit(3)->get();
-        return view('index', compact('news', 'academicLevels'));
+        $academicLevels = AcademicLevel::all();
+        $testimonials = Testimonial::all();
+        $accreditations = Accreditation::all();
+        return view('index', ['academicLevels' => $academicLevels, 'testimonials' => $testimonials, 'accreditations' => $accreditations, 'news' => $news]);
     }
     public function welcomeMessage()
     {
@@ -70,27 +77,31 @@ class HomeController extends Controller
 
     public function curriculum()
     {
-        return view('curriculum');
+        $academicLevels = AcademicLevel::all();
+        return view('curriculum', ['academicLevels' => $academicLevels]);
     }
 
     public function subjectsOffered()
     {
-        return view('subjects-offered');
+        $academicLevels = AcademicLevel::with('subjects')->get();
+        return view('subjects-offered', ['academicLevels' => $academicLevels]);
     }
 
     public function studyLevels()
     {
-        return view('study-levels');
+        $academicLevels = AcademicLevel::all();
+        return view('study-levels', ['academicLevels' => $academicLevels]);
     }
 
-    public function studyLevel()
+    public function studyLevel(AcademicLevel $level)
     {
-        return view('study-level');
+        return view('study-level', ['level' => $level]);
     }
 
     public function teachingMethods()
     {
-        return view('teaching-methods');
+        $methods = LearningApproach::all();
+        return view('teaching-methods', ['methods' => $methods]);
     }
 
     public function contactUs()
@@ -100,7 +111,8 @@ class HomeController extends Controller
 
     public function extracurricularActivities()
     {
-        return view('extracurricular-activities');
+        $clubs = Club::all();
+        return view('extracurricular-activities', ['clubs' => $clubs]);
     }
 
     public function searchPost()

@@ -134,6 +134,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="w-full md:w-1/4 my-2">
                 <div class="w-11/12 mx-auto flex flex-col items-center bg-green-50 hover:bg-green-100 p-2 h-full">
                     <i class="fa fa-building text-green-800 text-5xl my-2"></i>

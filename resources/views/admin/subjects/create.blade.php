@@ -41,17 +41,15 @@
                 @enderror
             </div>
             <div class="w-full flex flex-col md:p-4">
-                <label for="category" class="w-full text-lg font-semibold text-gray-600">Subject Category:</label>
-                <select name="category"
+                <label for="category_id" class="w-full text-lg font-semibold text-gray-600">Subject Category:</label>
+                <select name="category_id"
                     class="w-full md:w-10/12 p-2 focus:outline-none focus:border focus:border-green-600 rounded-md">
                     <option value="">-- select --</option>
-                    <option value="science">Science</option>
-                    <option value="arts">Arts</option>
-                    {{-- @foreach ($academicLevels as $level)
-                        <option value="{{ $level->name }}">{{ $level->name }}</option>
-                    @endforeach --}}
+                    @foreach ($categories as $category)
+                        <option value="{{ $category->category }}">{{ $category->category }}</option>
+                    @endforeach
                 </select>
-                @error('category')
+                @error('category_id')
                     <p class="text-lg text-red-600 my-2">{{ $message }}</p>
                 @enderror
             </div>

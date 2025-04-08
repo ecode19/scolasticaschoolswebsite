@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\AcademicLevel;
 use App\Models\Subject;
+use App\Models\SubjectCategory;
 use Illuminate\Http\Request;
 use Storage;
 
@@ -26,7 +27,8 @@ class SubjectsController extends Controller
     public function create()
     {
         $academicLevels = AcademicLevel::all();
-        return view('admin.subjects.create', ['academicLevels' => $academicLevels]);
+        $categories = SubjectCategory::all();
+        return view('admin.subjects.create', ['academicLevels' => $academicLevels, 'categories' => $categories]);
     }
 
     /**
@@ -38,8 +40,8 @@ class SubjectsController extends Controller
             'name' => 'required|string',
             'description' => 'required',
             'academic_level_id' => 'required|string',
-            'category' => 'nullable|string',
-            'status' => 'nullable|string',
+            'category_id' => 'required|string',
+            'status' => 'required|string',
             'primary_img' => 'required|file|mimes:png,jpg,jpeg,avif,webp|max:2048',
         ]);
 
@@ -52,6 +54,7 @@ class SubjectsController extends Controller
         }
 
         $subject['academic_level_id'] = AcademicLevel::where('name', $request->academic_level_id)->first()->id;
+        $subject['category_id'] = SubjectCategory::where('category', $request->category_id)->first()->id;
 
         $subject = Subject::create($subject);
 
@@ -73,7 +76,8 @@ class SubjectsController extends Controller
     public function edit(Request $request, Subject $subject)
     {
         $academicLevels = AcademicLevel::all();
-        return view('admin.subjects.edit', ['subject' => $subject, 'subjectLevel' => $subject->academicLevel, 'academicLevels' => $academicLevels]);
+        $categories = SubjectCategory::all();
+        return view('admin.subjects.edit', ['subject' => $subject, 'subjectLevel' => $subject->academicLevel, 'academicLevels' => $academicLevels, 'categories' => $categories, 'subjectCategory' => $subject->category]);
     }
 
     /**
@@ -85,9 +89,9 @@ class SubjectsController extends Controller
             'name' => 'required|string',
             'description' => 'required',
             'academic_level_id' => 'required|string',
-            'category' => 'nullable|string',
-            'status' => 'nullable|string',
-            'primary_img' => 'required|file|mimes:png,jpg,jpeg,avif,webp|max:2048',
+            'category_id' => 'required|string',
+            'status' => 'required|string',
+            'primary_img' => 'file|mimes:png,jpg,jpeg,avif,webp|max:2048',
         ]);
 
         $imagename = $subject->primary_img;
@@ -106,6 +110,7 @@ class SubjectsController extends Controller
 
         $updatedSubject['primary_img'] = $imagename;
         $updatedSubject['academic_level_id'] = AcademicLevel::where('name', $request->academic_level_id)->first()->id;
+        $updatedSubject['category_id'] = SubjectCategory::where('category', $request->category_id)->first()->id;
 
         $subject->update($updatedSubject);
 
@@ -115,7 +120,7 @@ class SubjectsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Request $request, Subject $subject)
+    public function destroy(Subject $subject)
     {
         $path = 'images/subjects/';
 
