@@ -73,6 +73,16 @@
                             class="fa fa-users mx-1 p-2 my-2"></i>
                         <li>Clubs & Extracurricular</li>
                     </a>
+                    <a href="{{ route('admin.achievement.index') }}"
+                        class="w-full flex items-center text-lg font-semibold hover:bg-green-300 rounded-sm"><i
+                            class="fa fa-trophy mx-1 p-2 my-2"></i>
+                        <li>Success Stories</li>
+                    </a>
+                    <a href="{{ route('admin.faqs.index') }}"
+                        class="w-full flex items-center text-lg font-semibold hover:bg-green-300 rounded-sm"><i
+                            class="fa fa-question mx-1 p-2 my-2"></i>
+                        <li>FAQs</li>
+                    </a>
                     <a href="{{ route('admin.post.index') }}"
                         class="w-full flex items-center text-lg font-semibold hover:bg-green-300 rounded-sm"><i
                             class="fa fa-newspaper mx-1 p-2 my-2"></i>
