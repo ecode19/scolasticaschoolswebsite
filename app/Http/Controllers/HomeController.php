@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\AcademicLevel;
 use App\Models\NewsEvent\NewsEvent;
 use App\Models\BlogPost;
 use App\Models\PostCategory;
@@ -12,8 +13,9 @@ class HomeController extends Controller
 {
     public function index()
     {
+        $academicLevels = AcademicLevel::all();
         $news = NewsEvent::where('type', 'news')->orderBy('created_at', 'desc')->limit(3)->get();
-        return view('index', compact('news'));
+        return view('index', compact('news', 'academicLevels'));
     }
     public function welcomeMessage()
     {
