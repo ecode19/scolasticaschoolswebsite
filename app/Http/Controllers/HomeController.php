@@ -6,8 +6,10 @@ use App\Http\Controllers\Controller;
 use App\Models\NewsEvent\NewsEvent;
 use App\Models\AcademicLevel;
 use App\Models\Accreditation;
+use App\Models\Achievement;
 use App\Models\BlogPost;
 use App\Models\Club;
+use App\Models\Faqs;
 use App\Models\LearningApproach;
 use App\Models\PostCategory;
 use App\Models\Testimonial;
@@ -109,10 +111,17 @@ class HomeController extends Controller
         return view('contact-us');
     }
 
+    public function faqs()
+    {
+        $faqs = Faqs::all();
+        return view('faqs', ['faqs' => $faqs]);
+    }
+
     public function extracurricularActivities()
     {
         $clubs = Club::all();
-        return view('extracurricular-activities', ['clubs' => $clubs]);
+        $achievements = Achievement::all();
+        return view('extracurricular-activities', ['clubs' => $clubs, 'achievements' => $achievements]);
     }
 
     public function searchPost()

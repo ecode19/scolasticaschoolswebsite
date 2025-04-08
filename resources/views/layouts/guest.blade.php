@@ -140,6 +140,7 @@
             </div>
             <div class="w-full md:w-1/4 p-4 order-4 md:order-2 flex flex-col md:items-center">
                 <h1 class="text-2xl mb-2">Stay in Touch</h1>
+                <p class="text-lg hover:text-green-400"><a href="{{route('faqs')}}">FAQS</a></p>
                 <div class="flex flex-row space-x-2 md:flex-col md:space-y-2 md:space-x-0 text-2xl text-green-100">
                     <a href="#"><i class="fab fa-facebook hover:text-blue-700"></i></a>
                     <a href="#"><i class="fab fa-instagram hover:text-red-500"></i></a>

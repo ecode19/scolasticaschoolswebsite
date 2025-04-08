@@ -164,25 +164,16 @@
             <div class="w-2/5 border-2 border-green-800 mt-2"></div>
         </div>
 
-        <div class="w-full md:w-fit mx-auto my-4 py-4 flex flex-col md:flex-row">
+        <div class="slider2 w-11/12 mx-auto my-4 py-4 flex flex-col md:flex-row">
+            @foreach ($achievements as $achievement)
             <div class="w-full md:w-1/3 my-2">
                 <div class="w-11/12 mx-auto border border-green-400 p-2 rounded-lg">
                     <div class="w-full">
-                        <p class="text-lg text-gray-800 text-center my-4">"Our Debate Club won the 2024 National Debate
-                            Championship, and our Science Club participated in the International Science Fair, where
-                            students presented innovative projects. Be part of the legacy!"</p>
+                        <div class="text-gray-800 text-center my-4 italic">{!! $achievement->description !!}</div>
                     </div>
                 </div>
             </div>
-            <div class="w-full md:w-1/3 my-2">
-                <div class="w-11/12 mx-auto border border-green-400 p-2 rounded-lg">
-                    <div class="w-full">
-                        <p class="text-lg text-gray-800 text-center my-4">"Lorem ipsum dolor sit amet, consectetur
-                            adipisicing elit. Rem, et, sapiente nam illum dicta sunt nihil, earum ipsam veritatis sed
-                            adipisci. At delectus quam voluptas itaque maiores inventore molestiae"</p>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </section>
 @endsection

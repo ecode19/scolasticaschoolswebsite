@@ -1,11 +1,13 @@
 <?php
 use App\Http\Controllers\AcademicLevels;
 use App\Http\Controllers\AccreditationController;
+use App\Http\Controllers\AchievementController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AssessmentMethodsController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ClubController;
 use App\Http\Controllers\CocurricularActivitiesController;
+use App\Http\Controllers\FaqsController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NewsEvent\NewsEventController;
 use App\Http\Controllers\LearnigApproachController;
@@ -28,6 +30,7 @@ Route::controller(HomeController::class)->group(function () {
     Route::get('our-history', 'ourHistory')->name('our-history');
     Route::get('our-mission-and-vision', 'missionVision')->name('mission-vision');
     Route::get('administration-staff', 'administration')->name('administration');
+    Route::get('/faqs', 'faqs')->name('faqs');
 
     Route::get('admission-process', 'admissionProcess')->name('admission-process');
     Route::get('admission-requirements', 'admissionRequirements')->name('admission-requirements');
@@ -76,6 +79,8 @@ Route::prefix('admin')->as('admin.')->group(function () {
     Route::resource('/cocurricular', CocurricularActivitiesController::class);
     Route::resource('/testimonials', TestimonialController::class);
     Route::resource('/accreditations', AccreditationController::class);
+    Route::resource('/achievement', AchievementController::class);
+    Route::resource('/faqs', FaqsController::class);
     Route::resource('/clubs', ClubController::class);
     Route::get('/dashboard', [AdminController::class, 'Dashboard'])->name('dashboard');
 });
