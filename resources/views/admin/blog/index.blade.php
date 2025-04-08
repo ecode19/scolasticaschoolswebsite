@@ -36,7 +36,7 @@
                                 <span class="text-green-700">
                                     {{ $post->category->category }}
                                     <span>
-                                        @if($post->featured === 1)
+                                        @if ($post->featured === 1)
                                             <i class="fa fa-star text-sm mx-2"></i>
                                         @endif
                                     </span>

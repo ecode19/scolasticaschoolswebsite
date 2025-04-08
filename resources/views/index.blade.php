@@ -134,6 +134,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="w-full md:w-1/4 my-2">
                 <div class="w-11/12 mx-auto flex flex-col items-center bg-green-50 hover:bg-green-100 p-2 h-full">
                     <i class="fa fa-building text-green-800 text-5xl my-2"></i>
@@ -191,69 +192,50 @@
     </section>
 
     {{-- News & Highlights --}}
-    <section class="w-full md:w-11/12 mx-auto my-2 md:my-8 md:py-4">
-        <div class="w-max mx-4">
-            <h1 class="oswald text-4xl text-green-900">News & School highlights</h1>
-            <div class="w-2/5 border-2 border-green-800 mt-2"></div>
-        </div>
+    @if ($news->isNotEmpty())
+        <section class="w-full md:w-11/12 mx-auto my-2 md:my-8 md:py-4">
+            <div class="w-max mx-4">
+                <h1 class="oswald text-4xl text-green-900">News & School highlights</h1>
+                <div class="w-2/5 border-2 border-green-800 mt-2"></div>
+            </div>
 
-        <div class="w-full flex flex-col md:flex-row mt-8">
-            <div class="w-full md:w-1/3 my-2">
-                <div class="w-full px-2 mx-auto">
-                    <div class="w-full h-58 overflow-hidden relative group">
-                        <img src={{ asset('images/kindergarten.jpg') }} alt="level photo"
-                            class="object-cover w-full transition duration-500 transform group-hover:scale-110">
-                        <div class="dark-overlay">
-                            <div class="absolute bottom-10 p-2">
-                                <span class="text-orange-300">Kindergarten</span>
-                                <a href="#">
-                                    <h6 class="merryFont text-2xl text-white hover:text-green-200">Opening of Sports
-                                        and Games Competitions</h6>
-                                </a>
-                                <span class="text-green-200">21-2-2025</span>
+            <div class="w-full flex flex-col md:flex-row mt-8">
+                @foreach ($news as $item)
+                    <div class="w-full md:w-1/3 my-2">
+                        <div class="w-full px-2 mx-auto">
+                            <div class="w-full h-58 overflow-hidden relative group rounded-xl">
+                                <img src={{ $item->image ? Storage::url('images/news_events/images/' . $item->image) : asset('images/school1.webp') }}
+                                    alt="level photo"
+                                    class="object-cover h-64 rounded-xl w-full transition duration-500 transform group-hover:scale-150">
+
+                                <div class="absolute inset-0 bg-gray-900 opacity-60 transition duration-500">
+                                </div>
+                                <!-- Text content -->
+                                <div class="overlay absolute inset-0 pb-10 flex items-end">
+                                    <div class="p-4 flex flex-col">
+                                        <span
+                                            class="text-green-400 group-hover:text-white transition duration-1000 font-bold text-lg">Kindergarten</span>
+                                        <a href="#"
+                                            class="merryFont text-2xl text-white group-hover:text-white transition font-bold duration-500">
+                                            {{ $item->title }}
+                                        </a>
+
+                                        <span class="text-green-200 group-hover:text-white transition duration-500">
+                                            {{ $item->created_at->diffForHumans() }}
+                                        </span>
+
+                                        <a href=""
+                                            class="w-32 mt-2 border-2 font-bold text-white border-green-300 focus:ring focus-green-600 bg-green-500 px-4 py-2 rounded-md">Read
+                                            More</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                @endforeach
             </div>
-            <div class="w-full md:w-1/3 my-2">
-                <div class="w-full px-2 mx-auto">
-                    <div class="w-full h-58 overflow-hidden relative group">
-                        <img src={{ asset('images/kindergarten.jpg') }} alt="level photo"
-                            class="object-cover w-full transition duration-500 transform group-hover:scale-110">
-                        <div class="dark-overlay">
-                            <div class="absolute bottom-10 p-2">
-                                <span class="text-orange-300">Kindergarten</span>
-                                <a href="#">
-                                    <h6 class="merryFont text-2xl text-white hover:text-green-200">Opening of Sports
-                                        and Games Competitions</h6>
-                                </a>
-                                <span class="text-green-200">21-2-2025</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="w-full md:w-1/3 my-2">
-                <div class="w-full px-2 mx-auto">
-                    <div class="w-full h-58 overflow-hidden relative group">
-                        <img src={{ asset('images/kindergarten.jpg') }} alt="level photo"
-                            class="object-cover w-full transition duration-500 transform group-hover:scale-110">
-                        <div class="dark-overlay">
-                            <div class="absolute bottom-10 p-2">
-                                <span class="text-orange-300">Kindergarten</span>
-                                <a href="#">
-                                    <h6 class="merryFont text-2xl text-white hover:text-green-200">Opening of Sports
-                                        and Games Competitions</h6>
-                                </a>
-                                <span class="text-green-200">21-2-2025</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    @endif
 
     {{-- testimonials --}}
     <section class="w-full p-8 bg-green-100">

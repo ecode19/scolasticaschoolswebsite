@@ -66,9 +66,9 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-    $(".history-slider").slick({
-        slidesToShow: 2,
-        slidesToScroll: 2,
+    $('.history-slider').slick({
+        slidesToShow: 3,
+        slidesToScroll: 3,
         autoplay: true,
         autoplaySpeed: 5000,
         speed: 2000,
