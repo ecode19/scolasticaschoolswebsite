@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\NewsEvent\NewsEvent;
 use App\Models\AcademicLevel;
 use App\Models\Accreditation;
 use App\Models\BlogPost;
@@ -16,12 +17,14 @@ class HomeController extends Controller
 {
     public function index()
     {
+        $news = NewsEvent::where('type', 'news')->orderBy('created_at', 'desc')->limit(3)->get();
         $academicLevels = AcademicLevel::all();
         $testimonials = Testimonial::all();
         $accreditations = Accreditation::all();
-        return view('index', ['academicLevels' => $academicLevels, 'testimonials' => $testimonials, 'accreditations' => $accreditations]);
+        return view('index', ['academicLevels' => $academicLevels, 'testimonials' => $testimonials, 'accreditations' => $accreditations, 'news' => $news]);
     }
-    public function welcomeMessage() {
+    public function welcomeMessage()
+    {
         return view('welcome-message');
     }
     public function ourHistory()
@@ -58,8 +61,19 @@ class HomeController extends Controller
     }
     public function schoolEvents()
     {
-        return view('school-events');
+        $featuredEvents = NewsEvent::where('type', 'event')->where('status', 'featured')->orderBy('created_at', 'desc')->get();
+        $pastEvents = NewsEvent::where('type', 'event')->where('status', 'past')->orderBy('created_at', 'desc')->get();
+        $upcomingEvents = NewsEvent::where('type', 'event')->where('status', 'upcoming')->orderBy('created_at', 'desc')->get();
+
+        return view('school-events', compact('featuredEvents', 'pastEvents', 'upcomingEvents'));
     }
+
+    public function aboutEvent($title)
+    {
+        $event = NewsEvent::where('title', $title)->first();
+        return view('about-event', compact('event'));
+    }
+
     public function curriculum() {
         $academicLevels = AcademicLevel::all();
         return view('curriculum', ['academicLevels' => $academicLevels]);
@@ -84,7 +98,8 @@ class HomeController extends Controller
         return view('teaching-methods', ['methods' => $methods]);
     }
 
-    public function contactUs() {
+    public function contactUs()
+    {
         return view('contact-us');
     }
 
@@ -93,7 +108,13 @@ class HomeController extends Controller
         return view('extracurricular-activities', ['clubs' => $clubs]);
     }
 
-    public function blog() {
+    public function searchPost()
+    {
+        return view('blog.search-result');
+    }
+
+    public function blog()
+    {
         $recentPosts = BlogPost::with('category')->orderBy('created_at', 'desc')->limit(4)->get();
         $featuredPosts = BlogPost::with('category')->where('featured', 1)->orderBy('created_at', 'desc')->limit(5)->get();
         $otherPosts = BlogPost::with('category')->paginate(10);
@@ -103,19 +124,21 @@ class HomeController extends Controller
         return view('blog.blog', ['recentPosts' => $recentPosts, 'featuredPosts' => $featuredPosts, 'otherPosts' => $otherPosts, 'categories' => $categories]);
     }
 
-    public function blogPost(BlogPost $post) {
+    public function blogPost(BlogPost $post)
+    {
         return view('blog.blog-post', ['post' => $post]);
     }
 
-    public function searchPostStore(Request $request) {
+    public function searchPostStore(Request $request)
+    {
         $search = $request->search;
         $posts = BlogPost::with('category')
-        ->where('title', 'LIKE', "%{$search}%")
-        ->orWhereHas('category', function ($query) use ($search) {
-            $query->where('category', 'LIKE', "%{$search}%");
-        })
-        ->orderBy('created_at', 'desc')
-        ->paginate(10);
+            ->where('title', 'LIKE', "%{$search}%")
+            ->orWhereHas('category', function ($query) use ($search) {
+                $query->where('category', 'LIKE', "%{$search}%");
+            })
+            ->orderBy('created_at', 'desc')
+            ->paginate(10);
 
         $otherPosts = BlogPost::limit('10')->get();
 
@@ -124,7 +147,8 @@ class HomeController extends Controller
         return view('blog.search-result', ['posts' => $posts, 'search' => $search, 'otherPosts' => $otherPosts, 'categories' => $categories]);
     }
 
-    public function categoryPosts($category) {
+    public function categoryPosts($category)
+    {
         $categoryId = PostCategory::where('category', $category)->first()->id;
         $categoryPosts = BlogPost::where('category_id', $categoryId)->orderByDesc('created_at')->paginate(10);
         $otherCategories = PostCategory::whereNot('category', $category)->get();

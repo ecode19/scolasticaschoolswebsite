@@ -24,7 +24,8 @@
                 @endforeach
             </div>
 
-            <p class="text-lg my-4 text-center">Found <span class="text-green-800 font-semibold text-xl">{{ $posts->count() }}</span> results</p>
+            <p class="text-lg my-4 text-center">Found <span
+                    class="text-green-800 font-semibold text-xl">{{ $posts->count() }}</span> results</p>
         </div>
 
         <div class="w-full flex flex-col space-y-3">
