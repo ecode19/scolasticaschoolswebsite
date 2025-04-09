@@ -37,7 +37,7 @@
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
                 <!-- Kindergarten -->
                 <div
                     class="group bg-white rounded-2xl shadow-xl transition transform hover:scale-105 hover:shadow-2xl duration-500 p-8">
@@ -47,9 +47,9 @@
                             KG
                         </div>
                     </div>
-                    <h3 class="text-2xl font-bold text-green-800 mb-4">Kindergarten</h3>
+                    <h3 class="text-2xl font-bold text-green-800 mb-4">Kindergarten (Pre-Primary Education) – Ages 4-6</h3>
                     <ul class="space-y-2 text-gray-700 list-disc list-inside">
-                        <li>Child must be 3-5 years old</li>
+                        <li>Child must be 7-13 years old</li>
                         <li>Birth certificate copy</li>
                         <li>Two passport-size photos</li>
                         <li>Medical report</li>
@@ -65,9 +65,9 @@
                             PR
                         </div>
                     </div>
-                    <h3 class="text-2xl font-bold text-green-800 mb-4">Primary</h3>
+                    <h3 class="text-2xl font-bold text-green-800 mb-4">Primary Education (Standard 1 - 7)</h3>
                     <ul class="space-y-2 text-gray-700 list-disc list-inside">
-                        <li>Age requirement: 6+ years</li>
+                        <li>Age requirement: 4-6 years</li>
                         <li>Birth certificate & school report</li>
                         <li>Two passport-size photos</li>
                         <li>Entrance exam required</li>
@@ -83,46 +83,33 @@
                             SC
                         </div>
                     </div>
-                    <h3 class="text-2xl font-bold text-green-800 mb-4">Secondary</h3>
+                    <h3 class="text-2xl font-bold text-green-800 mb-4">Secondary Education (Ordinary Level - O-Level, Form
+                        1-4) </h3>
                     <ul class="space-y-2 text-gray-700 list-disc list-inside">
+                        <li>Age requirement: 14-17 years</li>
                         <li>Completed Primary Education</li>
                         <li>Pass entrance exam & interview</li>
                         <li>Previous academic records</li>
                         <li>Transfer certificate</li>
                     </ul>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <section class="py-16 bg-white">
-        <div class="w-11/12  mx-auto text-center">
-            <h2 class="text-4xl lg:text-5xl font-extrabold text-green-800">Application Process</h2>
-            <p class="text-gray-600 text-lg mt-3">Follow these simple steps to get started.</p>
-
-            <div class="flex flex-wrap justify-center gap-10 mt-12">
-                <!-- Step 1 -->
+                <!-- Advanced -->
                 <div
-                    class="bg-gradient-to-tr from-green-100 to-white shadow-xl rounded-2xl p-8 hover:scale-105 hover:shadow-2xl transition duration-500">
-                    <div class="text-green-800 text-5xl font-bold mb-4">1</div>
-                    <h3 class="text-xl font-semibold text-green-900">Download the Form</h3>
-                    <p class="text-gray-700 mt-2">Download and fill out the application form carefully.</p>
-                </div>
-
-                <!-- Step 2 -->
-                <div
-                    class="bg-gradient-to-tr from-green-100 to-white shadow-xl rounded-2xl p-8 hover:scale-105 hover:shadow-2xl transition duration-500">
-                    <div class="text-green-800 text-5xl font-bold mb-4">2</div>
-                    <h3 class="text-xl font-semibold text-green-900">Submit Documents</h3>
-                    <p class="text-gray-700 mt-2">Provide all necessary documents to our office or online.</p>
-                </div>
-
-                <!-- Step 3 -->
-                <div
-                    class="bg-gradient-to-tr from-green-100 to-white shadow-xl rounded-2xl p-8 hover:scale-105 hover:shadow-2xl transition duration-500">
-                    <div class="text-green-800 text-5xl font-bold mb-4">3</div>
-                    <h3 class="text-xl font-semibold text-green-900">Entrance Assessment</h3>
-                    <p class="text-gray-700 mt-2">Participate in exams and interviews as scheduled.</p>
+                    class="group bg-white rounded-2xl shadow-xl transition transform hover:scale-105 hover:shadow-2xl duration-500 p-8">
+                    <div class="mb-4">
+                        <div
+                            class="w-16 h-16 flex items-center justify-center rounded-full bg-green-100 text-green-700 text-2xl font-bold shadow-md">
+                            AD
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-green-800 mb-4">Advanced Secondary Education (High School - A-Level,
+                        Form 5-6) </h3>
+                    <ul class="space-y-2 text-gray-700 list-disc list-inside">
+                        <li>Age requirement: 18-19 years</li>
+                        <li>Completed secondary Education</li>
+                        <li>Pass entrance exam & interview</li>
+                    </ul>
                 </div>
             </div>
         </div>

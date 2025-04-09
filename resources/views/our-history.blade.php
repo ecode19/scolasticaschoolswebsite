@@ -46,262 +46,195 @@
         <div class="w-11/12 mx-auto">
             <h1 class="text-green-700 font-semibold text-4xl">Our History</h1>
             <div class="py-3">
-                <p class="text-justify text-gray-700 leading-relaxed"> Lorem ipsum dolor sit amet, consectetur adipisicing
-                    elit. Ad, illum
-                    reiciendis!
-                    Reprehenderit, dolorem et molestiae provident omnis molestias velit fugiat delectus earum fugit ad
-                    aliquid autem dignissimos similique nisi, commodi accusamus nemo. Fugiat ea, tempora quas odit nisi
-                    molestiae deserunt a non commodi saepe sequi natus impedit sed labore, officia praesentium voluptas ad
-                    nemo neque voluptatum quasi laborum. Dolore deserunt minus autem perferendis, ex, animi voluptatum
-                    veniam, necessitatibus aliquam tempora tempore dolores adipisci rerum nobis ea nam fugiat omnis? Iure
-                    ipsam necessitatibus reiciendis ipsum incidunt deleniti rem inventore ratione, laboriosam est totam
-                    cumque blanditiis quidem reprehenderit sint iusto placeat eligendi, soluta, ex praesentium perspiciatis
-                    at. Nobis aspernatur dicta hic vero ullam voluptatum veniam perspiciatis, consequatur non blanditiis
-                    molestiae eius repellat exercitationem aut eum. Explicabo iusto quis adipisci pariatur ad, quibusdam
-                    molestiae reiciendis, minus nesciunt debitis placeat voluptatibus cum aspernatur sint facere earum
-                    dignissimos dolore deleniti. Aliquid quo ad quod perspiciatis ducimus vero aut explicabo quos porro qui
-                    modi, accusamus quae maiores magnam repellendus nihil earum, consectetur perferendis commodi. Distinctio
-                    sequi quis placeat alias illum nihil tempora beatae nemo voluptatibus hic, repellat, dignissimos sunt
-                    nam, qui minus asperiores consequuntur quo rem! Eum aut voluptas aspernatur ex, sunt blanditiis aliquid
-                    molestias? Suscipit.</p>
+                <p class="text-justify text-gray-700 leading-relaxed">
+                    Scolastica Schools has a rich history of academic excellence, innovation, and holistic development.
+                    Since its establishment, the school has grown from a single institution to a multi-level academic
+                    powerhouse, shaping young minds into future leaders.
+                </p>
 
-                <div class="mt-8">
-                    <a href="#"
-                        class="py-3 px-4 rounded-xl bg-green-700 text-white tex-lg font-semibold hover:bg-green-600 transition transform ease-in-out durataion-700">Read
-                        More</a>
+                <h1 class="text-justify text-gray-700 leading-relaxed"> </h1>
+            </div>
+        </div>
+    </section>
+
+    {{-- how it started --}}
+    <section class="pt-12 relative">
+        <div class="relative flex flex-col justify-center items-center bg-fixed bg-cover bg-center bg-no-repeat h-[600px] overflow-hidden"
+            style="background-image: url('{{ asset('images/DSC_4061.jpg') }}')">
+            <div class="absolute inset-0 bg-gradient-to-tr from-slate-900 to-gray-800 opacity-85 backdrop-blur-sm"></div>
+
+            <div class="relative z-10 w-full px-4 md:px-10 lg:px-20 max-w-screen-xl">
+                <h2 class="text-center text-white text-3xl md:text-5xl font-bold mb-12 drop-shadow-lg">
+                    Our Journey Through Time
+                </h2>
+
+                <div
+                    class="flex overflow-x-auto space-x-10 snap-x snap-mandatory pb-6 scrollbar-thin scrollbar-thumb-yellow-500">
+                    @php
+                        $timeline = [
+                            [
+                                'year' => '2001',
+                                'title' => 'The Beginning',
+                                'desc' =>
+                                    'Scolastica Schools was founded by <span class="text-yellow-400 font-bold">Mr. & Mrs. Edward Shayo</span> with a vision to provide high-quality, values-based education in Tanzania.',
+                                'highlight' => true,
+                            ],
+                            [
+                                'year' => '2002',
+                                'title' => 'First Admissions & Early Growth',
+                                'desc' =>
+                                    'The school officially admitted its first batch of students in Kindergarten and Grades 1-3. Emphasis was placed on child-centered learning.',
+                            ],
+                            [
+                                'year' => '2005',
+                                'title' => 'Expansion to Full Primary School',
+                                'desc' =>
+                                    'Expanded to Upper Primary (Grades 4-7). Introduced co-curriculars: music, arts, and sports.',
+                            ],
+                            [
+                                'year' => '2008',
+                                'title' => 'Secondary Education Introduced',
+                                'desc' => 'Started Form 1–4 (Grades 8–11). Accredited by NECTA to administer CSEE.',
+                            ],
+                            [
+                                'year' => '2012',
+                                'title' => 'National Exam Success',
+                                'desc' =>
+                                    'First Form 4 graduates achieved excellent NECTA results. Became a top private school.',
+                            ],
+                            [
+                                'year' => '2015',
+                                'title' => 'High School (A-Level)',
+                                'desc' =>
+                                    'Started Form 5 & 6 (Grades 12–13). Introduced Science, Business, and Arts tracks.',
+                            ],
+                            [
+                                'year' => '2020',
+                                'title' => 'STEM & Languages',
+                                'desc' => 'Launched robotics and coding programs. Added French and Mandarin.',
+                            ],
+                            [
+                                'year' => '2025',
+                                'title' => 'Beyond',
+                                'desc' =>
+                                    'Advanced leadership programs. Strengthened global partnerships and student exchanges.',
+                                'highlight' => true,
+                            ],
+                        ];
+                    @endphp
+
+                    @foreach ($timeline as $item)
+                        <div
+                            class="snap-center min-w-[280px] sm:min-w-[350px] bg-white/10 backdrop-blur-sm rounded-2xl border border-yellow-500 p-6 flex-shrink-0 hover:scale-105 transition-all duration-500 ease-in-out">
+                            <h3 class="text-white text-4xl font-bold text-center">{{ $item['year'] }}</h3>
+                            <p class="text-yellow-400 text-center font-semibold text-xl mt-3">{{ $item['title'] }}</p>
+                            <p class="text-white text-sm mt-3 text-justify leading-relaxed">{!! $item['desc'] !!}</p>
+                        </div>
+                    @endforeach
+                </div>
+
+                <div class="text-center mt-6">
+                    <p class="text-white text-sm opacity-80">Swipe left/right to explore the timeline</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Mission & Vision Section -->
-    <section class="">
+    <section class="bg-gradient-to-br from-white via-green-50 to-white py-20">
         <div class="container mx-auto px-6">
             <!-- Title -->
-            <div class="text-center mb-10">
-                <h2 class="text-4xl lg:text-5xl font-extrabold text-green-700 leading-tight">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl lg:text-6xl font-extrabold text-green-800 tracking-tight leading-tight animate-fade-up">
                     Our Mission & Vision
                 </h2>
-                <p class="mt-4 text-lg text-green-700 opacity-75">
-                    We're committed to excellence in every aspect of education.
+                <p class="mt-4 text-xl text-green-700 opacity-80 max-w-2xl mx-auto animate-fade-up delay-100">
+                    Empowering excellence in every learner — shaping futures with purpose, integrity, and global vision.
                 </p>
             </div>
 
             <!-- Mission and Vision Content -->
             <div class="flex flex-col md:flex-row justify-between gap-16">
-
                 <!-- Vision Block -->
-                <div class="w-full md:w-1/2 text-center p-6 bg-white rounded-xl shadow-green-100 shadow-xl">
+                <div
+                    class="w-full md:w-1/2 bg-white border border-green-200 rounded-2xl shadow-xl p-10 text-center transform transition duration-500 hover:-translate-y-1 hover:shadow-2xl animate-fade-up delay-200">
                     <div class="mb-6">
-                        <i class="fas fa-eye w-16 h-16 text-green-600 mx-auto text-4xl"></i>
+                        <i class="fas fa-eye text-5xl text-green-600 drop-shadow-md"></i>
                     </div>
-                    <h3 class="text-3xl font-bold text-green-800 mb-4">Our Vision</h3>
+                    <h3 class="text-3xl font-semibold text-green-900 mb-4">Our Vision</h3>
                     <p class="text-lg text-gray-700 leading-relaxed">
-                        To be the leading national school in Tanzania, where happy, well-rounded students achieve academic
-                        success in a diverse and challenging atmosphere, preparing them to become leaders in both national
-                        and global spheres.
+                        To become Tanzania’s top educational institution — nurturing joyful, well-rounded achievers
+                        in a diverse, future-forward environment that fosters local and global leadership.
                     </p>
                 </div>
 
                 <!-- Mission Block -->
-                <div class="w-full md:w-1/2 text-center p-6 bg-white rounded-xl shadow-green-100 shadow-xl">
+                <div
+                    class="w-full md:w-1/2 bg-white border border-green-200 rounded-2xl shadow-xl p-10 text-center transform transition duration-500 hover:-translate-y-1 hover:shadow-2xl animate-fade-up delay-300">
                     <div class="mb-6">
-                        <i class="fas fa-bullseye w-16 h-16 text-green-600 mx-auto text-4xl"></i>
+                        <i class="fas fa-bullseye text-5xl text-green-600 drop-shadow-md"></i>
                     </div>
-                    <h3 class="text-3xl font-bold text-green-800 mb-4">Our Mission</h3>
-                    <ul class="text-lg text-gray-700 leading-relaxed list-inside">
-                        <li class="mb-3">Honoring our Legacy – Building upon our past achievements to create a stronger
-                            future.</li>
-                        <li class="mb-3">Innovative Teaching & Learning – Incorporating best practices and creativity to
-                            inspire a passion for lifelong discovery.</li>
-                        <li class="mb-3">A Supportive Environment – Creating a school where students and teachers feel
-                            valued, happy, and safe.</li>
-                        <li class="mb-3">Integrity & Resilience – Nurturing self-confidence, discipline, and adaptability
-                            in students to face global challenges.</li>
-                        <li class="mb-3">Global Perspective & IDEALS – Encouraging students to learn from the world around
-                            them through languages, international exposure, and cross-cultural experiences.</li>
-                        <li class="mb-3">Inspiring Leadership – Cultivating a generation of responsible, ethical, and
-                            visionary leaders.</li>
+                    <h3 class="text-3xl font-semibold text-green-900 mb-4">Our Mission</h3>
+                    <ul class="text-left text-lg text-gray-700 leading-relaxed space-y-4">
+                        <li><strong class="text-green-700">•</strong> Honoring our Legacy – Building on past triumphs to
+                            forge a brighter tomorrow.</li>
+                        <li><strong class="text-green-700">•</strong> Innovative Learning – Fueling passion through
+                            creative, student-centered education.</li>
+                        <li><strong class="text-green-700">•</strong> Supportive Environment – Where every learner and
+                            educator thrives in safety and respect.</li>
+                        <li><strong class="text-green-700">•</strong> Integrity & Resilience – Cultivating ethical,
+                            confident, and adaptable individuals.</li>
+                        <li><strong class="text-green-700">•</strong> Global Outlook – Promoting cross-cultural awareness
+                            and international experiences.</li>
+                        <li><strong class="text-green-700">•</strong> Visionary Leadership – Inspiring responsible
+                            change-makers for the world ahead.</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    {{-- how it started --}}
-    <section class="pt-12">
-        <div class="relative flex flex-col justify-center items-center bg-fixed bg-cover bg-center bg-no-repeat h-80 md:h-[450px] lg:h-[560px] overflow-hidden"
-            style="background-image: url('{{ asset('images/DSC_4061.jpg') }}')">
-            <div class="absolute inset-0 bg-gradient-to-tr from-slate-800 to-gray-700 opacity-80 backdrop-blur"></div>
-
-            <div class="history-slider relative w-11/12 px-4 md:px-8">
-                <!-- Timeline Item -->
-                <div class="flex flex-col justify-center items-center">
-                    <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold uppercase text-center text-white mb-6 md:mb-10">
-                        2001
-                    </h1>
-                    <div class="flex flex-col justify-center items-center">
-                        <p class="text-center text-yellow-500 font-bold text-2xl md:text-3xl">The Beginning</p>
-                        <p
-                            class="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg leading-relaxed text-justify mt-3 text-white">
-                            Scolastica Schools was founded by <span class="text-yellow-400 font-bold">
-                                <br> Mr. & Mrs. Edward Shayo</span> with a vision to provide high-quality, values-based
-                            education in Tanzania.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Timeline Item -->
-                <div class="flex flex-col justify-center items-center">
-                    <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold uppercase text-center text-white mb-6 md:mb-10">
-                        2002
-                    </h1>
-                    <div class="flex flex-col justify-center items-center">
-                        <p class="text-center text-white font-bold text-2xl md:text-3xl">First Admissions & Early Growth</p>
-                        <p
-                            class="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg hidden leading-relaxed text-justify mt-3 text-white">
-                            The school officially admitted its first batch of students in Kindergarten and Grades 1-3.
-                            <br> Emphasis was placed on child-centered learning and foundational literacy and numeracy
-                            skills.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Timeline Item -->
-                <div class="flex flex-col justify-center items-center">
-                    <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold uppercase text-center text-white mb-6 md:mb-10">
-                        2005
-                    </h1>
-                    <div class="flex flex-col justify-center items-center">
-                        <p class="text-center text-yellow-500 font-bold text-2xl md:text-3xl">Expansion to Full Primary
-                            School</p>
-                        <p
-                            class="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg leading-relaxed text-justify mt-3 text-white">
-                            Due to increasing demand, Scolastica expanded to Upper Primary (Grades 4-7).
-                            <br> Introduction of co-curricular activities such as music, arts, and sports.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Timeline Item -->
-                <div class="flex flex-col justify-center items-center">
-                    <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold uppercase text-center text-white mb-6 md:mb-10">
-                        2008
-                    </h1>
-                    <div class="flex flex-col justify-center items-center">
-                        <p class="text-center text-yellow-500 font-bold text-2xl md:text-3xl">Introduction of Secondary
-                            Education (O-Level)</p>
-                        <p
-                            class="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg leading-relaxed text-justify mt-3 text-white">
-                            The school launched its Secondary School (Ordinary Level), offering Form 1 to Form 4 (Grades
-                            8-11). <br>
-                            Accredited by the National Examination Council of Tanzania (NECTA) to administer CSEE.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Timeline Item -->
-                <div class="flex flex-col justify-center items-center">
-                    <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold uppercase text-center text-white mb-6 md:mb-10">
-                        2012
-                    </h1>
-                    <div class="flex flex-col justify-center items-center">
-                        <p class="text-center text-white font-bold text-2xl md:text-3xl">First National Examination Success
-                        </p>
-                        <p
-                            class="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg leading-relaxed text-justify mt-3 text-white">
-                            The first Form 4 (O-Level) cohort graduated, achieving excellent results in the NECTA exams.
-                            <br> Scolastica became one of the top-performing private schools in the region.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Timeline Item -->
-                <div class="flex flex-col justify-center items-center">
-                    <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold uppercase text-center text-white mb-6 md:mb-10">
-                        2015
-                    </h1>
-                    <div class="flex flex-col justify-center items-center">
-                        <p class="text-center text-yellow-500 font-bold text-2xl md:text-3xl">Establishment of High School
-                            (A-Level)</p>
-                        <p
-                            class="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg leading-relaxed text-justify mt-3 text-white">
-                            Advanced Level (A-Level) classes (Form 5 & 6, Grades 12-13) were introduced. <br>
-                            Specialized subject tracks introduced, including Science, Business, and Arts.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Timeline Item -->
-                <div class="flex flex-col justify-center items-center">
-                    <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold uppercase text-center text-white mb-6 md:mb-10">
-                        2020
-                    </h1>
-                    <div class="flex flex-col justify-center items-center">
-                        <p class="text-center text-white font-bold text-2xl md:text-3xl">STEM & International Language
-                            Expansion</p>
-                        <p
-                            class="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg leading-relaxed text-justify mt-3 text-white">
-                            Launch of STEM programs, including robotics, coding, and science fairs. <br>
-                            Introduction of French and Chinese (Mandarin) language programs for international exposure.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Timeline Item -->
-                <div class="flex flex-col justify-center items-center">
-                    <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold uppercase text-center text-white mb-6 md:mb-10">
-                        2025
-                    </h1>
-                    <div class="flex flex-col justify-center items-center">
-                        <p class="text-center text-yellow-500 font-bold text-2xl md:text-3xl">Beyond – The Future of
-                            Scolastica Schools</p>
-                        <p
-                            class="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg leading-relaxed text-justify mt-3 text-white">
-                            Expansion of more advanced co-curricular and leadership programs. <br>
-                            Strengthening international collaborations and student exchange programs. <br>
-                            Continued focus on academic excellence, technology, and global competitiveness.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     {{-- directors --}}
-    <section class="py-12 bg-gray-100">
-        <div class="container mx-auto px-4">
-            <h1 class="text-center text-green-800 text-4xl font-semibold pb-10">
-                Visionary Leaders Who Shaped Our School's Legacy
-            </h1>
-            <div class="w-full">
-                <div
-                    class="tanzania-border bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 p-10">
-                    <!-- Founder Name -->
-                    <h2 class="text-2xl font-bold text-green-800 mb-4 text-center">
-                        Mr. Edward Shayo & Mrs. Edward Shayo – Founders & Managing Directors
-                    </h2>
+    <section class="py-20 bg-gradient-to-br from-gray-100 via-white to-gray-100">
+        <div class="container mx-auto px-6">
+            <!-- Section Title -->
+            <div class="text-center mb-12">
+                <h1 class="text-5xl font-extrabold text-green-800 leading-tight animate-fade-up">
+                    Visionary Leaders Who Shaped Our Legacy
+                </h1>
+                <p class="mt-4 text-lg text-gray-600 animate-fade-up delay-100">
+                    Honoring the founders whose passion and leadership laid the foundation for excellence.
+                </p>
+            </div>
 
-                    <!-- Founder Description -->
-                    <p class="text-gray-700 text-center text-lg leading-relaxed mb-6">
-                        Our visionary founders established Scolastica Schools with a mission to provide a world-class
-                        education rooted in integrity, leadership, and academic excellence.
-                    </p>
+            <!-- Founder Card -->
+            <div
+                class="max-w-4xl mx-auto bg-white border border-green-100 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 p-12 animate-fade-up delay-200">
+                <!-- Names -->
+                <h2 class="text-3xl font-bold text-green-900 mb-6 text-center tracking-tight">
+                    Mr. Edward Shayo & Mrs. Edward Shayo
+                    <br>
+                    <span class="text-xl font-medium text-green-600">Founders & Managing Directors</span>
+                </h2>
 
-                    <!-- Button -->
-                    <!-- Button Wrapper (centered) -->
-                    <div class="flex justify-center">
-                        <!-- Button -->
-                        <button
-                            class="button-border w-64 transition-all flex justify-center items-center duration-300 transform hover:scale-105 hover:bg-green-50 p-4 rounded-lg border-2 border-green-700 cursor-pointer">
-                            <a href="{{ route('administration') }}" class="text-green-700 font-semibold">Learn More</a>
-                        </button>
-                    </div>
+                <!-- Description -->
+                <p class="text-lg text-gray-700 text-center leading-relaxed mb-10 max-w-3xl mx-auto">
+                    With a bold vision and an unshakeable commitment to education, our founders laid the cornerstone of
+                    Scolastica Schools. Their unwavering dedication continues to inspire generations, shaping minds with
+                    values of integrity, leadership, and academic excellence.
+                </p>
 
+                <!-- Button -->
+                <div class="flex justify-center">
+                    <a href="{{ route('administration') }}"
+                        class="inline-block px-8 py-3 border-2 border-green-700 text-green-700 font-semibold rounded-lg transition-all duration-300 hover:bg-green-700 hover:text-white hover:shadow-md hover:-translate-y-1">
+                        Learn More
+                    </a>
                 </div>
             </div>
         </div>
     </section>
+
 
     {{-- Accredited --}}
     <section class="py-10">
@@ -324,8 +257,7 @@
                             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
                                 <!-- MoEST -->
                                 <div class="flex flex-col justify-center items-center mt-16">
-                                    <img src="{{ asset('images/ministry-of-toursim.png') }}"
-                                        class="w-32 h-32 rounded-full">
+                                    <img src="{{ asset('images/ministry-of-toursim.png') }}" class="w-32 h-32 rounded-full">
                                     <h2 class="text-white font-semibold text-lg text-center">Tanzania Ministry of
                                         Education, Science, and Technology (MoEST)</h2>
                                     <p class="text-sm text-white italic text-center mt-4">

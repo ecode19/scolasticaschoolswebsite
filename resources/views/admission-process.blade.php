@@ -38,57 +38,64 @@
             <div class="grid md:grid-cols-3 gap-10">
                 <!-- Step 1 -->
                 <div
-                    class="bg-white shadow-md rounded-2xl p-8 flex flex-col items-center text-center hover:shadow-xl transition duration-500">
+                    class="bg-gradient-to-tr from-green-100 to-white shadow-md rounded-2xl p-8 flex flex-col items-center text-center hover:shadow-xl transition duration-500">
                     <div
                         class="w-20 h-20 flex items-center justify-center rounded-full bg-green-100 text-green-800 font-bold text-3xl mb-5">
                         1
                     </div>
-                    <h3 class="text-xl font-semibold mb-4">Complete the Online Application</h3>
-                    <p class="text-gray-600 mb-6">Fill out our streamlined online form with your personal details, academic
-                        background, and program of interest.</p>
-                    <a href="#"
+                    <h3 class="text-xl font-semibold mb-4">Visit the School</h3>
+                    <p class="text-gray-600 mb-6">
+                        Come to our school in person to collect the application form and get a tour of our learning
+                        environment.
+                    </p>
+                    <a href="#contact"
                         class="bg-green-800 text-white px-6 py-2 rounded-full font-semibold hover:bg-green-700 transition duration-300">
-                        Apply Now
+                        Get Directions
                     </a>
                 </div>
 
                 <!-- Step 2 -->
                 <div
-                    class="bg-white shadow-md rounded-2xl p-8 flex flex-col items-center text-center hover:shadow-xl transition duration-500">
+                    class="bg-gradient-to-tr from-green-100 to-white shadow-md rounded-2xl p-8 flex flex-col items-center text-center hover:shadow-xl transition duration-500">
                     <div
                         class="w-20 h-20 flex items-center justify-center rounded-full bg-green-100 text-green-800 font-bold text-3xl mb-5">
                         2
                     </div>
-                    <h3 class="text-xl font-semibold mb-4">Submit Required Documents</h3>
-                    <p class="text-gray-600 mb-6">Upload copies of your transcripts, certificates, personal statement, and
-                        any other required documents.</p>
+                    <h3 class="text-xl font-semibold mb-4">Fill & Return the Application Form</h3>
+                    <p class="text-gray-600 mb-6">
+                        Complete the form with required details and return it with copies of birth certificate, recent
+                        report form, and passport photos.
+                    </p>
                     <a href="#"
                         class="bg-green-800 text-white px-6 py-2 rounded-full font-semibold hover:bg-green-700 transition duration-300">
-                        Submit Documents
+                        View Requirements
                     </a>
                 </div>
 
                 <!-- Step 3 -->
                 <div
-                    class="bg-white shadow-md rounded-2xl p-8 flex flex-col items-center text-center hover:shadow-xl transition duration-500">
+                    class="bg-gradient-to-tr from-green-100 to-white shadow-md rounded-2xl p-8 flex flex-col items-center text-center hover:shadow-xl transition duration-500">
                     <div
                         class="w-20 h-20 flex items-center justify-center rounded-full bg-green-100 text-green-800 font-bold text-3xl mb-5">
                         3
                     </div>
-                    <h3 class="text-xl font-semibold mb-4">Receive Confirmation & Next Steps</h3>
-                    <p class="text-gray-600 mb-6">After review, you'll receive confirmation via email with your next steps
-                        including interview (if required).</p>
+                    <h3 class="text-xl font-semibold mb-4">Attend Interview & Get Admission</h3>
+                    <p class="text-gray-600 mb-6">
+                        The student may be invited for an interview or assessment. Once successful, you’ll receive an
+                        official admission letter.
+                    </p>
                     <a href="#"
                         class="bg-green-800 text-white px-6 py-2 rounded-full font-semibold hover:bg-green-700 transition duration-300">
-                        View Status
+                        Admission Info
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
+
     {{-- Call to Action --}}
-    <section class="relative py-20 mb-11 bg-gradient-to-r from-green-600 via-emerald-600 to-green-700 overflow-hidden">
+    <section class="relative py-20 mb-11 bg-gradient-to-r from-green-400 via-emerald-300 to-green-700 overflow-hidden">
         <div class="absolute inset-0 bg-green-950 opacity-60 mix-blend-multiply"></div>
 
         <div class="relative z-10 max-w-5xl mx-auto px-6 text-center text-white">
