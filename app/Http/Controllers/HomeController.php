@@ -102,7 +102,8 @@ class HomeController extends Controller
 
     public function contactUs()
     {
-        return view('contact-us');
+        $faqs = Faqs::limit(5)->get();
+        return view('contact-us', ['faqs' => $faqs]);
     }
 
     public function faqs() {
