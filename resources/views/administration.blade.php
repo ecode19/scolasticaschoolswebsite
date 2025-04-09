@@ -19,76 +19,65 @@
     </section>
 
     {{-- administration structure --}}
-    <section class="py-12">
-        <div class="w-11/12 mx-auto text-center rounded-3xl shadow-2xl mt-28">
-            <div class="flex flex-col justify-center items-center">
-                {{-- <img src="{{ asset('images/ministry-of-toursim.png') }}" alt="" class="w-56 h-56 rounded-full"> --}}
-                <h1 class="text-2xl text-green-700 font-bold"><span class="font-normal text-gray-900">Name:</span> Mr. Edward
-                    Shayo & Mrs. Edward Shayo</h1>
-                <h1><span class="font-semibold">Position:</span>
-                    Founders & Managing Directors
+    <section class="py-24 bg-gradient-to-b from-white via-green-50 to-white">
+        <div class="container mx-auto px-6">
+            <!-- Section Header -->
+            <div class="text-center mb-20">
+                <h1 class="text-5xl font-extrabold text-green-800 leading-tight mb-4">
+                    Meet Our Leadership Team
                 </h1>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Passionate individuals guiding Scolastica Schools with vision, excellence, and integrity.
+                </p>
             </div>
 
-            <div
-                class="flex flex-col md:flex-row items-center justify-center bg-white rounded-xl shadow-lg p-8 px-8 py-12 mt-12">
-                <div class="w-full md:w-1/4 flex flex-col justify-center items-center">
-                    <h1 class="text-xl text-green-700 font-bold"><span class="font-normal text-gray-900">Name:</span> Mr.
-                        Peter
-                        Mayoki </h1>
-                    <h1 class="text-xl text-green-700 font-bold"><span class="font-normal text-gray-900">Position:</span>
-                        Headteacher
-                    </h1>
-                    <p class="p-6 text-justify leading-relaxed">
-                        A dynamic and seasoned leader, Mr. Peter Mayoki heads Scolastica Schools, ensuring that academic
+            <!-- Founders -->
+            <div class="bg-white rounded-3xl shadow-2xl p-10 mb-16 animate-fade-up">
+                <div class="flex flex-col items-center text-center">
+                    {{-- <img src="{{ asset('images/ministry-of-toursim.png') }}" alt="" class="w-40 h-40 rounded-full mb-6 shadow-lg"> --}}
+                    <h2 class="text-3xl font-bold text-green-800">Mr. Edward Shayo & Mrs. Edward Shayo</h2>
+                    <p class="text-lg text-gray-700 mt-2">Founders & Managing Directors</p>
+                </div>
+            </div>
+
+            <!-- Leadership Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 animate-fade-up delay-100">
+                <!-- Card -->
+                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl p-8 transition-all duration-300">
+                    <h3 class="text-xl font-bold text-green-800 mb-1">Mr. Peter Mayoki</h3>
+                    <p class="text-green-700 mb-4">Headteacher</p>
+                    <p class="text-gray-700 text-justify text-sm leading-relaxed">
+                        A dynamic and seasoned leader, Mr. Peter Mayoki heads Scolastica Schools, ensuring academic
                         standards, student welfare, and school operations run smoothly. His dedication to holistic education
-                        has been instrumental in making Scolastica Schools a center of excellence.
+                        has been instrumental in building a center of excellence.
                     </p>
                 </div>
 
-                <div class="w-full md:w-1/4 flex flex-col justify-center items-center">
-                    <h1 class="text-xl text-green-700 font-bold">
-                        <span class="">Name:</span> Mr. Peter Mashinde
-                    </h1>
-                    <h1 class="text-xl text-green-700 font-bold">
-                        <span class="font-normal text-gray-900">Position:</span>
-                        Deputy Headteacher (Secondary School)
-                    </h1>
-                    <p class="p-6 text-justify leading-relaxed">
-                        A passionate and experienced educationist, Mr. Peter Mashinde leads the Secondary School Division,
-                        ensuring that students are prepared for national and international success through quality
-                        education, discipline, and personal development programs.
+                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl p-8 transition-all duration-300">
+                    <h3 class="text-xl font-bold text-green-800 mb-1">Mr. Peter Mashinde</h3>
+                    <p class="text-green-700 mb-4">Deputy Headteacher (Secondary School)</p>
+                    <p class="text-gray-700 text-justify text-sm leading-relaxed">
+                        A passionate educationist, Mr. Mashinde ensures students are prepared for national and international
+                        success through quality education, discipline, and personal development in the Secondary School
+                        Division.
                     </p>
                 </div>
 
-                <div class="w-full md:w-1/4 flex flex-col justify-center items-center">
-                    <h1 class="text-xl text-green-700 font-bold">
-                        <span class="font-normal text-gray-900">Name:</span> Mr. Madam Shirima
-                    </h1>
-                    <h1 class="text-xl text-green-700 font-bold">
-                        <span class="font-normal text-gray-900">Position:</span>
-                        Deputy Headteacher (Primary School)
-                    </h1>
-                    <p class="p-6 text-justify leading-relaxed">
-                        As the Deputy Headteacher for Primary School, Madam Shirima plays a key role in shaping young minds.
-                        She leads the primary school team, ensuring innovative teaching methods, a nurturing environment,
-                        and a solid foundation for lifelong learning.
+                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl p-8 transition-all duration-300">
+                    <h3 class="text-xl font-bold text-green-800 mb-1">Madam Shirima</h3>
+                    <p class="text-green-700 mb-4">Deputy Headteacher (Primary School)</p>
+                    <p class="text-gray-700 text-justify text-sm leading-relaxed">
+                        Madam Shirima leads the primary school with passion, fostering a nurturing environment that
+                        encourages curiosity and foundational skills for lifelong learning.
                     </p>
                 </div>
 
-                <div class="w-full md:w-1/4 flex flex-col justify-center items-center">
-                    <h1 class="text-xl text-green-700 font-bold">
-                        <span class="font-semibold">Name:</span> Mr. Denis Engola & Mr. Ally Mkupaya
-                    </h1>
-                    <h1 class="text-xl text-green-700 font-bold">
-                        <span class="font-normal text-gray-900">Position:</span>
-                        Academic Heads
-                    </h1>
-                    <p class="p-6 text-justify leading-relaxed">
-                        Dedicated to maintaining high academic standards, Mr. Denis Engola and Mr. Ally Mkupaya oversee
-                        curriculum development, teacher training, and academic excellence across all school levels. Their
-                        focus is on ensuring that Scolastica Schools remains at the forefront of education in Tanzania and
-                        beyond.
+                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl p-8 transition-all duration-300">
+                    <h3 class="text-xl font-bold text-green-800 mb-1">Mr. Denis Engola & Mr. Ally Mkupaya</h3>
+                    <p class="text-green-700 mb-4">Academic Heads</p>
+                    <p class="text-gray-700 text-justify text-sm leading-relaxed">
+                        Tasked with curriculum development and academic standards, these visionary leaders ensure that
+                        Scolastica Schools upholds educational excellence at all levels across Tanzania and beyond.
                     </p>
                 </div>
             </div>
@@ -130,137 +119,96 @@
     </section>
 
     {{-- Why Choose Scolastica Schools --}}
-    <section class="py-12">
-        <div class="w-11/12 mx-auto">
-            <h1 class="text-center text-4xl font-semibold text-green-800 mb-5">Why Choose Scolastica Schools</h1>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5" data-aos="zoom-in"
-                data-aos-duration="2000">
+    <section class="py-20 bg-gradient-to-b from-green-50 via-white to-green-50">
+        <div class="w-11/12 max-w-7xl mx-auto">
+            <h1 class="text-center text-4xl md:text-5xl font-extrabold text-green-900 mb-12 tracking-tight leading-snug">
+                Why Choose <span class="text-green-700">Scolastica Schools</span>
+            </h1>
 
-                <div class="w-full flex flex-col justify-center items-center gap-5 mb-5 py-10 px-6 shadow-2xl">
-                    <h1 class="text-green-800 font-semibold text-xl"> Academic Excellence & Holistic Development</h1>
-                    <ul class="text-lg text-gray-700 leading-relaxed list-inside">
-                        <li class="mb-3">
-                            <i class="fa fa-arrow-right px-4"></i> A rigorous curriculum that balances academics,
-                            leadership, and
-                            personal growth
-                        </li>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up" data-aos-duration="1500">
 
-                        <li class="mb-3">
-                            <i class="fa fa-arrow-right px-4"></i> Exceptional performance in NECTA, IGCSE, and
-                            international
-                            exams.
-                        </li>
-
-                        <li class="mb-3">
-                            <i class="fa fa-arrow-right px-4"></i> Highly qualified teachers with modern teaching
-                            methodologies.
-                        </li>
+                <!-- Feature Box -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 text-center">
+                    <h2 class="text-green-800 font-bold text-xl mb-4">Academic Excellence & Holistic Development</h2>
+                    <ul class="text-gray-700 text-base space-y-4 text-left">
+                        <li><i class="fa fa-arrow-right text-green-700 mr-3"></i> A rigorous curriculum blending academics,
+                            leadership, and personal growth.</li>
+                        <li><i class="fa fa-arrow-right text-green-700 mr-3"></i> Exceptional performance in NECTA, IGCSE,
+                            and global assessments.</li>
+                        <li><i class="fa fa-arrow-right text-green-700 mr-3"></i> Highly qualified teachers applying
+                            innovative teaching strategies.</li>
                     </ul>
                 </div>
 
-                <div class="w-full flex flex-col justify-center items-center gap-5 mb-5 py-10 px-6 shadow-2xl">
-                    <h1 class="text-green-800 font-semibold text-xl"> Global Perspective & International Opportunities</h1>
-                    <ul class="text-lg text-gray-700 leading-relaxed list-inside">
-                        <li class="mb-3">
-                            <i class="fa fa-arrow-right px-4"></i> Offering Kiswahili, French, and Chinese (Mandarin) for
-                            multilingual proficiency.
-                        </li>
-
-                        <li class="mb-3">
-                            <i class="fa fa-arrow-right px-4"></i>Global partnerships for student exchange programs and
-                            international university pathways.
-                        </li>
-
-                        <li class="mb-3">
-                            <i class="fa fa-arrow-right "></i> Preparation for SAT, IELTS, and TOEFL to support global
-                            higher
-                            education.
-                        </li>
+                <!-- Feature Box -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 text-center">
+                    <h2 class="text-green-800 font-bold text-xl mb-4">Global Perspective & International Opportunities</h2>
+                    <ul class="text-gray-700 text-base space-y-4 text-left">
+                        <li><i class="fa fa-arrow-right text-green-700 mr-3"></i> Kiswahili, French & Mandarin for
+                            multilingual fluency.</li>
+                        <li><i class="fa fa-arrow-right text-green-700 mr-3"></i> Global partnerships and student exchange
+                            programs.</li>
+                        <li><i class="fa fa-arrow-right text-green-700 mr-3"></i> Preparation for SAT, IELTS, TOEFL & global
+                            university pathways.</li>
                     </ul>
                 </div>
 
-                <div class="w-full flex flex-col justify-center items-center gap-5 mb-5 py-10 px-6 shadow-2xl">
-                    <h1 class="text-green-800 font-semibold text-xl"> Modern Facilities & Digital Learning</h1>
-                    <ul class="text-lg text-gray-700 leading-relaxed list-inside">
-                        <li class="mb-3">
-                            <i class="fa fa-arrow-right px-4"></i>Smart classrooms, science labs, and fully-equipped ICT
-                            centers.
-                        </li>
-
-                        <li class="mb-3">
-                            <i class="fa fa-arrow-right px-4"></i>Robotics, coding, and STEM innovation programs.
-                        </li>
-
-                        <li class="mb-3">
-                            <i class="fa fa-arrow-right px-4"></i>Integration of Microsoft & Google for Education tools.
-                        </li>
+                <!-- Feature Box -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 text-center">
+                    <h2 class="text-green-800 font-bold text-xl mb-4">Modern Facilities & Digital Learning</h2>
+                    <ul class="text-gray-700 text-base space-y-4 text-left">
+                        <li><i class="fa fa-arrow-right text-green-700 mr-3"></i> Smart classrooms, science labs & ICT
+                            centers.</li>
+                        <li><i class="fa fa-arrow-right text-green-700 mr-3"></i> Robotics, coding & STEM innovation
+                            programs.</li>
+                        <li><i class="fa fa-arrow-right text-green-700 mr-3"></i> Microsoft & Google for Education tools
+                            integration.</li>
                     </ul>
                 </div>
 
-                <div class="w-full flex flex-col justify-center items-center gap-5 mb-5 py-10 px-6 shadow-2xl">
-                    <h1 class="text-green-800 font-semibold text-xl"> Co-Curricular & Talent Development</h1>
-                    <ul class="text-lg text-gray-700 leading-relaxed list-inside">
-                        <li class="mb-3">
-                            <i class="fa fa-arrow-right px-4"></i>Sports, music, drama, art, and cultural activities for
-                            well-rounded growth.
-                        </li>
-
-                        <li class="mb-3">
-                            <i class="fa fa-arrow-right px-4"></i>Specialized clubs like debate, entrepreneurship, and
-                            environmental awareness.
-                        </li>
-
-                        <li class="mb-3">
-                            <i class="fa fa-arrow-right px-4"></i>Competitive sports training with access to national
-                            tournaments.
-                        </li>
+                <!-- Feature Box -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 text-center">
+                    <h2 class="text-green-800 font-bold text-xl mb-4">Co-Curricular & Talent Development</h2>
+                    <ul class="text-gray-700 text-base space-y-4 text-left">
+                        <li><i class="fa fa-arrow-right text-green-700 mr-3"></i> Sports, music, art & cultural activities
+                            for whole-child development.</li>
+                        <li><i class="fa fa-arrow-right text-green-700 mr-3"></i> Clubs in debate, entrepreneurship, and
+                            sustainability.</li>
+                        <li><i class="fa fa-arrow-right text-green-700 mr-3"></i> Competitive sports training with access to
+                            national tournaments.</li>
                     </ul>
                 </div>
 
-                <div class="w-full flex flex-col justify-center items-center gap-5 mb-5 py-10 px-6 shadow-2xl">
-                    <h1 class="text-green-800 font-semibold text-xl"> A Safe & Supportive Learning Environment</h1>
-                    <ul class="text-lg text-gray-700 leading-relaxed list-inside">
-                        <li class="mb-3">
-                            <i class="fa fa-arrow-right px-4"></i>Strong mentorship and guidance programs for personal
-                            development.
-                        </li>
-
-                        <li class="mb-3">
-                            <i class="fa fa-arrow-right px-4"></i>Zero-tolerance for bullying – a culture of respect,
-                            discipline, and inclusivity.
-                        </li>
-
-                        <li class="mb-3">
-                            <i class="fa fa-arrow-right px-4"></i>A nurturing atmosphere where students feel supported,
-                            challenged, and motivated.
-                        </li>
+                <!-- Feature Box -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 text-center">
+                    <h2 class="text-green-800 font-bold text-xl mb-4">Safe & Supportive Environment</h2>
+                    <ul class="text-gray-700 text-base space-y-4 text-left">
+                        <li><i class="fa fa-arrow-right text-green-700 mr-3"></i> Mentorship programs for personal and
+                            academic growth.</li>
+                        <li><i class="fa fa-arrow-right text-green-700 mr-3"></i> Culture of respect, inclusivity, and
+                            zero-tolerance for bullying.</li>
+                        <li><i class="fa fa-arrow-right text-green-700 mr-3"></i> A nurturing and motivating school
+                            atmosphere.</li>
                     </ul>
                 </div>
 
-                <div class="w-full flex flex-col justify-center items-center gap-5 mb-5 py-10 px-6 shadow-2xl">
-                    <h1 class="text-green-800 font-semibold text-xl"> Leadership & Career Readiness</h1>
-                    <ul class="text-lg text-gray-700 leading-relaxed list-inside">
-                        <li class="mb-3">
-                            <i class="fa fa-arrow-right px-4"></i>Emphasis on critical thinking, problem-solving, and
-                            real-world
-                            application.
-                        </li>
-
-                        <li class="mb-3">
-                            <i class="fa fa-arrow-right px-4"></i>Internship and mentorship programs with business leaders
-                            and
-                            professionals.
-                        </li>
-
-                        <li class="mb-3">
-                            <i class="fa fa-arrow-right px-4"></i>Strong alumni network with graduates excelling in top
-                            universities and careers.
-                        </li>
+                <!-- Feature Box -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 text-center">
+                    <h2 class="text-green-800 font-bold text-xl mb-4">Leadership & Career Readiness</h2>
+                    <ul class="text-gray-700 text-base space-y-4 text-left">
+                        <li><i class="fa fa-arrow-right text-green-700 mr-3"></i> Focus on critical thinking, innovation &
+                            real-world problem-solving.</li>
+                        <li><i class="fa fa-arrow-right text-green-700 mr-3"></i> Internships & mentorships with industry
+                            professionals.</li>
+                        <li><i class="fa fa-arrow-right text-green-700 mr-3"></i> Thriving alumni in top global universities
+                            and careers.</li>
                     </ul>
                 </div>
+
             </div>
         </div>
     </section>
+
 
     {{-- choose us --}}
     <section class="py-12 lg:py-28 bg-green-800">

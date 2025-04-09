@@ -19,6 +19,7 @@ class HomeController extends Controller
 {
     public function index()
     {
+        $academicLevels = AcademicLevel::all();
         $news = NewsEvent::where('type', 'news')->orderBy('created_at', 'desc')->limit(3)->get();
         $academicLevels = AcademicLevel::all();
         $testimonials = Testimonial::all();
@@ -76,26 +77,31 @@ class HomeController extends Controller
         return view('about-event', compact('event'));
     }
 
-    public function curriculum() {
+    public function curriculum()
+    {
         $academicLevels = AcademicLevel::all();
         return view('curriculum', ['academicLevels' => $academicLevels]);
     }
 
-    public function subjectsOffered() {
+    public function subjectsOffered()
+    {
         $academicLevels = AcademicLevel::with('subjects')->get();
         return view('subjects-offered', ['academicLevels' => $academicLevels]);
     }
 
-    public function studyLevels() {
+    public function studyLevels()
+    {
         $academicLevels = AcademicLevel::all();
         return view('study-levels', ['academicLevels' => $academicLevels]);
     }
 
-    public function studyLevel(AcademicLevel $level) {
+    public function studyLevel(AcademicLevel $level)
+    {
         return view('study-level', ['level' => $level]);
     }
 
-    public function teachingMethods() {
+    public function teachingMethods()
+    {
         $methods = LearningApproach::all();
         return view('teaching-methods', ['methods' => $methods]);
     }
@@ -106,12 +112,14 @@ class HomeController extends Controller
         return view('contact-us', ['faqs' => $faqs]);
     }
 
-    public function faqs() {
+    public function faqs()
+    {
         $faqs = Faqs::all();
         return view('faqs', ['faqs' => $faqs]);
     }
 
-    public function extracurricularActivities() {
+    public function extracurricularActivities()
+    {
         $clubs = Club::all();
         $achievements = Achievement::all();
         return view('extracurricular-activities', ['clubs' => $clubs, 'achievements' => $achievements]);
