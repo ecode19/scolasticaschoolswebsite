@@ -10,7 +10,7 @@
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-   @include('partials.cssLinks')
+    @include('partials.cssLinks')
 </head>
 
 <body>
@@ -87,6 +87,11 @@
                         class="w-full flex items-center text-lg font-semibold hover:bg-green-300 rounded-sm"><i
                             class="fa fa-newspaper mx-1 p-2 my-2"></i>
                         <li>Blog</li>
+                    </a>
+                    <a href="{{ route('admin.staff.index') }}"
+                        class="w-full flex items-center text-lg font-semibold hover:bg-green-300 rounded-sm"><i
+                            class="fa fa-newspaper mx-1 p-2 my-2"></i>
+                        <li>Staff Management</li>
                     </a>
                 </ul>
             </div>

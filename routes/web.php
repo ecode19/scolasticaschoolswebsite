@@ -12,21 +12,22 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NewsEvent\NewsEventController;
 use App\Http\Controllers\LearnigApproachController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Staff\StaffController;
 use App\Http\Controllers\SubjectCategoryController;
 use App\Http\Controllers\SubjectsController;
 use App\Http\Controllers\TestimonialController;
 use Illuminate\Support\Facades\Route;
 
 Route::controller(HomeController::class)->group(function () {
-    Route::get('/',  'index')->name('index');
-    Route::get('/curriculum',  'curriculum')->name('curriculum');
-    Route::get('/welcome-message',  'welcomeMessage')->name('welcome-message');
-    Route::get('/subjects-offered',  'subjectsOffered')->name('subjects-offered');
-    Route::get('/study-levels',  'studyLevels')->name('study-levels');
-    Route::get('/study-levels/{level}',  'studyLevel')->name('study-level');
-    Route::get('/teaching-methods',  'teachingMethods')->name('teaching-methods');
-    Route::get('/contact-us',  'contactUs')->name('contact-us');
-    Route::get('/extracurricular-activities',  'extracurricularActivities')->name('extracurricular-activities');
+    Route::get('/', 'index')->name('index');
+    Route::get('/curriculum', 'curriculum')->name('curriculum');
+    Route::get('/welcome-message', 'welcomeMessage')->name('welcome-message');
+    Route::get('/subjects-offered', 'subjectsOffered')->name('subjects-offered');
+    Route::get('/study-levels', 'studyLevels')->name('study-levels');
+    Route::get('/study-levels/{level}', 'studyLevel')->name('study-level');
+    Route::get('/teaching-methods', 'teachingMethods')->name('teaching-methods');
+    Route::get('/contact-us', 'contactUs')->name('contact-us');
+    Route::get('/extracurricular-activities', 'extracurricularActivities')->name('extracurricular-activities');
     Route::get('our-history', 'ourHistory')->name('our-history');
     Route::get('our-mission-and-vision', 'missionVision')->name('mission-vision');
     Route::get('administration-staff', 'administration')->name('administration');
@@ -39,7 +40,6 @@ Route::controller(HomeController::class)->group(function () {
     Route::get('student-achievements', 'studentAchievements')->name('student-achievements');
     Route::get('school/events', 'schoolEvents')->name('school-events');
     Route::get('/school/events/{title}', 'aboutEvent')->name('about-event');
-    // Route::get('/{title}', 'aboutEvent')->name('about-event');
     Route::get('/blog', 'blog')->name('blog');
     Route::get('/blog/{post}', 'blogPost')->name('blog-post');
     Route::get('/blog/category/{category}', 'categoryPosts')->name('blog-category-posts');
@@ -50,12 +50,6 @@ Route::controller(AdminController::class)->group(function () {
     Route::get('4', 'Dashboard')->name('admin.dashboard');
 });
 
-// Route::controller(BlogController::class)->group(function () {
-//     Route::get('/admin/blog/posts', 'index')->name('admin.blog.index');
-//     Route::get('/admin/blog/posts/post', 'show')->name('admin.blog.show');
-//     Route::get('/admin/blog/posts/create', 'create')->name('admin.blog.create');
-// });
-
 // news event controller
 Route::controller(NewsEventController::class)->prefix('admin/news/event')->name('admin.news.event.')->group(function () {
     Route::get('index', 'newsEventIndex')->name('index');
@@ -64,6 +58,17 @@ Route::controller(NewsEventController::class)->prefix('admin/news/event')->name(
     Route::get('edit/{newsEvent}', 'newsEventEdit')->name('edit');
     Route::put('update/{newsEvent}', 'newsEventUpdate')->name('update');
     Route::delete('destroy/{newsEvent}', 'newsEventDestroy')->name('destroy');
+});
+
+// staff related routes
+Route::controller(StaffController::class)->prefix('admin/staff')->name('admin.staff.')->group(function () {
+    Route::get('index', 'staffIndex')->name('index');
+    Route::get('create', 'staffCreate')->name('create');
+    Route::post('store', 'staffStore')->name('store');
+    Route::get('edit/{staff}', 'staffEdit')->name('edit');
+    Route::put('update/{staff}', 'staffUpdate')->name('update');
+    Route::delete('destroy/{staff}', 'staffDestroy')->name('destroy');
+
 });
 
 Route::prefix('admin')->as('admin.')->group(function () {

@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('title') | {{ config('app.name') }}</title>
+    {{-- <title>@yield('title') | {{ config('app.name') }}</title> --}}
+
+    {!! SEO::generate() !!}
+    {!! OpenGraph::generate() !!}
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -55,7 +58,8 @@
                     <div x-data="{ open: false }" class="relative group">
                         <x-dropdown title="About Us">
                             <li><a href="{{ route('welcome-message') }}"
-                                    class="block px-4 py-2 hover:bg-green-100 transition text-green-950">Welcome Message</a>
+                                    class="block px-4 py-2 hover:bg-green-100 transition text-green-950">Welcome
+                                    Message</a>
                             </li>
                             <li><a href="{{ route('our-history') }}"
                                     class="block px-4 py-2 hover:bg-green-100 transition text-green-950">Our History</a>
@@ -140,7 +144,7 @@
             </div>
             <div class="w-full md:w-1/4 p-4 order-4 md:order-2 flex flex-col md:items-center">
                 <h1 class="text-2xl mb-2">Stay in Touch</h1>
-                <p class="text-lg hover:text-green-400"><a href="{{route('faqs')}}">FAQS</a></p>
+                <p class="text-lg hover:text-green-400"><a href="{{ route('faqs') }}">FAQS</a></p>
                 <div class="flex flex-row space-x-2 md:flex-col md:space-y-2 md:space-x-0 text-2xl text-green-100">
                     <a href="#"><i class="fab fa-facebook hover:text-blue-700"></i></a>
                     <a href="#"><i class="fab fa-instagram hover:text-red-500"></i></a>

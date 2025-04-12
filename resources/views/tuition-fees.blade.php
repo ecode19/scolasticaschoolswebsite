@@ -1,5 +1,4 @@
 @extends('layouts.guest')
-@section('title', 'Tuition Fees')
 @section('content')
     {{-- Hero Section --}}
     <section>
@@ -46,11 +45,11 @@
                     <h3 class="text-2xl font-bold text-green-700 mt-6">Kindergarten</h3>
                     <p class="text-gray-600 mt-2 italic">Laying a strong foundation for young learners.</p>
                     <ul class="mt-6 text-gray-700 text-left space-y-2">
-                        <li><strong>Tuition:</strong> TZS 450,000 per term</li>
-                        <li><strong>Meals:</strong> TZS 150,000 per term</li>
-                        <li><strong>Uniform:</strong> TZS 100,000 (one-time)</li>
-                        <li><strong>Total Estimate:</strong> <span class="text-green-700 font-semibold">TZS
-                                700,000/term</span></li>
+                        <li><strong>Tuition:</strong> Affordable and inclusive</li>
+                        <li><strong>Meals:</strong> Included in our flexible packages</li>
+                        <li><strong>Uniform:</strong> Provided at minimal cost</li>
+                        <li><strong>Estimate:</strong> <span class="text-green-700 font-semibold">Designed to be
+                                budget-friendly for young families</span></li>
                     </ul>
                 </div>
 
@@ -64,11 +63,11 @@
                     <h3 class="text-2xl font-bold text-blue-700 mt-6">Primary School</h3>
                     <p class="text-gray-600 mt-2 italic">Building character and knowledge.</p>
                     <ul class="mt-6 text-gray-700 text-left space-y-2">
-                        <li><strong>Tuition:</strong> TZS 600,000 per term</li>
-                        <li><strong>Boarding:</strong> TZS 400,000 per term</li>
-                        <li><strong>Books & Materials:</strong> TZS 150,000 annually</li>
-                        <li><strong>Total Estimate:</strong> <span class="text-blue-700 font-semibold">TZS
-                                1,000,000/term</span></li>
+                        <li><strong>Tuition:</strong> Flexible & competitive</li>
+                        <li><strong>Boarding:</strong> Available with manageable plans</li>
+                        <li><strong>Books & Materials:</strong> Covered through subsidized packages</li>
+                        <li><strong>Estimate:</strong> <span class="text-blue-700 font-semibold">Excellent value for quality
+                                education</span></li>
                     </ul>
                 </div>
 
@@ -82,11 +81,11 @@
                     <h3 class="text-2xl font-bold text-red-700 mt-6">Secondary School</h3>
                     <p class="text-gray-600 mt-2 italic">Preparing students for national & global success.</p>
                     <ul class="mt-6 text-gray-700 text-left space-y-2">
-                        <li><strong>Tuition:</strong> TZS 900,000 per term</li>
-                        <li><strong>Boarding:</strong> TZS 500,000 per term</li>
-                        <li><strong>National Exam Fees:</strong> TZS 100,000 annually</li>
-                        <li><strong>Total Estimate:</strong> <span class="text-red-700 font-semibold">TZS
-                                1,400,000/term</span></li>
+                        <li><strong>Tuition:</strong> Competitively priced with scholarship support</li>
+                        <li><strong>Boarding:</strong> Available for both boys and girls</li>
+                        <li><strong>National Exam Fees:</strong> Guided and well-supported</li>
+                        <li><strong>Estimate:</strong> <span class="text-red-700 font-semibold">Accessible for families at
+                                every income level</span></li>
                     </ul>
                 </div>
 
@@ -100,11 +99,11 @@
                     <h3 class="text-2xl font-bold text-purple-700 mt-6">A-Level</h3>
                     <p class="text-gray-600 mt-2 italic">Focused academic & career preparation.</p>
                     <ul class="mt-6 text-gray-700 text-left space-y-2">
-                        <li><strong>Tuition:</strong> TZS 1,100,000 per term</li>
-                        <li><strong>Boarding:</strong> TZS 550,000 per term</li>
-                        <li><strong>Lab & Practical Fees:</strong> TZS 200,000 annually</li>
-                        <li><strong>Total Estimate:</strong> <span class="text-purple-700 font-semibold">TZS
-                                1,650,000/term</span></li>
+                        <li><strong>Tuition:</strong> Reasonably structured for academic excellence</li>
+                        <li><strong>Boarding:</strong> Safe, comfortable, and affordable</li>
+                        <li><strong>Lab & Practical Fees:</strong> Covered with learning-focused resources</li>
+                        <li><strong>Estimate:</strong> <span class="text-purple-700 font-semibold">Great value for
+                                pre-university readiness</span></li>
                     </ul>
                 </div>
             </div>
@@ -112,192 +111,11 @@
             <!-- Optional CTA -->
             <div class="mt-16">
                 <p class="text-lg text-gray-700 font-semibold">
-                    For a detailed breakdown of fees and payment plans, feel free to reach out to our admissions team.
+                    Interested in a detailed breakdown? Contact our admissions office — we’re here to guide you through
+                    every step.
                 </p>
             </div>
 
-        </div>
-    </section>
-
-
-    {{-- section --}}
-    <section class="py-12">
-        <div class="w-11/12 mx-auto">
-            <h1 class="text-5xl font-bold text-center text-green-700">Flexible Installment & Payment Plans</h1>
-            <p class="text-lg text-gray-600 text-center mt-4">
-                We understand that every family has unique financial needs. To make tuition payments easier, Scolastica
-                Schools offers flexible installment plans tailored to Tanzanian school terms.
-            </p>
-
-            <div class="flex justify-center items-center">
-                {{-- table listing payment installment --}}
-                <div class="mt-8 w-full">
-                    <div
-                        class="relative flex flex-col w-full h-full overflow-scroll text-gray-700 bg-white shadow-md rounded-lg bg-clip-border">
-                        <table class="w-full text-left table-auto min-w-max">
-                            <thead>
-                                <tr>
-                                    <th class="p-4 border-b border-slate-300 bg-slate-50">
-                                        <p class="block text-sm font-normal leading-none text-slate-500">
-                                            Education Level
-                                        </p>
-                                    </th>
-                                    <th class="p-4 border-b border-slate-300 bg-slate-50">
-                                        <p class="block text-sm font-normal leading-none text-slate-500">
-                                            Plan Type
-                                        </p>
-                                    </th>
-                                    <th class="p-4 border-b border-slate-300 bg-slate-50">
-                                        <p class="block text-sm font-normal leading-none text-slate-500">
-                                            Payment Frequency
-                                        </p>
-                                    </th>
-                                    <th class="p-4 border-b border-slate-300 bg-slate-50">
-                                        <p class="block text-sm font-normal leading-none text-slate-500">
-                                            Installments
-                                        </p>
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <!-- Kindergarten -->
-                                <tr class="hover:bg-slate-50">
-                                    <td class="p-4 border-b border-slate-200">
-                                        <p class="block text-sm text-slate-800">
-                                            Kindergarten
-                                        </p>
-                                    </td>
-                                    <td class="p-4 border-b border-slate-200">
-                                        <p class="block text-sm text-slate-800">
-                                            Termly Plan
-                                        </p>
-                                    </td>
-                                    <td class="p-4 border-b border-slate-200">
-                                        <p class="block text-sm text-slate-800">
-                                            Once per term
-                                        </p>
-                                    </td>
-                                    <td class="p-4 border-b border-slate-200">
-                                        <p class="block text-sm text-slate-800">
-                                            3 payments (per term)
-                                        </p>
-                                    </td>
-                                </tr>
-
-                                <!-- Primary -->
-                                <tr class="hover:bg-slate-50">
-                                    <td class="p-4 border-b border-slate-200">
-                                        <p class="block text-sm text-slate-800">
-                                            Primary
-                                        </p>
-                                    </td>
-                                    <td class="p-4 border-b border-slate-200">
-                                        <p class="block text-sm text-slate-800">
-                                            Termly Plan
-                                        </p>
-                                    </td>
-                                    <td class="p-4 border-b border-slate-200">
-                                        <p class="block text-sm text-slate-800">
-                                            Once per term
-                                        </p>
-                                    </td>
-                                    <td class="p-4 border-b border-slate-200">
-                                        <p class="block text-sm text-slate-800">
-                                            3 payments (per term)
-                                        </p>
-                                    </td>
-                                </tr>
-
-                                <!-- Secondary -->
-                                <tr class="hover:bg-slate-50">
-                                    <td class="p-4 border-b border-slate-200">
-                                        <p class="block text-sm text-slate-800">
-                                            Secondary
-                                        </p>
-                                    </td>
-                                    <td class="p-4 border-b border-slate-200">
-                                        <p class="block text-sm text-slate-800">
-                                            Termly Plan
-                                        </p>
-                                    </td>
-                                    <td class="p-4 border-b border-slate-200">
-                                        <p class="block text-sm text-slate-800">
-                                            Once per term
-                                        </p>
-                                    </td>
-                                    <td class="p-4 border-b border-slate-200">
-                                        <p class="block text-sm text-slate-800">
-                                            3 payments (per term)
-                                        </p>
-                                    </td>
-                                </tr>
-
-                                <!-- A-Level -->
-                                <tr class="hover:bg-slate-50">
-                                    <td class="p-4 border-b border-slate-200">
-                                        <p class="block text-sm text-slate-800">
-                                            A-Level
-                                        </p>
-                                    </td>
-                                    <td class="p-4 border-b border-slate-200">
-                                        <p class="block text-sm text-slate-800">
-                                            Termly Plan
-                                        </p>
-                                    </td>
-                                    <td class="p-4 border-b border-slate-200">
-                                        <p class="block text-sm text-slate-800">
-                                            Once per term
-                                        </p>
-                                    </td>
-                                    <td class="p-4 border-b border-slate-200">
-                                        <p class="block text-sm text-slate-800">
-                                            3 payments (per term)
-                                        </p>
-                                    </td>
-                                </tr>
-
-                                <!-- Annual -->
-                                <tr class="hover:bg-slate-50">
-                                    <td class="p-4 border-b border-slate-200">
-                                        <p class="block text-sm text-slate-800">
-                                            Annually
-                                        </p>
-                                    </td>
-                                    <td class="p-4 border-b border-slate-200">
-                                        <p class="block text-sm text-slate-800">
-                                            Once per year
-                                        </p>
-                                    </td>
-                                    <td class="p-4 border-b border-slate-200">
-                                        <p class="block text-sm text-slate-800">
-                                            1 payment
-                                        </p>
-                                    </td>
-                                </tr>
-
-                                <!-- Monthly -->
-                                <tr class="hover:bg-slate-50">
-                                    <td class="p-4 border-b border-slate-200">
-                                        <p class="block text-sm text-slate-800">
-                                            Monthly Plan
-                                        </p>
-                                    </td>
-                                    <td class="p-4 border-b border-slate-200">
-                                        <p class="block text-sm text-slate-800">
-                                            Every month
-                                        </p>
-                                    </td>
-                                    <td class="p-4 border-b border-slate-200">
-                                        <p class="block text-sm text-slate-800">
-                                            10 payments
-                                        </p>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 

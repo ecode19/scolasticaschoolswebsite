@@ -1,5 +1,4 @@
 @extends('layouts.guest')
-@section('title', 'Mission-Vision')
 @section('content')
     {{-- hero section --}}
     <section class="bg-gray-400 relative">
@@ -27,8 +26,7 @@
                     <div class="p-10 flex flex-col justify-center items-center">
                         <h1 class="text-green-800 font-semibold text-4xl">Vision</h1>
                         <div class="border-2 w-16 border-green-700 mt-2"></div>
-                        <p class="text-center pt-5 leading-relaxed"> We're committed to excellence in every aspect of
-                            education.
+                        <p class="text-center pt-5 leading-relaxed">
                             To be the leading national school in Tanzania, where happy, well-rounded students achieve
                             academic success in a diverse and challenging atmosphere, preparing them to become leaders in
                             both national and global spheres.

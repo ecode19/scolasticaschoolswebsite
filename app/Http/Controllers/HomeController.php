@@ -12,7 +12,18 @@ use App\Models\Club;
 use App\Models\Faqs;
 use App\Models\LearningApproach;
 use App\Models\PostCategory;
+use App\Models\Staff\Staff;
 use App\Models\Testimonial;
+use App\Services\SEO\AboutEventSeo;
+use App\Services\SEO\AdministrationSeo;
+use App\Services\SEO\AdmissionProcessSeo;
+use App\Services\SEO\AdmissionRequirementsSeo;
+use App\Services\SEO\HistorySeo;
+use App\Services\SEO\MissionVisionSeo;
+use App\Services\SEO\ScholarshipAndAidSeo;
+use App\Services\SEO\SchoolEventsSeo;
+use App\Services\SEO\StudentAchievementsSeo;
+use App\Services\SEO\TuitionFeesSeo;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -32,38 +43,53 @@ class HomeController extends Controller
     }
     public function ourHistory()
     {
+        (new HistorySeo())->apply();
         return view('our-history');
     }
     public function missionVision()
     {
+        (new MissionVisionSeo())->apply();
         return view('mission-vision');
     }
     public function administration()
     {
-        return view('administration');
+        (new AdministrationSeo())->apply();
+        $staff = Staff::all();
+        return view('administration', compact('staff'));
     }
     public function admissionProcess()
     {
+        (new AdmissionProcessSeo())->apply();
         return view('admission-process');
     }
     public function admissionRequirements()
     {
+        (new AdmissionRequirementsSeo())->apply();
+
         return view('admission-requirements');
     }
     public function tuitionsFees()
     {
+        (new TuitionFeesSeo())->apply();
+
         return view('tuition-fees');
     }
     public function scholarshipAids()
     {
+        (new ScholarshipAndAidSeo())->apply();
+
         return view('scholarship-aids');
     }
     public function studentAchievements()
     {
+        (new StudentAchievementsSeo())->apply();
+
         return view('student-achievements');
     }
     public function schoolEvents()
     {
+        (new SchoolEventsSeo())->apply();
+
         $featuredEvents = NewsEvent::where('type', 'event')->where('status', 'featured')->orderBy('created_at', 'desc')->get();
         $pastEvents = NewsEvent::where('type', 'event')->where('status', 'past')->orderBy('created_at', 'desc')->get();
         $upcomingEvents = NewsEvent::where('type', 'event')->where('status', 'upcoming')->orderBy('created_at', 'desc')->get();
@@ -74,6 +100,7 @@ class HomeController extends Controller
     public function aboutEvent($title)
     {
         $event = NewsEvent::where('title', $title)->first();
+        (new AboutEventSeo())->apply($event);
         return view('about-event', compact('event'));
     }
 
