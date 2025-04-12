@@ -1,5 +1,4 @@
 @extends('layouts.guest')
-@section('title', 'About US')
 @section('content')
     <style>
         .tanzania-border {
@@ -47,9 +46,31 @@
             <h1 class="text-green-700 font-semibold text-4xl">Our History</h1>
             <div class="py-3">
                 <p class="text-justify text-gray-700 leading-relaxed">
-                    Scolastica Schools has a rich history of academic excellence, innovation, and holistic development.
-                    Since its establishment, the school has grown from a single institution to a multi-level academic
-                    powerhouse, shaping young minds into future leaders.
+                    For over 30 years, Scolastica School has been more than just a place of learning—it has been a launchpad
+                    for success, a home for creativity, and a community where young minds flourish. Since our founding in
+                    1994, we have remained steadfast in our mission to provide children with the very best start in life,
+                    shaping them into confident, capable, and compassionate individuals ready to take on the world. <br>
+                    <br>
+
+                    At Scolastica, education goes beyond textbooks. We cultivate curiosity, ignite passions, and instil
+                    values that last a lifetime. Our students don’t just learn—they discover, innovate, and grow in an
+                    environment that is safe, vibrant, and filled with joy. With a perfect blend of academic excellence and
+                    personal development, we equip them with the creativity to dream big, the confidence to chase their
+                    goals, and the courtesy to lead with kindness. <br> <br>
+
+                    Guiding them every step of the way is our team of dedicated, world-class educators—mentors who inspire,
+                    challenge, and support each child to reach their full potential. But education is a partnership, and our
+                    strong connection with parents ensures that every student is surrounded by encouragement, both at home
+                    and in school. <br> <br>
+
+                    Our students are more than learners; they are pioneers, leaders, and visionaries in the making. They are
+                    polite, independent, and eager to explore new horizons. But most importantly, they are happy. Because at
+                    Scolastica, we believe that happiness fuels success—and when children feel valued, they achieve
+                    greatness. <br> <br>
+
+                    Scolastica isn’t just a school; it’s a journey of discovery, a hub of excellence, and a family that
+                    nurtures brilliance. Trust us with your child’s future, and we promise to deliver not just achievers,
+                    but confident, compassionate, and world-ready individuals.
                 </p>
 
                 <h1 class="text-justify text-gray-700 leading-relaxed"> </h1>
@@ -73,51 +94,78 @@
                     @php
                         $timeline = [
                             [
-                                'year' => '2001',
+                                'year' => ' 1994 –1995 ',
                                 'title' => 'The Beginning',
                                 'desc' =>
-                                    'Scolastica Schools was founded by <span class="text-yellow-400 font-bold">Mr. & Mrs. Edward Shayo</span> with a vision to provide high-quality, values-based education in Tanzania.',
+                                    'Scolastica Schools was founded by <span class="text-yellow-400 font-bold">Ms Scolastica and Mr. Edward Shayo</span> with a vision to provide high-quality, values-based education in Tanzania. <br> The first campus was established from the scratch in a living-room home <br> environment with three pupils in kindergarten and the number gradually increased and after two years, the Lower Primary classes.',
                                 'highlight' => true,
                             ],
                             [
-                                'year' => '2002',
+                                'year' => '1996 - 1997',
                                 'title' => 'First Admissions & Early Growth',
                                 'desc' =>
-                                    'The school officially admitted its first batch of students in Kindergarten and Grades 1-3. Emphasis was placed on child-centered learning.',
+                                    'The school officially admitted its first batch of students in Kindergarten and Grades 1-3 <br> Emphasis was placed on child-centered learning and foundational literacy and numeracy skills.',
+                            ],
+                            [
+                                'year' => ' 1997 – 2004',
+                                'title' => 'Expansion to Full Primary School',
+                                'desc' => 'Due to increasing demand, Scolastica expanded to Upper Primary (Grades 4-7). <br>
+                                    Introduction of co-curricular activities such as music, arts, and sports. <br>
+                                    First class seven class graduated <br>
+                                    H. E. The President of the United Republic of Tanzania President Benjamine Wiliam Mkapa commissioned the primary school building
+                                    ',
                             ],
                             [
                                 'year' => '2005',
-                                'title' => 'Expansion to Full Primary School',
-                                'desc' =>
-                                    'Expanded to Upper Primary (Grades 4-7). Introduced co-curriculars: music, arts, and sports.',
+                                'title' => 'Introduction of Secondary Education (O-Level)',
+                                'desc' => 'The school launched its Secondary School (Ordinary Level), offering Form 1 to Form 4 (Grades 8-11) <br>
+                                   Accredited by the National Examination Council of Tanzania (NECTA) to administer CSEE (Certificate of Secondary Education Examination). <br>
+                                    ',
                             ],
                             [
-                                'year' => '2008',
-                                'title' => 'Secondary Education Introduced',
-                                'desc' => 'Started Form 1–4 (Grades 8–11). Accredited by NECTA to administer CSEE.',
+                                'year' => '2009',
+                                'title' => 'Establishment of High School (A-Level)',
+                                'desc' => 'Advanced Level (A-Level) classes (Form 5 & 6, Grades 12-13) were introduced. <br>
+                                    Specialized subject tracks introduced, including Science, Business, and Arts.
+                                    ',
                             ],
                             [
                                 'year' => '2012',
-                                'title' => 'National Exam Success',
-                                'desc' =>
-                                    'First Form 4 graduates achieved excellent NECTA results. Became a top private school.',
+                                'title' => 'First National Examination Success',
+                                'desc' => 'The first Form 4 (O-Level) cohort graduated, achieving excellent results in the NECTA exams. <br>
+                                    Scolastica became one of the top-performing private schools in the region.
+                                    ',
                             ],
+
                             [
-                                'year' => '2015',
-                                'title' => 'High School (A-Level)',
-                                'desc' =>
-                                    'Started Form 5 & 6 (Grades 12–13). Introduced Science, Business, and Arts tracks.',
+                                'year' => '2018',
+                                'title' => 'Modernization & Digital Learning',
+                                'desc' => 'Integration of smart classrooms, e-learning platforms, and ICT-based learning tools. <br>
+                                Partnership with Microsoft & Google for Education to enhance technology-driven education.
+                                ',
                             ],
                             [
                                 'year' => '2020',
-                                'title' => 'STEM & Languages',
-                                'desc' => 'Launched robotics and coding programs. Added French and Mandarin.',
+                                'title' => 'STEM & International Language Expansion',
+                                'desc' => 'Launch of STEM programs, including robotics, coding, and science fairs. <br>
+                              Introduction of French and Chinese (Mandarin) language programs for international exposure.
+                                ',
+                            ],
+
+                            [
+                                'year' => '2023',
+                                'title' => 'Global Recognition & University Success',
+                                'desc' => 'The school received recognition for academic excellence and leadership training. <br>
+                              Alumni successfully secured admissions to top universities locally and internationally.
+                                ',
                             ],
                             [
-                                'year' => '2025',
-                                'title' => 'Beyond',
-                                'desc' =>
-                                    'Advanced leadership programs. Strengthened global partnerships and student exchanges.',
+                                'year' => '2025 & Beyond',
+                                'title' => 'The Future of Scolastica Schools',
+                                'desc' => 'Expansion of more advanced co-curricular and International curriculum programs (IGCSE and As/A level)<br>
+                                    Strengthening international collaborations and student exchange programs. <br>
+                                    Continued focus on academic excellence, technology, and global competitiveness.
+                                    ',
                                 'highlight' => true,
                             ],
                         ];
@@ -128,7 +176,7 @@
                             class="snap-center min-w-[280px] sm:min-w-[350px] bg-white/10 backdrop-blur-sm rounded-2xl border border-yellow-500 p-6 flex-shrink-0 hover:scale-105 transition-all duration-500 ease-in-out">
                             <h3 class="text-white text-4xl font-bold text-center">{{ $item['year'] }}</h3>
                             <p class="text-yellow-400 text-center font-semibold text-xl mt-3">{{ $item['title'] }}</p>
-                            <p class="text-white text-sm mt-3 text-justify leading-relaxed">{!! $item['desc'] !!}</p>
+                            <p class="text-white text-sm mt-3 text-center leading-relaxed">{!! $item['desc'] !!}</p>
                         </div>
                     @endforeach
                 </div>
@@ -163,8 +211,9 @@
                     </div>
                     <h3 class="text-3xl font-semibold text-green-900 mb-4">Our Vision</h3>
                     <p class="text-lg text-gray-700 leading-relaxed">
-                        To become Tanzania’s top educational institution — nurturing joyful, well-rounded achievers
-                        in a diverse, future-forward environment that fosters local and global leadership.
+                        To be the leading national school in Tanzania, where happy, well-rounded students achieve academic
+                        success in a diverse and challenging atmosphere, preparing them to become leaders in both national
+                        and global spheres.
                     </p>
                 </div>
 
@@ -209,32 +258,51 @@
 
             <!-- Founder Card -->
             <div
-                class="max-w-4xl mx-auto bg-white border border-green-100 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 p-12 animate-fade-up delay-200">
+                class="max-w-8xl mx-auto bg-white border border-green-100 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 p-12 animate-fade-up delay-200">
                 <!-- Names -->
                 <h2 class="text-3xl font-bold text-green-900 mb-6 text-center tracking-tight">
-                    Mr. Edward Shayo & Mrs. Edward Shayo
+                    Ms. Scolastica Edward Shayo & Mr. Edward Shayo
                     <br>
                     <span class="text-xl font-medium text-green-600">Founders & Managing Directors</span>
                 </h2>
 
                 <!-- Description -->
-                <p class="text-lg text-gray-700 text-center leading-relaxed mb-10 max-w-3xl mx-auto">
-                    With a bold vision and an unshakeable commitment to education, our founders laid the cornerstone of
-                    Scolastica Schools. Their unwavering dedication continues to inspire generations, shaping minds with
-                    values of integrity, leadership, and academic excellence.
+                <p class="text-lg text-gray-700 text-center leading-relaxed mb-10 mx-auto">
+                    Our visionary founders, Ms. Scolastica Edward Shayo and Mr. Edward Shayo established Scolastica Schools
+                    with the mission to provide a world-class education that nurtures academic excellence, integrity, and
+                    leadership. With years of experience in Hospitality and Engineering, have a deep commitment to shaping
+                    future leaders, they continue to guide the school towards achieving its vision of being the best
+                    national school in Tanzania.
                 </p>
 
-                <!-- Button -->
-                <div class="flex justify-center">
-                    <a href="{{ route('administration') }}"
-                        class="inline-block px-8 py-3 border-2 border-green-700 text-green-700 font-semibold rounded-lg transition-all duration-300 hover:bg-green-700 hover:text-white hover:shadow-md hover:-translate-y-1">
-                        Learn More
-                    </a>
+                <div>
+                    <h2 class="text-xl font-bold text-green-900 mb-6 tracking-tight">
+                        A Heartfelt Tribute to Ms. Scolastica Edward Shayo
+                    </h2>
+                    {{-- condolences --}}
+                    <p class="text-lg text-gray-700 text-justify leading-relaxed mb-10 mx-auto">
+                        With deep gratitude and immense admiration, Scolastica School extends our heartfelt thanks to Ms.
+                        Scolastica Edward Shayo for her extraordinary vision and dedication, in establishing Scolastica
+                        Schools. <br><br>
+
+                        Scolastica began in the sitting room of Ms. Scolastica Edward Shayo with just three pupils—a humble
+                        yet powerful beginning that blossomed into an institution of excellence. What started as a simple
+                        dream has flourished into a beacon of knowledge, shaping young minds and empowering future leaders.
+                        <br><br>
+
+                        Your unwavering commitment to education has transformed countless lives, providing a foundation of
+                        excellence, discipline, and opportunity for generations to come. Your passion, resilience, and
+                        relentless pursuit of academic excellence continue to inspire students, teachers, and the entire
+                        community. Because of your efforts, Scolastica Schools stand as a testament to the power of
+                        education and the impact of a single individual’s dream to create lasting change.
+                    </p>
+
+                    <h2 class="italic text-green-800">Thank you, Ms. Scolastica Edward Shayo, for your incredible
+                        legacy and for nurturing the bright minds of tomorrow</h2>
                 </div>
             </div>
         </div>
     </section>
-
 
     {{-- Accredited --}}
     <section class="py-10">

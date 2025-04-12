@@ -1,5 +1,4 @@
 @extends('layouts.guest')
-@section('title', 'About US')
 @section('content')
     {{-- Hero Section --}}
     <section>
