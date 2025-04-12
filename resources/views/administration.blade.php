@@ -1,5 +1,4 @@
 @extends('layouts.guest')
-@section('title', 'Administration Structure')
 @section('content')
     {{-- Hero Section --}}
     <section class="bg-gray-400 relative">
@@ -33,17 +32,29 @@
 
             <!-- Founders -->
             <div class="bg-white rounded-3xl shadow-2xl p-10 mb-16 animate-fade-up">
-                <div class="flex flex-col items-center text-center">
-                    {{-- <img src="{{ asset('images/ministry-of-toursim.png') }}" alt="" class="w-40 h-40 rounded-full mb-6 shadow-lg"> --}}
-                    <h2 class="text-3xl font-bold text-green-800">Mr. Edward Shayo & Mrs. Edward Shayo</h2>
-                    <p class="text-lg text-gray-700 mt-2">Founders & Managing Directors</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 animate-fade-up delay-100">
+                    <div class="flex flex-col items-center text-center">
+                        <img src="{{ asset('images/ministry-of-toursim.png') }}" alt=""
+                            class="w-40 h-40 rounded-full mb-6 shadow-lg">
+                        <h2 class="text-3xl font-bold text-green-800">Mrs. Edward Shayo</h2>
+                        <p class="text-lg text-gray-700 mt-2">Founder & Managing Director</p>
+                    </div>
+
+                    <div class="flex flex-col items-center text-center">
+                        <img src="{{ asset('images/ministry-of-toursim.png') }}" alt=""
+                            class="w-40 h-40 rounded-full mb-6 shadow-lg">
+                        <h2 class="text-3xl font-bold text-green-800">Mr. Edward Shayo</h2>
+                        <p class="text-lg text-gray-700 mt-2">Founder & Managing Director</p>
+                    </div>
                 </div>
             </div>
 
             <!-- Leadership Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 animate-fade-up delay-100">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 animate-fade-up delay-100">
                 <!-- Card -->
-                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl p-8 transition-all duration-300">
+                <div class="bg-white rounded-2xl items-center shadow-lg hover:shadow-2xl p-8 transition-all duration-300">
+                    <img src="{{ asset('images/ministry-of-toursim.png') }}" alt=""
+                        class="w-40 h-40 rounded-full mb-6 shadow-lg">
                     <h3 class="text-xl font-bold text-green-800 mb-1">Mr. Peter Mayoki</h3>
                     <p class="text-green-700 mb-4">Headteacher</p>
                     <p class="text-gray-700 text-justify text-sm leading-relaxed">
@@ -54,6 +65,8 @@
                 </div>
 
                 <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl p-8 transition-all duration-300">
+                    <img src="{{ asset('images/ministry-of-toursim.png') }}" alt=""
+                        class="w-40 h-40 rounded-full mb-6 shadow-lg">
                     <h3 class="text-xl font-bold text-green-800 mb-1">Mr. Peter Mashinde</h3>
                     <p class="text-green-700 mb-4">Deputy Headteacher (Secondary School)</p>
                     <p class="text-gray-700 text-justify text-sm leading-relaxed">
@@ -64,6 +77,8 @@
                 </div>
 
                 <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl p-8 transition-all duration-300">
+                    <img src="{{ asset('images/ministry-of-toursim.png') }}" alt=""
+                        class="w-40 h-40 rounded-full mb-6 shadow-lg">
                     <h3 class="text-xl font-bold text-green-800 mb-1">Madam Shirima</h3>
                     <p class="text-green-700 mb-4">Deputy Headteacher (Primary School)</p>
                     <p class="text-gray-700 text-justify text-sm leading-relaxed">
@@ -73,8 +88,20 @@
                 </div>
 
                 <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl p-8 transition-all duration-300">
-                    <h3 class="text-xl font-bold text-green-800 mb-1">Mr. Denis Engola & Mr. Ally Mkupaya</h3>
-                    <p class="text-green-700 mb-4">Academic Heads</p>
+                    <img src="{{ asset('images/ministry-of-toursim.png') }}" alt=""
+                        class="w-40 h-40 rounded-full mb-6 shadow-lg">
+                    <h3 class="text-xl font-bold text-green-800 mb-1">Mr. Denis</h3>
+                    <p class="text-green-700 mb-4">Academic Head</p>
+                    <p class="text-gray-700 text-justify text-sm leading-relaxed">
+                        Tasked with curriculum development and academic standards, these visionary leaders ensure that
+                        Scolastica Schools upholds educational excellence at all levels across Tanzania and beyond.
+                    </p>
+                </div>
+                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl p-8 transition-all duration-300">
+                    <img src="{{ asset('images/ministry-of-toursim.png') }}" alt=""
+                        class="w-40 h-40 rounded-full mb-6 shadow-lg">
+                    <h3 class="text-xl font-bold text-green-800 mb-1"> Mr. Ally Mkupaya</h3>
+                    <p class="text-green-700 mb-4">Academic Head</p>
                     <p class="text-gray-700 text-justify text-sm leading-relaxed">
                         Tasked with curriculum development and academic standards, these visionary leaders ensure that
                         Scolastica Schools upholds educational excellence at all levels across Tanzania and beyond.
@@ -84,39 +111,48 @@
         </div>
     </section>
 
-    {{-- other staff members --}}
-    <section class="py-12">
-        <div class="container mx-auto">
-            <h1 class="text-center font-semibold text-4xl text-green-800 mb-10">Our Other Valuable Staff</h1>
-            <div class="overflow-hidden border rounded-lg shadow-md">
-                <table class="w-full divide-y divide-gray-200">
-                    <thead class="bg-green-800 text-white">
-                        <tr>
-                            <th scope="col" class="px-6 py-3 text-left font-semibold uppercase">S/N
-                            </th>
-                            <th scope="col" class="px-6 py-3 text-left font-semibold uppercase">Name
-                            </th>
-                            <th scope="col" class="px-6 py-3 text-left font-semibold uppercase">
-                                Profession </th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-gray-200">
-                        <tr class="hover:bg-green-100 transiton transform ease-out duration-1000">
-                            <td class="px-6 py-4  text-gray-900">1</td>
-                            <td class="px-6 py-4  font-medium text-gray-900">John Swai</td>
-                            <td class="px-6 py-4  text-gray-500">Advanced Mathematics</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="px-6 py-4  text-gray-900">2</td>
-                            <td class="px-6 py-4  font-medium text-gray-900">Jane Bakalemwa</td>
-                            <td class="px-6 py-4  text-gray-500">Kiswahili</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
+    @if ($staff)
+        {{-- other staff members --}}
+        <section class="py-12">
+            <div class="container mx-auto">
+                <h1 class="text-center font-semibold text-4xl text-green-800 mb-10">Our Other Valuable Staff</h1>
+                <div class="overflow-hidden border rounded-lg shadow-md">
+                    <table class="w-full divide-y divide-gray-200">
+                        <thead class="bg-green-800 text-white">
+                            <tr>
+                                <th scope="col" class="px-6 py-3 text-left font-semibold uppercase">S/N
+                                </th>
+                                <th scope="col" class="px-6 py-3 text-left font-semibold uppercase">Name
+                                </th>
+                                <th scope="col" class="px-6 py-3 text-left font-semibold uppercase">
+                                    Gender </th>
 
-    </section>
+                                <th scope="col" class="px-6 py-3 text-left font-semibold uppercase">
+                                    Bio </th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            @php
+                                $counter = 1;
+                            @endphp
+                            @if ($staff->isNotEmpty())
+                                @foreach ($staff as $member)
+                                    <tr class="hover:bg-green-100 transiton transform ease-out duration-1000">
+                                        <td class="px-6 py-4  text-gray-900">{{ $counter++ }}</td>
+                                        <td class="px-6 py-4  font-medium text-gray-900">{{ $member->first_name }}
+                                            {{ $member->last_name }}</td>
+                                        <td class="px-6 py-4  text-gray-500">{{ $member->gender }}</td>
+                                        <td class="px-6 py-4  text-gray-500">{{ $member->bio }}</td>
+                                    </tr>
+                                @endforeach
+                            @endif
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </section>
+    @endif
 
     {{-- Why Choose Scolastica Schools --}}
     <section class="py-20 bg-gradient-to-b from-green-50 via-white to-green-50">
@@ -148,7 +184,8 @@
                             multilingual fluency.</li>
                         <li><i class="fa fa-arrow-right text-green-700 mr-3"></i> Global partnerships and student exchange
                             programs.</li>
-                        <li><i class="fa fa-arrow-right text-green-700 mr-3"></i> Preparation for SAT, IELTS, TOEFL & global
+                        <li><i class="fa fa-arrow-right text-green-700 mr-3"></i> Preparation for SAT, IELTS, TOEFL &
+                            global
                             university pathways.</li>
                     </ul>
                 </div>
@@ -174,7 +211,8 @@
                             for whole-child development.</li>
                         <li><i class="fa fa-arrow-right text-green-700 mr-3"></i> Clubs in debate, entrepreneurship, and
                             sustainability.</li>
-                        <li><i class="fa fa-arrow-right text-green-700 mr-3"></i> Competitive sports training with access to
+                        <li><i class="fa fa-arrow-right text-green-700 mr-3"></i> Competitive sports training with access
+                            to
                             national tournaments.</li>
                     </ul>
                 </div>
@@ -200,7 +238,8 @@
                             real-world problem-solving.</li>
                         <li><i class="fa fa-arrow-right text-green-700 mr-3"></i> Internships & mentorships with industry
                             professionals.</li>
-                        <li><i class="fa fa-arrow-right text-green-700 mr-3"></i> Thriving alumni in top global universities
+                        <li><i class="fa fa-arrow-right text-green-700 mr-3"></i> Thriving alumni in top global
+                            universities
                             and careers.</li>
                     </ul>
                 </div>

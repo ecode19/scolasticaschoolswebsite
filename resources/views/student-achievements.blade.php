@@ -1,5 +1,4 @@
 @extends('layouts.guest')
-@section('title', 'Student Achievements')
 @section('content')
     {{-- Hero Section --}}
     <section class="relative bg-gray-400">

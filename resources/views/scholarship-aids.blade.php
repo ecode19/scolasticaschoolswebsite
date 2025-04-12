@@ -1,5 +1,4 @@
 @extends('layouts.guest')
-@section('title', 'Sholarships & Financial Aid')
 @section('content')
     {{-- Hero Section --}}
     <section>
@@ -55,14 +54,10 @@
                         <i class="fa-solid fa-handshake-angle text-4xl"></i>
                     </div>
                     <h2 class="mt-6 text-3xl font-semibold text-green-700">Academic Excellence Scholarship</h2>
-                    <p class="text-center text-xl italic text-gray-600">Tailored options for Top 5% of students</p>
-
-                    <div class="mt-6 text-center">
-                        <h3 class="text-lg font-semibold text-gray-700">Coverage: <span class="text-green-600">Up to 100%
-                                tuition</span></h3>
-                        <h4 class="text-lg font-semibold text-gray-700 mt-2">Deadline: <span class="text-green-600">July
-                                30th</span></h4>
-                    </div>
+                    <p class="text-center text-xl italic text-gray-600 p-6">Recognizing outstanding academic
+                        promise. Our
+                        scholarship celebrates students who demonstrate excellence, with further details communicated
+                        privately to selected recipients and their families.</p>
                 </div>
                 <div
                     class="w-full md:w-1/2 rounded-2xl shadow-xl bg-white border-2 border-blue-400 flex flex-col justify-center items-center py-14 mt-8 hover:scale-105 transition-all">
@@ -71,14 +66,10 @@
                         <i class="fa-solid fa-handshake-angle text-4xl"></i>
                     </div>
                     <h2 class="mt-6 text-3xl font-semibold text-blue-700">Financial Aid Program</h2>
-                    <p class="text-center text-xl italic text-gray-600">Tailored options for families in financial need</p>
-
-                    <div class="mt-6 text-center">
-                        <h3 class="text-lg font-semibold text-gray-700">Coverage: <span class="text-blue-600">Sliding scale
-                                tuition assistance</span></h3>
-                        <h4 class="text-lg font-semibold text-gray-700 mt-2">Deadline: <span class="text-blue-600">Open
-                                year-round</span></h4>
-                    </div>
+                    <p class="text-center text-xl italic text-gray-600 p-6">We're currently in the process of establishing a
+                        comprehensive financial aid program to support families in need. This initiative is expected to
+                        launch in the coming academic years. Stay tuned for official announcements and application
+                        guidelines.</p>
                 </div>
 
             </div>
@@ -90,17 +81,15 @@
         <div class="w-11/12 mx-auto">
             <!-- Section Title -->
             <h1 class="text-center text-4xl font-extrabold text-green-800 mb-12">
-                Why Apply for a Scholarship at Scolastica Schools?
+                Benefits of Scholarships at Scolastica Schools
             </h1>
 
             <!-- Section Description -->
             <p class="text-center text-xl text-gray-700 max-w-4xl mx-auto">
-                At Scolastica Schools, we are committed to providing exceptional education to bright and deserving students.
-                By applying for one of our scholarships, you will be opening doors to new opportunities, unlocking your full
-                potential,
-                and becoming part of a legacy of success. Our scholarships not only cover tuition, but also provide access
-                to a supportive
-                community and an environment where you can thrive.
+                At Scolastica Schools, scholarships are a token of recognition for outstanding students. They offer more
+                than just financial relief — they provide motivation, build confidence, and open doors to greater
+                opportunities. Scholarship recipients become part of a vibrant, supportive academic community designed to
+                nurture excellence and lifelong success.
             </p>
         </div>
     </section>
@@ -149,5 +138,4 @@
             </div>
         </div>
     </section>
-
 @endsection
