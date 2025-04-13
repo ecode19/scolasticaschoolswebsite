@@ -48,14 +48,14 @@ $(document).ready(function () {
                 },
             },
             {
-                breakpoint: 600,
+                breakpoint: 850,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
                 },
             },
             {
-                breakpoint: 480,
+                breakpoint: 600,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
@@ -118,6 +118,17 @@ $(document).ready(function () {
       }
     });
   });
+
+//   toggle guest nav
+const openNavBtn = document.getElementById('open-nav')
+const closeNavBtn = document.getElementById('close-nav')
+const mainNav = document.getElementById('main-nav')
+openNavBtn.addEventListener('click', () => {
+    mainNav.classList.remove('hidden')
+})
+closeNavBtn.addEventListener('click', () => {
+    mainNav.classList.add('hidden')
+})
 
 
 const date = new Date();

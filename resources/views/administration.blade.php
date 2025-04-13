@@ -34,14 +34,14 @@
             <div class="bg-white rounded-3xl shadow-2xl p-10 mb-16 animate-fade-up">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 animate-fade-up delay-100">
                     <div class="flex flex-col items-center text-center">
-                        <img src="{{ asset('images/ministry-of-toursim.png') }}" alt=""
+                        <img src="{{ asset('images/user.avif') }}" alt=""
                             class="w-40 h-40 rounded-full mb-6 shadow-lg">
                         <h2 class="text-3xl font-bold text-green-800">Mrs. Edward Shayo</h2>
                         <p class="text-lg text-gray-700 mt-2">Founder & Managing Director</p>
                     </div>
 
                     <div class="flex flex-col items-center text-center">
-                        <img src="{{ asset('images/ministry-of-toursim.png') }}" alt=""
+                        <img src="{{ asset('images/user.avif') }}" alt=""
                             class="w-40 h-40 rounded-full mb-6 shadow-lg">
                         <h2 class="text-3xl font-bold text-green-800">Mr. Edward Shayo</h2>
                         <p class="text-lg text-gray-700 mt-2">Founder & Managing Director</p>
@@ -53,7 +53,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 animate-fade-up delay-100">
                 <!-- Card -->
                 <div class="bg-white rounded-2xl items-center shadow-lg hover:shadow-2xl p-8 transition-all duration-300">
-                    <img src="{{ asset('images/ministry-of-toursim.png') }}" alt=""
+                    <img src="{{ asset('images/user.avif') }}" alt=""
                         class="w-40 h-40 rounded-full mb-6 shadow-lg">
                     <h3 class="text-xl font-bold text-green-800 mb-1">Mr. Peter Mayoki</h3>
                     <p class="text-green-700 mb-4">Headteacher</p>
@@ -65,7 +65,7 @@
                 </div>
 
                 <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl p-8 transition-all duration-300">
-                    <img src="{{ asset('images/ministry-of-toursim.png') }}" alt=""
+                    <img src="{{ asset('images/user.avif') }}" alt=""
                         class="w-40 h-40 rounded-full mb-6 shadow-lg">
                     <h3 class="text-xl font-bold text-green-800 mb-1">Mr. Peter Mashinde</h3>
                     <p class="text-green-700 mb-4">Deputy Headteacher (Secondary School)</p>
@@ -77,7 +77,7 @@
                 </div>
 
                 <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl p-8 transition-all duration-300">
-                    <img src="{{ asset('images/ministry-of-toursim.png') }}" alt=""
+                    <img src="{{ asset('images/user.avif') }}" alt=""
                         class="w-40 h-40 rounded-full mb-6 shadow-lg">
                     <h3 class="text-xl font-bold text-green-800 mb-1">Madam Shirima</h3>
                     <p class="text-green-700 mb-4">Deputy Headteacher (Primary School)</p>
@@ -88,7 +88,7 @@
                 </div>
 
                 <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl p-8 transition-all duration-300">
-                    <img src="{{ asset('images/ministry-of-toursim.png') }}" alt=""
+                    <img src="{{ asset('images/user.avif') }}" alt=""
                         class="w-40 h-40 rounded-full mb-6 shadow-lg">
                     <h3 class="text-xl font-bold text-green-800 mb-1">Mr. Denis</h3>
                     <p class="text-green-700 mb-4">Academic Head</p>
@@ -98,7 +98,7 @@
                     </p>
                 </div>
                 <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl p-8 transition-all duration-300">
-                    <img src="{{ asset('images/ministry-of-toursim.png') }}" alt=""
+                    <img src="{{ asset('images/user.avif') }}" alt=""
                         class="w-40 h-40 rounded-full mb-6 shadow-lg">
                     <h3 class="text-xl font-bold text-green-800 mb-1"> Mr. Ally Mkupaya</h3>
                     <p class="text-green-700 mb-4">Academic Head</p>
@@ -122,6 +122,8 @@
                             <tr>
                                 <th scope="col" class="px-6 py-3 text-left font-semibold uppercase">S/N
                                 </th>
+                                <th scope="col" class="px-6 py-3 text-left font-semibold uppercase">Photo
+                                </th>
                                 <th scope="col" class="px-6 py-3 text-left font-semibold uppercase">Name
                                 </th>
                                 <th scope="col" class="px-6 py-3 text-left font-semibold uppercase">
@@ -139,6 +141,10 @@
                                 @foreach ($staff as $member)
                                     <tr class="hover:bg-green-100 transiton transform ease-out duration-1000">
                                         <td class="px-6 py-4  text-gray-900">{{ $counter++ }}</td>
+                                        <td class="py-2 px-4">
+                                            <img src="{{ asset('/storage/images/staff/profile/' . $member->profile_picture) }}" alt="Staff profile"
+                                                class="w-16 h-16 object-cover rounded-md md:w-24 md:h-24">
+                                        </td>
                                         <td class="px-6 py-4  font-medium text-gray-900">{{ $member->first_name }}
                                             {{ $member->last_name }}</td>
                                         <td class="px-6 py-4  text-gray-500">{{ $member->gender }}</td>
@@ -298,7 +304,7 @@
 
                 <!-- Admission Button -->
                 <div class="mt-10">
-                    <a href="#"
+                    <a href="{{route('contact-us')}}"
                         class="py-4 px-10 text-green-900 bg-white rounded-xl font-semibold text-xl focus:outline-none hover:bg-green-200 transition-transform transform ease-in-out duration-500 hover:scale-110 ring-2 ring-green-500 shadow-lg">
                         Apply Now
                     </a>

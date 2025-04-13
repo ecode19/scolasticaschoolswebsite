@@ -66,7 +66,7 @@
                         <tr class="border-b border-gray-300 hover:bg-gray-100">
                             <td class="py-2 px-4">{{ $counter++ }}</td>
                             <td class="py-2 px-4">
-                                <img src="" alt="Staff profile"
+                                <img src="{{ asset('/storage/images/staff/profile/' . $member->profile_picture) }}" alt="Staff profile"
                                     class="w-16 h-16 object-cover rounded-md md:w-24 md:h-24">
                             </td>
 

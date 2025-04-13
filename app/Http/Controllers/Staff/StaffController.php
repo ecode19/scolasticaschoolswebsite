@@ -30,7 +30,7 @@ class StaffController extends Controller
             'last_name' => ['required', 'string'],
             'gender' => ['required'],
             'bio' => ['nullable'],
-            'profile_picture' => ['nullable', 'mimes:jpg,png,jpeg', 'max:2048'],
+            'profile_picture' => ['nullable', 'mimes:jpg,png,jpeg,avif', 'max:2048'],
         ], [
             'first_name.required' => 'Kindly fill in you firstname is required',
             'last_name.required' => 'Kindly fill in you lastnem is required',
@@ -54,7 +54,7 @@ class StaffController extends Controller
             $imageStoragePath = "images/staff/profile/";
             try {
                 $image->storeAs($imageStoragePath, $imageName, 'public');
-                $Staff->image = $imageName;
+                $Staff->profile_picture = $imageName;
             } catch (Exception $e) {
                 Log::error('Profile picture upload failed: ' . $e->getMessage());
                 return redirect()->back()
@@ -83,7 +83,7 @@ class StaffController extends Controller
             'last_name' => ['required'],
             'gender' => ['required', 'string', 'max:255'],
             'bio' => ['nullable', 'string', 'max:255'],
-            'profile_picture' => ['nullable', 'mimes:jpg,png,jpeg', 'max:2048'],
+            'profile_picture' => ['nullable', 'mimes:jpg,png,jpeg,avif', 'max:2048'],
         ], [
             'first_name.required' => 'The firstname filled is required',
             'last_name.required' => 'The last name filled is required',
@@ -112,7 +112,7 @@ class StaffController extends Controller
                 }
 
                 $image->storeAs($imageStoragePath, $imageName, 'public');
-                $Staff->image = $imageName;
+                $Staff->profile_picture = $imageName;
             } catch (Exception $e) {
                 Log::error('profile picture upload failed!' . $e->getMessage());
                 return redirect()->back()

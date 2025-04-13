@@ -15,11 +15,7 @@
     <section class="w-full md:w-11/12 mx-auto p-2 my-8">
         <p class="font-semibold text-justify text-lg my-4 text-gray-800">Dear Esteemed Parents, Students, and the Scolastica
             Community,</p>
-        <p class="text-justify text-lg text-gray-600">Education is the foundation upon which great legacies are built, minds
-            are ignited, and futures are shaped. At Scolastica Schools, we are not merely educators—we are architects of
-            excellence, sculptors of character, and pioneers of boundless potential. It is with profound honor and
-            unwavering dedication that we, Mr. and Mrs. Edward Shayo, welcome you to an institution where aspirations take
-            flight, and every learner is nurtured to lead, innovate, and excel. </p>
+        <p class="text-justify text-lg text-gray-600">Education is the foundation upon which <b>great legacies are built, minds are ignited, and futures are shaped</b>. At Scolastica Schools, we are not merely educators—we are <b>architects of excellence, sculptors of character, and pioneers of boundless potential</b>. It is with profound honor and unwavering dedication that Scolastica, welcomes you to our institution where aspirations take flight, and every learner is nurtured to <b>lead, innovate, and excel.</b></p>
         <p class="text-justify text-lg text-gray-600 my-2">Spanning <b>Kindergarten, Primary, Secondary, and High
                 School,</b> Scolastica Schools stands as a <b>pillar of academic distinction and holistic development</b>.
             Our approach transcends conventional learning, intertwining <b>intellectual rigor, character fortification, and
@@ -56,9 +52,9 @@
         <p class="text-justify text-lg text-gray-600 my-4">Welcome to Scolastica Schools—Where Brilliance Begins, and
             Greatness is Forged.
         </p>
-        <p class="text-justify text-lg text-gray-600 my-2 font-bold">With highest regards,.</p>
-        <p class="text-justify text-lg text-gray-600 my-2 font-bold">Mr. & Mrs. Edward Shayo</p>
-        <p class="text-justify text-lg text-gray-600 my-2 font-bold">Managing Directors, Scolastica Schools</p>
+        <p class="text-justify text-lg text-gray-600 my-2 font-bold">With regards,.</p>
+        <p class="text-justify text-lg text-gray-600 my-2 font-bold">Principal</p>
+        <p class="text-justify text-lg text-gray-600 my-2 font-bold">Scolastica Schools</p>
     </section>
 
 @endsection

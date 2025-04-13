@@ -8,7 +8,7 @@
             <div class="absolute bottom-10 left-10 transparent-bg">
                 <div class="text-white text-center">
                     <h1 class="oswald text-3xl md:text-6xl uppercase text-green-200">Scolastica Schools</h1>
-                    <p class="text-lg md:text-2xl italic my-2 text-orange-200">Nurturing Excellence, Inspiring Leaders</p>
+                    <p class="text-lg md:text-2xl italic my-2 text-orange-200">Equal Education for All Children</p>
                 </div>
             </div>
         </div>
@@ -30,8 +30,8 @@
             <p class="text-justify text-lg text-gray-800">Education is the foundation upon which great legacies are built,
                 minds are ignited, and futures are shaped. At Scolastica Schools, we are not merely educators—we are
                 architects of excellence, sculptors of character, and pioneers of boundless potential. It is with profound
-                honor and unwavering dedication that we, Mr. and Mrs. Edward Shayo, welcome you to an institution where
-                aspirations take flight, and every learner is nurtured to lead, innovate, and excel. <a
+                honor and unwavering dedication that Scolastica, welcomes you to our institution where aspirations take
+                flight, and every learner is nurtured to lead, innovate, and excel.<a
                     href="{{ route('welcome-message') }}"><button
                         class="bg-orange-600 hover:bg-orange-700 text-orange-100 p-2 rounded-md mx-2 text-sm">Read More <i
                             class="fa fa-arrow-right"></i></button></a></p>
@@ -42,13 +42,13 @@
     <section class="w-full  mx-auto p-6 flex flex-wrap items-center bg-green-100">
         <div class="w-full md:w-1/2 lg:w-1/4 my-2">
             <div class="w-11/12 mx-auto p-4 flex flex-col items-center  rounded-md  ">
-                <span class="text-3xl text-green-900">500+</span>
+                <span class="text-3xl text-green-900">300+</span>
                 <span class="mt-2 text-xl  text-orange-700">Students</span>
             </div>
         </div>
         <div class="w-full md:w-1/2 lg:w-1/4 my-2">
             <div class="w-11/12 mx-auto p-4 flex flex-col items-center  rounded-md  ">
-                <span class="text-3xl text-green-900">50</span>
+                <span class="text-3xl text-green-900">50+</span>
                 <span class="mt-2 text-xl  text-orange-700">Teachers</span>
             </div>
         </div>
@@ -60,7 +60,7 @@
         </div>
         <div class="w-full md:w-1/2 lg:w-1/4 my-2">
             <div class="w-11/12 mx-auto p-4 flex flex-col items-center  rounded-md  ">
-                <span class="text-3xl text-green-900">2005</span>
+                <span class="text-3xl text-green-900">1994</span>
                 <span class="mt-2 text-xl  text-orange-700">Founded On</span>
             </div>
         </div>
@@ -224,7 +224,7 @@
                                             {{ $item->created_at->diffForHumans() }}
                                         </span>
 
-                                        <a href=""
+                                        <a href="{{ route('about-event', $item->title) }}"
                                             class="w-32 mt-2 border-2 font-bold text-white border-green-300 focus:ring focus-green-600 bg-green-500 px-4 py-2 rounded-md">Read
                                             More</a>
                                     </div>

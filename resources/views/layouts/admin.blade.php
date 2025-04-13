@@ -17,7 +17,7 @@
     <section class="w-full flex">
         <div class="w-[20%] h-full fixed left-0 bg-green-100 overflow-y-auto shadow-md shadow-green-700 text-green-950">
             <div class="w-1/3 mx-auto flex flex-col items-center my-4">
-                <img src="{{ asset('images/logo.png') }}" alt="school logo" class="w-full">
+                <img src="{{ asset('images/primary_logo.png') }}" alt="school logo" class="w-full">
                 <h3 class="text-lg text-green-800">ADMIN</h3>
             </div>
 
@@ -83,6 +83,11 @@
                             class="fa fa-question mx-1 p-2 my-2"></i>
                         <li>FAQs</li>
                     </a>
+                    <a href="{{ route('admin.news.event.index') }}"
+                        class="w-full flex items-center text-lg font-semibold hover:bg-green-300 rounded-sm"><i
+                            class="fa fa-calendar mx-1 p-2 my-2"></i>
+                        <li>News & Events</li>
+                    </a>
                     <a href="{{ route('admin.post.index') }}"
                         class="w-full flex items-center text-lg font-semibold hover:bg-green-300 rounded-sm"><i
                             class="fa fa-newspaper mx-1 p-2 my-2"></i>
@@ -90,7 +95,7 @@
                     </a>
                     <a href="{{ route('admin.staff.index') }}"
                         class="w-full flex items-center text-lg font-semibold hover:bg-green-300 rounded-sm"><i
-                            class="fa fa-newspaper mx-1 p-2 my-2"></i>
+                            class="fa fa-users mx-1 p-2 my-2"></i>
                         <li>Staff Management</li>
                     </a>
                 </ul>

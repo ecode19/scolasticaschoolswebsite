@@ -149,7 +149,7 @@
             </p>
 
             {{-- Enquiry Button --}}
-            <a href="#"
+            <a href="{{route('contact-us')}}"
                 class="inline-block bg-white text-green-900 font-bold text-lg px-8 py-3 rounded-full shadow-lg hover:bg-gray-100 transition duration-300 ease-in-out transform hover:scale-105 focus:ring-4 ring-white">
                 Enquire Now
             </a>

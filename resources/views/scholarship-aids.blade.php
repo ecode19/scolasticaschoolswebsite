@@ -130,7 +130,7 @@
 
                 <!-- Admission Button -->
                 <div class="mt-10">
-                    <a href="#"
+                    <a href="{{route('contact-us')}}"
                         class="py-4 px-10 text-green-900 bg-white rounded-xl font-semibold text-xl focus:outline-none hover:bg-green-200 transition-transform transform ease-in-out duration-500 hover:scale-110 ring-2 ring-green-500 shadow-lg">
                         Apply Now
                     </a>

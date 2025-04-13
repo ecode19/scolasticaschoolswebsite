@@ -19,14 +19,15 @@
     </style>
     {{-- Hero Section --}}
     <section class="relative bg-gray-400">
-        <div class="relative flex justify-center items-center h-96 overflow-hidden">
+        <div class="relative flex justify-center items-center h-80 overflow-hidden">
             {{-- Hero Image --}}
             <div class="absolute inset-0">
-                <img src="{{ asset('images/DSC_4638.jpg') }}" alt="Legacy Image" class="w-full h-full object-cover">
+                <img src="{{ asset('images/history/history_pic5-1.PNG') }}" alt="Legacy Image"
+                    class="w-full h-full object-cover">
             </div>
 
             {{-- Enhanced Gradient Overlay --}}
-            <div class="absolute inset-0 bg-gradient-to-r from-green-900 via-green-700 to-transparent opacity-50"></div>
+            {{-- <div class="absolute inset-0 bg-gradient-to-r from-green-900 via-green-700 to-transparent opacity-50"></div> --}}
 
             {{-- Text Content --}}
             <div class="relative text-center px-4 sm:px-8">
@@ -34,7 +35,7 @@
                     Our Legacy: A Journey Through Time
                 </h1>
                 <h2 class="mt-6 text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white drop-shadow-md">
-                    Since 1950
+                    Since 1994
                 </h2>
             </div>
         </div>
@@ -81,7 +82,7 @@
     {{-- how it started --}}
     <section class="pt-12 relative">
         <div class="relative flex flex-col justify-center items-center bg-fixed bg-cover bg-center bg-no-repeat h-[600px] overflow-hidden"
-            style="background-image: url('{{ asset('images/DSC_4061.jpg') }}')">
+            style="background-image: url('{{ asset('images/history/history_pic1.PNG') }}')">
             <div class="absolute inset-0 bg-gradient-to-tr from-slate-900 to-gray-800 opacity-85 backdrop-blur-sm"></div>
 
             <div class="relative z-10 w-full px-4 md:px-10 lg:px-20 max-w-screen-xl">
@@ -304,6 +305,119 @@
         </div>
     </section>
 
+    {{-- Slider --}}
+    <section class="py-20 bg-gradient-to-br from-gray-100 via-white to-gray-100">
+        <!-- Section Title -->
+        <div class="text-center mb-12">
+            <h1 class="text-5xl font-extrabold text-green-800 leading-tight animate-fade-up">
+                A Visual Journey Through our History
+            </h1>
+        </div>
+        <div class="slider2 w-11/12 mx-auto my-4 py-4 flex flex-col md:flex-row">
+            <div class="w-full md:w-1/3 my-2">
+                <div class="w-11/12 mx-auto border border-green-400 p-2 rounded-lg overflow-hidden h-80">
+                    <img src="{{ asset('images/history/history_pic1.PNG') }}" alt="" class="h-full object-cover">
+                </div>
+            </div>
+            <div class="w-full md:w-1/3 my-2">
+                <div class="w-11/12 mx-auto border border-green-400 p-2 rounded-lg overflow-hidden h-80">
+                    <img src="{{ asset('images/history/history_pic2.PNG') }}" alt="" class="h-full object-cover">
+                </div>
+            </div>
+            <div class="w-full md:w-1/3 my-2">
+                <div class="w-11/12 mx-auto border border-green-400 p-2 rounded-lg overflow-hidden h-80">
+                    <img src="{{ asset('images/history/history_pic3.PNG') }}" alt="" class="h-full object-cover">
+                </div>
+            </div>
+            <div class="w-full md:w-1/3 my-2">
+                <div class="w-11/12 mx-auto border border-green-400 p-2 rounded-lg overflow-hidden h-80">
+                    <img src="{{ asset('images/history/history_pic4.PNG') }}" alt="" class="h-full object-cover">
+                </div>
+            </div>
+            <div class="w-full md:w-1/3 my-2">
+                <div class="w-11/12 mx-auto border border-green-400 p-2 rounded-lg overflow-hidden h-80">
+                    <img src="{{ asset('images/history/history_pic5.PNG') }}" alt="" class="h-full object-cover">
+                </div>
+            </div>
+            <div class="w-full md:w-1/3 my-2">
+                <div class="w-11/12 mx-auto border border-green-400 p-2 rounded-lg overflow-hidden h-80">
+                    <img src="{{ asset('images/history/history_pic6.PNG') }}" alt="" class="h-full object-cover">
+                </div>
+            </div>
+            <div class="w-full md:w-1/3 my-2">
+                <div class="w-11/12 mx-auto border border-green-400 p-2 rounded-lg overflow-hidden h-80">
+                    <img src="{{ asset('images/history/history_pic7.PNG') }}" alt="" class="h-full object-cover">
+                </div>
+            </div>
+            <div class="w-full md:w-1/3 my-2">
+                <div class="w-11/12 mx-auto border border-green-400 p-2 rounded-lg overflow-hidden h-80">
+                    <img src="{{ asset('images/history/history_pic8.PNG') }}" alt=""
+                        class="h-full object-cover">
+                </div>
+            </div>
+            <div class="w-full md:w-1/3 my-2">
+                <div class="w-11/12 mx-auto border border-green-400 p-2 rounded-lg overflow-hidden h-80">
+                    <img src="{{ asset('images/history/history_pic9.PNG') }}" alt=""
+                        class="h-full object-cover">
+                </div>
+            </div>
+            <div class="w-full md:w-1/3 my-2">
+                <div class="w-11/12 mx-auto border border-green-400 p-2 rounded-lg overflow-hidden h-80">
+                    <img src="{{ asset('images/history/history_pic10.PNG') }}" alt=""
+                        class="h-full object-cover">
+                </div>
+            </div>
+            <div class="w-full md:w-1/3 my-2">
+                <div class="w-11/12 mx-auto border border-green-400 p-2 rounded-lg overflow-hidden h-80">
+                    <img src="{{ asset('images/history/history_pic11.PNG') }}" alt=""
+                        class="h-full object-cover">
+                </div>
+            </div>
+            <div class="w-full md:w-1/3 my-2">
+                <div class="w-11/12 mx-auto border border-green-400 p-2 rounded-lg overflow-hidden h-80">
+                    <img src="{{ asset('images/history/history_pic12.PNG') }}" alt=""
+                        class="h-full object-cover">
+                </div>
+            </div>
+            <div class="w-full md:w-1/3 my-2">
+                <div class="w-11/12 mx-auto border border-green-400 p-2 rounded-lg overflow-hidden h-80">
+                    <img src="{{ asset('images/history/history_pic13.PNG') }}" alt=""
+                        class="h-full object-cover">
+                </div>
+            </div>
+            <div class="w-full md:w-1/3 my-2">
+                <div class="w-11/12 mx-auto border border-green-400 p-2 rounded-lg overflow-hidden h-80">
+                    <img src="{{ asset('images/history/history_pic14.PNG') }}" alt=""
+                        class="h-full object-cover">
+                </div>
+            </div>
+            <div class="w-full md:w-1/3 my-2">
+                <div class="w-11/12 mx-auto border border-green-400 p-2 rounded-lg overflow-hidden h-80">
+                    <img src="{{ asset('images/history/history_pic15.PNG') }}" alt=""
+                        class="h-full object-cover">
+                </div>
+            </div>
+            <div class="w-full md:w-1/3 my-2">
+                <div class="w-11/12 mx-auto border border-green-400 p-2 rounded-lg overflow-hidden h-80">
+                    <img src="{{ asset('images/history/history_pic16.PNG') }}" alt=""
+                        class="h-full object-cover">
+                </div>
+            </div>
+            <div class="w-full md:w-1/3 my-2">
+                <div class="w-11/12 mx-auto border border-green-400 p-2 rounded-lg overflow-hidden h-80">
+                    <img src="{{ asset('images/history/history_pic17.PNG') }}" alt=""
+                        class="h-full object-cover">
+                </div>
+            </div>
+            <div class="w-full md:w-1/3 my-2">
+                <div class="w-11/12 mx-auto border border-green-400 p-2 rounded-lg overflow-hidden h-80">
+                    <img src="{{ asset('images/history/history_pic18.PNG') }}" alt=""
+                        class="h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
     {{-- Accredited --}}
     <section class="py-10">
         <div class="w-full">
@@ -325,7 +439,8 @@
                             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
                                 <!-- MoEST -->
                                 <div class="flex flex-col justify-center items-center mt-16">
-                                    <img src="{{ asset('images/ministry-of-toursim.png') }}" class="w-32 h-32 rounded-full">
+                                    <img src="{{ asset('images/ministry-of-toursim.png') }}"
+                                        class="w-32 h-32 rounded-full">
                                     <h2 class="text-white font-semibold text-lg text-center">Tanzania Ministry of
                                         Education, Science, and Technology (MoEST)</h2>
                                     <p class="text-sm text-white italic text-center mt-4">
@@ -436,7 +551,7 @@
                         Want to join us? Click the button below.
                     </h2>
                     <div class="mt-8">
-                        <a href="#"
+                        <a href="{{route('contact-us')}}"
                             class="inline-block py-3 px-7 text-lg font-bold border-2 border-white rounded-xl bg-white text-gray-900 transition duration-500 transform hover:scale-105 hover:bg-gray-100">
                             Join Us Now
                         </a>
@@ -494,7 +609,7 @@
 
                 <!-- Admission Button -->
                 <div class="mt-10">
-                    <a href="#"
+                    <a href="{{route('contact-us')}}"
                         class="py-4 px-10 text-green-900 bg-white rounded-xl font-semibold text-xl focus:outline-none hover:bg-green-200 transition-transform transform ease-in-out duration-500 hover:scale-110 ring-2 ring-green-500 shadow-lg">
                         Apply Now
                     </a>

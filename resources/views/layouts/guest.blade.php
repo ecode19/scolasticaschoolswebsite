@@ -45,15 +45,25 @@
 
 <body>
     <div class="w-full">
-        <nav class="w-full p-2 bg-green-900 flex items-center">
+        <nav class="w-full lg:p-2 bg-green-900 flex items-center justify-between lg:justify-normal">
             <div class="w-20 mx-4">
-                <img src={{ asset('images/logo.png') }} alt="school logo" class="w-full rounded-full">
+                <a href="{{ route('index') }}">
+                    <img src={{ asset('images/secondary_logo.png') }} alt="school logo" class="w-full rounded-full">
+                </a>
             </div>
 
-            <div class="merryFont w-max mx-auto">
-                <ul class="w-full flex items-center">
+            <h1 class="uppercase text-lg md:text-2xl oswaldFont block lg:hidden text-white font-bold">Scolastica Schools
+            </h1>
+
+            <div id="main-nav"
+                class="merryFont w-full lg:w-max lg:mx-auto hidden lg:block fixed top-0 left-0 h-screen lg:h-auto lg:static z-50 bg-green-900 opacity-95 lg:opacity-100 lg:bg-inherit">
+                <div class="w-fit ml-auto p-4 block lg:hidden">
+                    <i class="fa fa-times text-white text-xl cursor-pointer" id="close-nav"></i>
+                </div>
+                <ul class="w-full flex items-center flex-col space-y-3 lg:space-y-0 lg:flex-row">
                     <a href="{{ route('index') }}">
-                        <li class="py-1 px-2 text-lg text-white hover:border-b hover:border-green-400">Home</li>
+                        <li class="py-1 px-2 text-xl lg:text-lg text-white hover:border-b hover:border-green-400">Home
+                        </li>
                     </a>
                     <div x-data="{ open: false }" class="relative group">
                         <x-dropdown title="About Us">
@@ -124,11 +134,41 @@
                     </div>
 
                     <a href="{{ route('contact-us') }}">
-                        <li class="py-1 px-2 text-lg text-white hover:border-b hover:border-green-400">Contact us</li>
+                        <li class="py-1 px-2 text-xl lg:text-lg text-white hover:border-b hover:border-green-400">
+                            Contact us</li>
                     </a>
                 </ul>
             </div>
+
+            <div class="w-20 mx-4">
+                <a href="{{ route('index') }}">
+                    <img src={{ asset('images/primary_logo.png') }} alt="school logo" class="w-full rounded-full">
+                </a>
+            </div>
         </nav>
+        {{-- mini nav --}}
+        <div class="w-full lg:hidden py-2 px-4 bg-green-900 flex justify-between items-center">
+            <ul class="flex items-center">
+                <a href="{{ route('our-history') }}">
+                    <li class="py-1 px-2 text-white hover:border-b hover:border-green-400">About-Us</li>
+                </a>
+                <a href="{{ route('study-levels') }}">
+                    <li class="py-1 px-2 text-white hover:border-b hover:border-green-400">Levels</li>
+                </a>
+                <a href="{{ route('curriculum') }}">
+                    <li class="py-1 px-2 text-white hover:border-b hover:border-green-400">Curriculum</li>
+                </a>
+                <a href="{{ route('admission-process') }}">
+                    <li class="py-1 px-2 text-white hover:border-b hover:border-green-400">admission</li>
+                </a>
+                <a href="{{ route('contact-us') }}">
+                    <li class="py-1 px-2 text-white hover:border-b hover:border-green-400">Contact</li>
+                </a>
+            </ul>
+            <div>
+                <i class="fa fa-align-justify text-white text-lg cursor-pointer" id="open-nav"></i>
+            </div>
+        </div>
     </div>
     @yield('content')
 

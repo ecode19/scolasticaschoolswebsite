@@ -257,7 +257,7 @@
                 <h1 class="text-white font-semibold text-4xl">Join Us in Shaping the Future</h1>
                 {{-- admission button --}}
                 <div class="mt-12">
-                    <a href="#"
+                    <a href="{{route('contact-us')}}"
                         class="py-3 px-7 text-gray-800 bg-white rounded-xl font-semibold text-lg focus:outline-none hover:bg-gray-200 transition transform ease-in-out duration-700 focus:scale-95 ring-4 ring-white">
                         Apply Now
                     </a>
