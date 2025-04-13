@@ -6,9 +6,9 @@
     <div class="w-full lg:h-[500px] overflow-hidden relative">
         <img src={{ asset('/storage/images/academic-levels/' . $level->image_2) }} alt="" class="w-full object-cover">
         <div class="w-full">
-            <div class="absolute bottom-10 left-10 transparent-bg">
+            <div class="absolute bottom-5 left-5 lg:bottom-10 lg:left-10 transparent-bg">
                 <div class="text-white text-center">
-                    <h1 class="oswald text-3xl md:text-6xl uppercase text-green-200">{{ $level->name }}</h1>
+                    <h1 class="oswald text-xl md:text-4xl lg:text-6xl uppercase text-green-200">{{ $level->name }}</h1>
                 </div>
             </div>
         </div>
@@ -21,19 +21,19 @@
         </div>
         <div class="w-full md:w-1/2 p-2 md:p-4 lg:p-8 order-2 md:order-2">
             <div class="w-fit">
-                <h1 class="oswald text-4xl text-green-900">Welcome to our {{$level->short_name}}</h1>
+                <h1 class="oswald text-2xl md:text-4xl text-green-900">Welcome to our {{$level->short_name}}</h1>
                 <div class="w-2/5 border-2 border-green-800 mt-2"></div>
             </div>
-            <div class="defaultText text-justify text-lg text-gray-800 my-4">{!! $level->description !!}</div>
+            <div class="defaultText text-justify md:text-lg text-gray-800 my-4">{!! $level->description !!}</div>
         </div>
     </section>
 
     <section class="w-full p-12  bg-no-repeat bg-center bg-cover bg-fixed bg-gray-600 bg-blend-multiply"
         style="background-image: url('{{ asset('/storage/images/academic-levels/' . $level->image_3) }}')">
         <div class="w-full md:w-10/12 mx-auto">
-            <i class="fa fa-book-open text-4xl text-white"></i>
-            <h1 class="oswald text-4xl text-white">Our Curriculum</h1>
-            <div class="text-lg text-white my-4">{!! $level->curriculum !!}</div>
+            <i class="fa fa-book-open text-2xl md:text-4xl text-white"></i>
+            <h1 class="oswald text-2xl md:text-4xl text-white">Our Curriculum</h1>
+            <div class="md:text-lg text-white my-4">{!! $level->curriculum !!}</div>
         </div>
     </section>
 
@@ -41,7 +41,7 @@
     <section class="w-full md:w-11/12 mx-auto p-2 my-8">
         <div class="w-full">
             <div class="w-max">
-                <h1 class="oswald text-4xl text-green-900">Subjects Offered</h1>
+                <h1 class="oswald text-2xl md:text-4xl text-green-900">Subjects Offered</h1>
                 <div class="w-2/5 border-2 border-green-800 mt-2"></div>
             </div>
             <div class="w-full flex md:flex-row flex-wrap items-stretch mt-8">
@@ -69,7 +69,7 @@
     {{-- teaching approach --}}
     <section class="w-full p-8">
         <div class="w-fit mx-4">
-            <h1 class="oswald text-4xl text-green-900 text-wrap">Teaching & Learnig Approach</h1>
+            <h1 class="oswald text-2xl md:text-4xl text-green-900 text-wrap">Teaching & Learnig Approach</h1>
             <div class="w-2/5 border-2 border-green-800 mt-2"></div>
         </div>
 
@@ -83,7 +83,7 @@
                         </div>
                         <div class="my-2">
                             <h5 class="text-green-800 text-center text-3xl my-2">{{ $approach->name }}</h5>
-                            <p class="defaultText text-lg text-center">{{ $approach->description }}</p>
+                            <p class="defaultText md:text-lg text-center">{{ $approach->description }}</p>
                         </div>
                     </div>
                 </div>
@@ -93,19 +93,19 @@
 
     {{-- assessments --}}
     <section class="w-full p-12 text-center bg-green-200 my-4 md:my-8">
-        <i class="fa fa-book-open text-4xl text-green-900"></i>
-        <h1 class="oswald text-4xl text-green-900">Assessments & Examinations</h1>
+        <i class="fa fa-book-open text-2xl md:text-4xl text-green-900"></i>
+        <h1 class="oswald text-2xl md:text-4xl text-green-900">Assessments & Examinations</h1>
         <div class="w-full md:w-10/12 mx-auto text-center">
             @foreach ($level->assessmentMethods as $method)
-            <p class="defaultText text-lg text-gray-800 my-2"><i class="fa fa-check mx-2"></i>{{$method->name}}</p>
+            <p class="defaultText md:text-lg text-gray-800 my-2"><i class="fa fa-check mx-2"></i>{{$method->name}}</p>
             @endforeach
         </div>
     </section>
 
     {{-- co-curricular --}}
     <section class="w-full md:w-11/12 mx-auto">
-        <div class="w-fit">
-            <h1 class="oswald text-4xl text-green-900">Co-Curricular Activities & Special Programs</h1>
+        <div class="w-fit px-2">
+            <h1 class="oswald text-2xl md:text-4xl text-green-900 text-wrap">Co-Curricular Activities & Special Programs</h1>
             <div class="w-2/5 border-2 border-green-800 mt-2"></div>
         </div>
         <div class="slider3 w-full">
@@ -118,9 +118,9 @@
                         </div>
                         <div class="w-full md:w-1/2 p-2 md:p-4 lg:p-8 order-1 md:order-2">
                             <div class="w-fit">
-                                <h1 class="oswald text-4xl text-green-900">{{ $activity->name }}</h1>
+                                <h1 class="oswald text-2xl md:text-4xl text-green-900">{{ $activity->name }}</h1>
                             </div>
-                            <div class="defaultText text-justify text-lg text-gray-800 my-4">{!! $activity->description !!}</div>
+                            <div class="defaultText text-justify md:text-lg text-gray-800 my-4">{!! $activity->description !!}</div>
                         </div>
                     </div>
                 </div>
@@ -133,11 +133,11 @@
     <section class="w-full md:w-11/12 mx-auto p-2 my-8">
         <div class="w-full">
             <div class="w-max">
-                <h1 class="oswald text-4xl text-green-900">Facilities & Learning Resources</h1>
+                <h1 class="oswald text-2xl md:text-4xl text-green-900">Facilities & Learning Resources</h1>
                 <div class="w-2/5 border-2 border-green-800 mt-2"></div>
             </div>
 
-            <p class="defaultText text-lg my-4">
+            <p class="defaultText md:text-lg my-4">
                 Our students have access to world-class learning facilities, including modern classrooms, well-equipped
                 science labs, a digital learning center, and a well-stocked library. These resources ensure that students
                 can explore their full academic potential.

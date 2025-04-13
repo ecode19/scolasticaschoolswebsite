@@ -2,7 +2,7 @@
 @section('title', 'Blog search result')
 @section('content')
 
-    <section class="w-full md:w-11/12 mx-auto">
+    <section class="w-full md:w-11/12 mx-auto p-2">
         <p class="text-lg my-4 text-center">Search results for <span
                 class="text-green-800 font-semibold">"{{ $search }}"</span></p>
         <div class="w-full md:w-10/12 mx-auto p-2">
@@ -12,7 +12,7 @@
                     <input type="text" name="search" value="{{ $search }}"
                         class="p-2 border border-gree-300 w-10/12 focus:outline-none focus:border focus:border-green-500">
                     <button class="bg-green-800 text-lg text-green-200 p-2 font-semibold"><i
-                            class="fa fa-search mx-2"></i>search</button>
+                            class="fa fa-search mx-2"></i><span class="hidden md:block">search</span></button>
                 </div>
             </form>
 
@@ -47,8 +47,8 @@
             @endforeach
         </div>
 
-        <div class="w-full my-4">
-            <h3 class="text-4xl text-green-800 mb-4 text-center">Explore more on our blog</h3>
+        <div class="w-full my-4 py-4 md:py-0">
+            <h3 class="text-2xl md:text-4xl text-green-800 mb-4 text-center">Explore more on our blog</h3>
             <div class="w-full flex flex-col md:flex-row flex-wrap">
                 @foreach ($otherPosts as $post)
                     <div class="w-full md:w-1/3 lg:w-1/5 my-4">

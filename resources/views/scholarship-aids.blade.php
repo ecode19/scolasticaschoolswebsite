@@ -28,12 +28,12 @@
     <section class="py-20">
         <div class="w-11/12 mx-auto">
             <!-- Main Title -->
-            <h1 class="text-center text-5xl font-extrabold text-green-800 mb-12">
+            <h1 class="text-center text-3xl md:text-5xl font-extrabold text-green-800 mb-12">
                 Empowering Bright Minds, Creating Future Leaders
             </h1>
 
             <!-- Description -->
-            <p class="text-center text-xl text-gray-700 max-w-4xl mx-auto mb-12">
+            <p class="text-center md:text-lg text-gray-700 max-w-4xl mx-auto mb-12">
                 At Scolastica Schools, we believe that financial limitations should never be a barrier to quality education.
                 Our scholarships and financial aid programs are designed to support academically gifted, talented, and
                 deserving students
@@ -43,7 +43,7 @@
 
         {{-- Available Scholarships --}}
         <div class="w-11/12 mx-auto">
-            <h1 class="text-center text-4xl font-semibold text-green-800 mb-12">
+            <h1 class="text-center text-2x md:text-4xl font-semibold text-green-800 mb-12">
                 Available Scholarships
             </h1>
             <div class="w-full flex flex-col md:flex-row justify-center items-center gap-12">
@@ -53,8 +53,8 @@
                         class="w-20 h-20 rounded-full bg-green-700 text-white border-4 border-white flex justify-center items-center shadow-xl">
                         <i class="fa-solid fa-handshake-angle text-4xl"></i>
                     </div>
-                    <h2 class="mt-6 text-3xl font-semibold text-green-700">Academic Excellence Scholarship</h2>
-                    <p class="text-center text-xl italic text-gray-600 p-6">Recognizing outstanding academic
+                    <h2 class="mt-6 text-xl md:text-3xl font-semibold text-green-700">Academic Excellence Scholarship</h2>
+                    <p class="text-center md:text-xl italic text-gray-600 p-6">Recognizing outstanding academic
                         promise. Our
                         scholarship celebrates students who demonstrate excellence, with further details communicated
                         privately to selected recipients and their families.</p>
@@ -65,8 +65,8 @@
                         class="w-20 h-20 rounded-full bg-blue-700 text-white border-4 border-white flex justify-center items-center shadow-xl">
                         <i class="fa-solid fa-handshake-angle text-4xl"></i>
                     </div>
-                    <h2 class="mt-6 text-3xl font-semibold text-blue-700">Financial Aid Program</h2>
-                    <p class="text-center text-xl italic text-gray-600 p-6">We're currently in the process of establishing a
+                    <h2 class="mt-6 text-xl md:text-3xl font-semibold text-blue-700">Financial Aid Program</h2>
+                    <p class="text-center md:text-xl italic text-gray-600 p-6">We're currently in the process of establishing a
                         comprehensive financial aid program to support families in need. This initiative is expected to
                         launch in the coming academic years. Stay tuned for official announcements and application
                         guidelines.</p>
@@ -80,12 +80,12 @@
     <section class="py-20 bg-gradient-to-r from-green-50 via-green-100 to-green-200">
         <div class="w-11/12 mx-auto">
             <!-- Section Title -->
-            <h1 class="text-center text-4xl font-extrabold text-green-800 mb-12">
+            <h1 class="text-center text-2xl md:text-4xl font-extrabold text-green-800 mb-12">
                 Benefits of Scholarships at Scolastica Schools
             </h1>
 
             <!-- Section Description -->
-            <p class="text-center text-xl text-gray-700 max-w-4xl mx-auto">
+            <p class="text-center md:text-xl text-gray-700 max-w-4xl mx-auto">
                 At Scolastica Schools, scholarships are a token of recognition for outstanding students. They offer more
                 than just financial relief — they provide motivation, build confidence, and open doors to greater
                 opportunities. Scholarship recipients become part of a vibrant, supportive academic community designed to

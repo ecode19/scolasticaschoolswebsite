@@ -3,7 +3,7 @@
 @section('content')
 
     <div class="w-full md:w-11/12 mx-auto p-4">
-        <h3 class="text-4xl text-green-800 mb-4">{{ $category }}</h3>
+        <h3 class="text-2xl md:text-4xl text-green-800 mb-4">{{ $category }}</h3>
 
         <div class="flex flex-col space-y-3">
             @if ($categoryPosts->count() > 0)

@@ -33,6 +33,11 @@
                             class="fa fa-book-open mx-1 p-2 my-2"></i>
                         <li>Academic Levels</li>
                     </a>
+                    <a href="{{ route('admin.staff.index') }}"
+                        class="w-full flex items-center text-lg font-semibold hover:bg-green-300 rounded-sm"><i
+                            class="fa fa-users mx-1 p-2 my-2"></i>
+                        <li>Staff Management</li>
+                    </a>
                     <a href="{{ route('admin.subjects.index') }}"
                         class="w-full flex items-center text-lg font-semibold hover:bg-green-300 rounded-sm"><i
                             class="fa fa-book mx-1 p-2 my-2"></i>
@@ -92,11 +97,6 @@
                         class="w-full flex items-center text-lg font-semibold hover:bg-green-300 rounded-sm"><i
                             class="fa fa-newspaper mx-1 p-2 my-2"></i>
                         <li>Blog</li>
-                    </a>
-                    <a href="{{ route('admin.staff.index') }}"
-                        class="w-full flex items-center text-lg font-semibold hover:bg-green-300 rounded-sm"><i
-                            class="fa fa-users mx-1 p-2 my-2"></i>
-                        <li>Staff Management</li>
                     </a>
                 </ul>
             </div>

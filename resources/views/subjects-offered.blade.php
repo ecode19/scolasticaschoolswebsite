@@ -4,18 +4,18 @@
 
 <section class="w-11/12 mx-auto my-4 p-4">
     <div class="w-max">
-        <h1 class="oswald text-4xl text-green-900">Subjects Offered</h1>
+        <h1 class="oswald text-2xl md:text-4xl text-green-900">Subjects Offered</h1>
         <div class="w-2/5 border-2 border-green-800 mt-2"></div>
     </div>
 
     <div class="w-full my-4">
-        <p class="defaultText text-justify text-lg">Our school offers a wide range of subjects across different educational levels, providing students with the flexibility to explore their academic strengths and interests. Below is a detailed breakdown of the subjects taught at Scolastica Secondary School.</p>
+        <p class="defaultText text-justify md:text-lg">Our school offers a wide range of subjects across different educational levels, providing students with the flexibility to explore their academic strengths and interests. Below is a detailed breakdown of the subjects taught at Scolastica Secondary School.</p>
     </div>
 
     @foreach ($academicLevels as $level)
     <div class="w-full my-8">
-        <div class="w-max">
-            <h1 class="oswald text-4xl text-green-900">{{$level->name}}</h1>
+        <div class="w-fit">
+            <h1 class="oswald text-2xl md:text-4xl text-green-900 text-wrap">{{$level->name}}</h1>
             <div class="w-2/5 border-2 border-green-800 mt-2"></div>
         </div>
 

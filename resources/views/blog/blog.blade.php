@@ -2,7 +2,7 @@
 @section('title', 'Blog')
 @section('content')
 
-    <section class="w-full md:w-11/12 mx-auto">
+    <section class="w-full md:w-11/12 mx-auto p-2">
         <h2 class="text-green-800 text-center text-3xl my-2">Welcome to Scolastica Blog</h2>
 
         @if ($recentPosts->count() > 0)
@@ -13,7 +13,7 @@
                         <input type="text" name="search"
                             class="p-2 border border-gree-300 w-10/12 focus:outline-none focus:border focus:border-green-500">
                         <button class="bg-green-800 text-lg text-green-200 p-2 font-semibold"><i
-                                class="fa fa-search mx-2"></i>search</button>
+                                class="fa fa-search mx-2"></i><span class="hidden md:block">search</span></button>
                     </div>
                 </form>
 
@@ -27,8 +27,8 @@
             </div>
 
             <div class="w-full flex flex-col md:flex-row my-4">
-                <div class="w-full md:w-2/3">
-                    <h3 class="text-4xl text-green-800 mb-4">Recent Posts</h3>
+                <div class="w-full md:w-2/3 mb-4 md:mb-0">
+                    <h3 class="text-2xl md:text-4xl text-green-800 mb-4">Recent Posts</h3>
 
                     <div class="flex flex-col space-y-3">
                         @foreach ($recentPosts as $post)
@@ -49,8 +49,8 @@
                         @endforeach
                     </div>
                 </div>
-                <div class="w-full md:w-1/3">
-                    <h3 class="text-2xl text-green-800 mb-4">Featured Posts</h3>
+                <div class="w-full md:w-1/3 my-3 mb:my-0">
+                    <h3 class="text-2xl text-green-800 mb-2 md:mb-4">Featured Posts</h3>
                     <div class="flex flex-col space-y-2">
                         @if ($featuredPosts->count() > 0)
                             @foreach ($featuredPosts as $post)
@@ -74,7 +74,7 @@
 
             @if ($otherPosts->count() > 0)
                 <div class="w-full my-4">
-                    <h3 class="text-4xl text-green-800 mb-4 text-center">More on our blog</h3>
+                    <h3 class="text-2xl md:text-4xl text-green-800 mb-4 text-center">More on our blog</h3>
                     <div class="w-full flex flex-col md:flex-row flex-wrap">
                         @foreach ($otherPosts as $post)
                             <div class="w-full md:w-1/3 lg:w-1/5 my-4">

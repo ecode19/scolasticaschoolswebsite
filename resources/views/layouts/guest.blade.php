@@ -175,16 +175,17 @@
     {{-- Footer --}}
     <footer class="w-full bg-green-900 text-white">
         <div class="w-full flex flex-col md:flex-row p-4">
-            <div class="w-full md:w-1/4 p-4 order-1 md:order-1 flex items-center h-fit">
-                <img src={{ asset('images/logo.png') }} alt="school logo" class="w-20 rounded-full">
-                <div class="flex flex-col items-center mx-2 uppercase text-xl text-green-100">
+            <div class="w-full md:w-1/4 p-4 order-1 md:order-1 flex items-center justify-between h-fit">
+                <img src={{ asset('images/secondary_logo.png') }} alt="school logo" class="w-20 rounded-full">
+                <div class="flex flex-row md:flex-col space-x-2 md:space-x-0 items-center mx-2 uppercase text-xl text-green-100">
                     <span class="oswaldFont">Scolastica</span>
                     <span class="oswaldFont">Schools</span>
                 </div>
+                <img src={{ asset('images/primary_logo.png') }} alt="school logo" class="w-20 rounded-full">
             </div>
             <div class="w-full md:w-1/4 p-4 order-4 md:order-2 flex flex-col md:items-center">
-                <h1 class="text-2xl mb-2">Stay in Touch</h1>
-                <p class="text-lg hover:text-green-400"><a href="{{ route('faqs') }}">FAQS</a></p>
+                <h1 class="text-xl md:text-2xl mb-2">Stay in Touch</h1>
+                <p class="md:text-lg hover:text-green-400"><a href="{{ route('faqs') }}">FAQS</a></p>
                 <div class="flex flex-row space-x-2 md:flex-col md:space-y-2 md:space-x-0 text-2xl text-green-100">
                     <a href="#"><i class="fab fa-facebook hover:text-blue-700"></i></a>
                     <a href="#"><i class="fab fa-instagram hover:text-red-500"></i></a>
@@ -192,8 +193,8 @@
                 </div>
             </div>
             <div class="w-full md:w-1/4 p-4 order-3 md:order-3">
-                <h1 class="text-2xl mb-2">Popular Links</h1>
-                <div class="flex flex-col space-y-2 text-lg text-green-100">
+                <h1 class="text-xl md:text-2xl mb-2">Popular Links</h1>
+                <div class="flex flex-col space-y-2 md:text-lg text-green-100">
                     <a href="https://www.moe.go.tz/">
                         <p class="hover:text-green-200">Ministry of Education, Science, and Technology</p>
                     </a>
@@ -203,8 +204,8 @@
                 </div>
             </div>
             <div class="w-full md:w-1/4 p-4 order-2 md:order-4">
-                <h1 class="text-2xl mb-2">Contact Us</h1>
-                <div class="flex flex-col space-y-2 text-lg text-green-100">
+                <h1 class="text-xl md:text-2xl mb-2">Contact Us</h1>
+                <div class="flex flex-col space-y-2 md:text-lg text-green-100">
                     <p>Scolastica Secondary School,</p>
                     <p>P.O.BOX 159,</p>
                     <p>Himo - Kilimanjaro, Tanzania</p>

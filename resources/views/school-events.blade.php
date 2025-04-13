@@ -11,9 +11,9 @@
             <div class="absolute inset-0 bg-gradient-to-tr from-gray-800 via-gray-900 to-transparent opacity-50"></div>
             {{-- Text --}}
             <div class="relative text-center text-white px-4">
-                <h1 class="text-4xl lg:text-6xl font-bold">Explore Our School Events</h1>
-                <h2 class="mt-4 text-2xl font-semibold">A Hub for Learning, Growth, and Celebration</h2>
-                <p class="mt-4 text-lg">Join us as we create meaningful experiences through a variety of school events
+                <h1 class="text-2xl md:text-4xl lg:text-6xl font-bold">Explore Our School Events</h1>
+                <h2 class="mt-4 text-xl md:text-2xl font-semibold">A Hub for Learning, Growth, and Celebration</h2>
+                <p class="mt-4 text-lg hidden md:block">Join us as we create meaningful experiences through a variety of school events
                     designed to inspire and connect our community. From academic workshops to cultural festivals, there’s
                     something for everyone!</p>
             </div>

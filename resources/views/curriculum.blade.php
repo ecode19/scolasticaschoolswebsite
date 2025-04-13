@@ -4,12 +4,12 @@
 
     <section class="w-11/12 mx-auto my-4 p-4">
         <div class="w-max">
-            <h1 class="oswald text-4xl text-green-900">Our Curriculum</h1>
+            <h1 class="oswald text-2xl md:text-4xl text-green-900">Our Curriculum</h1>
             <div class="w-2/5 border-2 border-green-800 mt-2"></div>
         </div>
 
         <div class="w-full my-4">
-            <p class="defaultText text-justify text-lg">The Scolastica Schools’ education system follows a structured
+            <p class="defaultText text-justify md:text-lg">The Scolastica Schools’ education system follows a structured
                 curriculum designed by the Tanzania Institute of Education (TIE) under the guidance of the Ministry of
                 Education, Science, and Technology (MoEST). It emphasizes competency-based learning, fostering practical
                 skills alongside theoretical knowledge. The curriculum is categorized into four major academic levels:
@@ -26,10 +26,10 @@
                     </div>
                     <div class="w-full md:w-1/2 p-2 md:p-4 lg:p-8 order-2 md:order-2">
                         <div class="w-max">
-                            <h1 class="oswald text-4xl text-green-900">{{ $level->short_name }}</h1>
+                            <h1 class="oswald text-2xl md:text-4xl text-green-900">{{ $level->short_name }}</h1>
                             <div class="w-2/5 border-2 border-green-800 mt-2"></div>
                         </div>
-                        <div class="defaultText text-justify merryFont text-lg text-gray-800 my-4">{!! $level->curriculum !!}
+                        <div class="defaultText text-justify merryFont md:text-lg text-gray-800 my-4">{!! $level->curriculum !!}
                         </div>
                     </div>
                 @endif
@@ -45,10 +45,10 @@
                     </div>
                     <div class="w-full md:w-1/2 p-2 md:p-4 lg:p-8 order-2 md:order-1">
                         <div class="w-max">
-                            <h1 class="oswald text-4xl text-green-900">{{ $level->short_name }}</h1>
+                            <h1 class="oswald text-2xl md:text-4xl text-green-900">{{ $level->short_name }}</h1>
                             <div class="w-2/5 border-2 border-green-800 mt-2"></div>
                         </div>
-                        <div class="defaultText text-justify merryFont text-lg text-gray-800 my-4">{!! $level->curriculum !!}
+                        <div class="defaultText text-justify merryFont md:text-lg text-gray-800 my-4">{!! $level->curriculum !!}
                         </div>
                     </div>
                 @endif
@@ -64,10 +64,10 @@
                     </div>
                     <div class="w-full md:w-1/2 p-2 md:p-4 lg:p-8 order-2 md:order-2">
                         <div class="w-max">
-                            <h1 class="oswald text-4xl text-green-900">{{ $level->short_name }}</h1>
+                            <h1 class="oswald text-2xl md:text-4xl text-green-900">{{ $level->short_name }}</h1>
                             <div class="w-2/5 border-2 border-green-800 mt-2"></div>
                         </div>
-                        <div class="defaultText text-justify merryFont text-lg text-gray-800 my-4">{!! $level->curriculum !!}
+                        <div class="defaultText text-justify merryFont md:text-lg text-gray-800 my-4">{!! $level->curriculum !!}
                         </div>
                     </div>
                 @endif
@@ -83,10 +83,10 @@
                 </div>
                 <div class="w-full md:w-1/2 p-2 md:p-4 lg:p-8 order-2 md:order-1">
                     <div class="w-max">
-                        <h1 class="oswald text-4xl text-green-900">{{ $level->short_name }}</h1>
+                        <h1 class="oswald text-2xl md:text-4xl text-green-900">{{ $level->short_name }}</h1>
                         <div class="w-2/5 border-2 border-green-800 mt-2"></div>
                     </div>
-                    <div class="defaultText text-justify merryFont text-lg text-gray-800 my-4">{!! $level->curriculum !!}
+                    <div class="defaultText text-justify merryFont md:text-lg text-gray-800 my-4">{!! $level->curriculum !!}
                     </div>
                 </div>
             @endif
@@ -99,15 +99,15 @@
             </div>
             <div class="w-full md:w-1/2 p-2 md:p-4 lg:p-8 order-2 md:order-2">
                 <div class="w-fit">
-                    <h1 class="oswald text-4xl text-green-900">Extracurricular Learning & Special Programs</h1>
+                    <h1 class="oswald text-2xl md:text-4xl text-green-900">Extracurricular Learning & Special Programs</h1>
                     <div class="w-2/5 border-2 border-green-800 mt-2"></div>
                 </div>
-                <p class="defaultText text-justify text-lg text-gray-800 my-4">Beyond the standard curriculum, we offer a
+                <p class="defaultText text-justify md:text-lg text-gray-800 my-4">Beyond the standard curriculum, we offer a
                     variety of extracurricular learning opportunities to ensure students gain practical skills, leadership
                     abilities, and global perspectives. Our STEM and entrepreneurship programs empower students to innovate
                     and solve real-world challenges.</p>
                 <div class="w-full">
-                    <ul class="defaultText merryFont text-lg list-disc mx-6">
+                    <ul class="defaultText merryFont md:text-lg list-disc mx-6">
                         <li class="my-2">STEM, ICT, entrepreneurship, and leadership development</li>
                         <li class="my-2">Engagement in research projects</li>
                         <li class="my-2">Science fairs</li>

@@ -25,16 +25,16 @@
         {{-- Recent Accomplishments --}}
         <section class="mt-20">
             <div class="text-center mb-12">
-                <h2 class="text-4xl font-extrabold text-green-800">Recent Student and Alumni Accomplishments</h2>
+                <h2 class="text-2xl md:text-4xl font-extrabold text-green-800">Recent Student and Alumni Accomplishments</h2>
             </div>
 
             <div class="flex flex-col md:flex-row justify-center items-center gap-12">
                 <div
-                    class="w-full md:w-1/3 bg-white rounded-3xl shadow-xl p-8 flex items-center transform hover:scale-105 transition-transform ease-in-out duration-500">
+                    class="w-full md:w-1/3 bg-white rounded-3xl shadow-xl p-8 flex flex-col items-center transform hover:scale-105 transition-transform ease-in-out duration-500">
                     <img src="{{ asset('images/kilimanjaro2.jpeg') }}"
                         class="h-40 w-40 rounded-lg border-4 border-green-600 mr-6">
                     <div>
-                        <h3 class="text-2xl font-semibold text-green-800 mb-3">Alumni Testimonial – Dr. Michael Lema (Class
+                        <h3 class="text-xl md:text-2xl font-semibold text-green-800 mb-3">Alumni Testimonial – Dr. Michael Lema (Class
                             of 2015)</h3>
                         <p class="text-gray-600 mb-4">Scolastica Schools shaped my academic foundation and personal growth
                             in ways I could never have imagined. The rigorous curriculum, inspiring teachers, and leadership
@@ -44,11 +44,11 @@
                 </div>
 
                 <div
-                    class="w-full md:w-1/3 bg-white rounded-3xl shadow-xl p-8 flex items-center transform hover:scale-105 transition-transform ease-in-out duration-500">
+                    class="w-full md:w-1/3 bg-white rounded-3xl shadow-xl p-8 flex flex-col items-center transform hover:scale-105 transition-transform ease-in-out duration-500">
                     <img src="{{ asset('images/kilimanjaro2.jpeg') }}"
                         class="h-40 w-40 rounded-lg border-4 border-green-600 mr-6">
                     <div>
-                        <h3 class="text-2xl font-semibold text-green-800 mb-3">Parent Testimonial – Mrs. Angela Mushi</h3>
+                        <h3 class="text-xl md:text-2xl font-semibold text-green-800 mb-3">Parent Testimonial – Mrs. Angela Mushi</h3>
                         <p class="text-gray-600 mb-4">As a parent, I wanted a school that goes beyond academics—one that
                             nurtures character, leadership, and global awareness. Scolastica has exceeded my expectations.
                             My children are not only excelling in their studies but also becoming responsible, innovative,
@@ -58,11 +58,11 @@
                 </div>
 
                 <div
-                    class="w-full md:w-1/3 bg-white rounded-3xl shadow-xl p-8 flex items-center transform hover:scale-105 transition-transform ease-in-out duration-500">
+                    class="w-full md:w-1/3 bg-white rounded-3xl shadow-xl p-8 flex flex-col items-center transform hover:scale-105 transition-transform ease-in-out duration-500">
                     <img src="{{ asset('images/kilimanjaro2.jpeg') }}"
                         class="h-40 w-40 rounded-lg border-4 border-green-600 mr-6">
                     <div>
-                        <h3 class="text-2xl font-semibold text-green-800 mb-3">Teacher Testimonial – Mr. Jonathan Karanja
+                        <h3 class="text-xl md:text-2xl font-semibold text-green-800 mb-3">Teacher Testimonial – Mr. Jonathan Karanja
                         </h3>
                         <p class="text-gray-600 mb-4">Teaching at Scolastica Schools is a rewarding experience. The school's
                             commitment to excellence and innovation ensures that both students and educators thrive. Seeing
@@ -109,7 +109,7 @@
 
     {{-- FAQs --}}
     <section class="mt-20 max-w-7xl mx-auto px-6">
-        <h2 class="text-4xl font-extrabold text-green-800 text-center mb-12">Frequently Asked Questions</h2>
+        <h2 class="text-2xl md:text-4xl font-extrabold text-green-800 text-center mb-12">Frequently Asked Questions</h2>
         <div class="bg-white p-8 rounded-2xl shadow-2xl">
             <details
                 class="mb-6 p-4 bg-gray-50 rounded-xl shadow-sm transition-all ease-in-out duration-300 hover:shadow-xl">

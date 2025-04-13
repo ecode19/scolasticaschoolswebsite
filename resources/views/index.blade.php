@@ -5,10 +5,10 @@
     <div class="w-full lg:h-[500px] overflow-hidden relative">
         <img src={{ asset('images/students/students-1.jpg') }} alt="" class="w-full object-cover">
         <div class="w-full">
-            <div class="absolute bottom-10 left-10 transparent-bg">
+            <div class="absolute bottom-5 left-5 lg:bottom-10 lg:left-10 transparent-bg">
                 <div class="text-white text-center">
-                    <h1 class="oswald text-3xl md:text-6xl uppercase text-green-200">Scolastica Schools</h1>
-                    <p class="text-lg md:text-2xl italic my-2 text-orange-200">Equal Education for All Children</p>
+                    <h1 class="oswald text-xl md:text-4xl lg:text-6xl uppercase text-green-200">Scolastica Schools</h1>
+                    <p class="text-md md:text-2xl italic my-2 text-orange-200">Equal Education for All Children</p>
                 </div>
             </div>
         </div>
@@ -48,7 +48,7 @@
         </div>
         <div class="w-full md:w-1/2 lg:w-1/4 my-2">
             <div class="w-11/12 mx-auto p-4 flex flex-col items-center  rounded-md  ">
-                <span class="text-3xl text-green-900">50+</span>
+                <span class="text-3xl text-green-900">40+</span>
                 <span class="mt-2 text-xl  text-orange-700">Teachers</span>
             </div>
         </div>

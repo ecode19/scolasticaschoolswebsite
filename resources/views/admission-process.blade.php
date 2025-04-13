@@ -117,7 +117,7 @@
     {{-- Special Recognitions & Partnerships --}}
     <section class="py-28">
         <div class="container mx-auto px-4">
-            <h1 class="text-center text-5xl font-semibold pb-12 text-green-700">
+            <h1 class="text-center text-3xl md:text-5xl font-semibold pb-12 text-green-700">
                 Special Recognitions & Partnerships
             </h1>
 
@@ -125,25 +125,25 @@
                 data-aos-duration="2000">
 
                 <div class="flex flex-col items-center text-center">
-                    <h2 class="text-3xl font-extrabold text-gray-900">
+                    <h2 class="text-xl md:text-3xl font-extrabold text-gray-900">
                         STEM Tanzania Accreditation
                     </h2>
                 </div>
 
                 <div class="flex flex-col items-center text-center">
-                    <h2 class="text-3xl font-extrabold text-gray-900">
+                    <h2 class="text-xl md:text-3xl font-extrabold text-gray-900">
                         Tanzania Sports Council (TSC) Affiliation
                     </h2>
                 </div>
 
                 <div class="flex flex-col items-center text-center">
-                    <h2 class="text-3xl font-extrabold text-gray-900">
+                    <h2 class="text-xl md:text-3xl font-extrabold text-gray-900">
                         Microsoft & Google for Education Partnerships
                     </h2>
                 </div>
 
                 <div class="flex flex-col items-center text-center">
-                    <h2 class="text-3xl font-extrabold text-gray-900">
+                    <h2 class="text-xl md:text-3xl font-extrabold text-gray-900">
                         Language Proficiency Certifications – DELF & HSK
                     </h2>
                 </div>
