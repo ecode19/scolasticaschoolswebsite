@@ -248,7 +248,6 @@
         </div>
     </section>
 
-
     {{-- choose us --}}
     <section class="py-12 lg:py-28 bg-green-800">
         <div class="w-11/12 mx-auto">
