@@ -63,6 +63,74 @@
             </div>
         </div>
     </section>
+    {{-- our motto --}}
+    <section class="bg-gradient-to-br from-green-50 to-white py-16 px-6 md:px-20 lg:px-32">
+        <div class="w-11/12 mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-green-800 mb-6">
+                Our Motto
+            </h2>
+            <p class="text-xl text-gray-700 font-medium mb-10 leading-relaxed">
+                <span class="italic font-semibold text-green-700">Equal Education for All Children</span> – isn't just our
+                motto – it's the heartbeat of our school. This reflects our unwavering commitment to fairness, inclusion,
+                and opportunity. More than just words, it’s a promise that every child, regardless of background or ability,
+                receives the same high-quality education and support.
+            </p>
+        </div>
+
+        <div class="w-11/12 mx-auto grid md:grid-cols-2 gap-10 text-gray-700">
+            <div class="flex items-start gap-4">
+                <i class="fas fa-handshake text-3xl text-green-700 mt-1"></i>
+                <div>
+                    <h4 class="text-xl font-semibold mb-1">Inclusivity</h4>
+                    <p class="text-base leading-relaxed">
+                        Every child matters. We create an environment where all students feel valued and respected,
+                        regardless of their background or learning needs.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+                <i class="fas fa-scale-balanced text-3xl text-green-700 mt-1"></i>
+                <div>
+                    <h4 class="text-xl font-semibold mb-1">Equity in Resources</h4>
+                    <p class="text-base leading-relaxed">
+                        From materials to attention, each child receives not just equal, but fair support tailored to their
+                        unique journey.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+                <i class="fas fa-seedling text-3xl text-green-700 mt-1"></i>
+                <div>
+                    <h4 class="text-xl font-semibold mb-1">Opportunity for Growth</h4>
+                    <p class="text-base leading-relaxed">
+                        Whether excelling in academics, arts, or sports—we nurture every student’s strengths and support
+                        their challenges.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+                <i class="fas fa-globe text-3xl text-green-700 mt-1"></i>
+                <div>
+                    <h4 class="text-xl font-semibold mb-1">Foundation for the Future</h4>
+                    <p class="text-base leading-relaxed">
+                        We level the playing field to shape confident, capable individuals who can positively impact the
+                        world.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-4xl mx-auto mt-14 text-center">
+            <p class="text-lg md:text-xl text-gray-800 italic font-medium leading-loose">
+                “Equal Education for All Children” is our guidepost—fueling compassion, inspiring dreams, and ensuring no
+                child is left behind. It stands for equity, love, and the power of potential in every learner.
+            </p>
+        </div>
+    </section>
+
 
     {{-- Why Choose Scolastica Schools --}}
     <section class="py-12">
