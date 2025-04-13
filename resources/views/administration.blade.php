@@ -36,7 +36,7 @@
                     <div class="flex flex-col items-center text-center">
                         <img src="{{ asset('images/ministry-of-toursim.png') }}" alt=""
                             class="w-40 h-40 rounded-full mb-6 shadow-lg">
-                        <h2 class="text-3xl font-bold text-green-800">Mrs. Edward Shayo</h2>
+                        <h2 class="text-3xl font-bold text-green-800">Ms. Scolastica Edward Shayo </h2>
                         <p class="text-lg text-gray-700 mt-2">Founder & Managing Director</p>
                     </div>
 
@@ -247,7 +247,6 @@
             </div>
         </div>
     </section>
-
 
     {{-- choose us --}}
     <section class="py-12 lg:py-28 bg-green-800">
