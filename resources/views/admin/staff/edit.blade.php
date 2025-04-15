@@ -8,7 +8,7 @@
             class="py-1 px-2 bg-green-700 hover:bg-gray-700 text-white rounded-md">Back</a>
     </div>
 
-    <div class="max-w-6xl mx-auto overflow-x-auto pb-10">
+    <div class="w-11/12 max-w-6xl mx-auto overflow-x-auto pb-10">
         <form action="{{ route('admin.staff.update', $staff) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
@@ -39,8 +39,8 @@
 
             {{-- staff biography --}}
             <div class="mb-4">
-                <label for="bio" class="block text-gray-700 font-bold mb-2">bio:</label>
-                <textarea name="content" id="content" rows="5" class="w-full p-2 border border-gray-300 rounded-md">{{ $staff->bio }}</textarea>
+                <label for="bio" class="block text-gray-700 font-bold mb-2">Teaching Level:</label>
+                <textarea name="bio" id="bio" rows="5" class="w-full p-2 border border-gray-300 rounded-md" placeholder="eg. Kindergarten Teacher">{{ $staff->bio }}</textarea>
                 <x-input-error :messages="$errors->get('bio')" class="mt-2" />
             </div>
 

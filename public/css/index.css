@@ -52,7 +52,7 @@
 
 /* slider */
 .slick-slide {
-    margin: 0 5px;
+    margin: 0;
 }
 
 .slick-track {
@@ -74,3 +74,4 @@
     background-color: #8f09dd;
     border-color: #8f09dd;
 }
+

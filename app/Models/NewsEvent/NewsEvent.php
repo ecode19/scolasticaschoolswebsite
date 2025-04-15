@@ -11,7 +11,6 @@ class NewsEvent extends Model
     protected $fillable = [
         'title',
         'type',
-        'status',
         'location',
         'content',
         'image',

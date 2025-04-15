@@ -29,7 +29,6 @@ class NewsEventController extends Controller
             'title' => ['required', 'string', 'max:255'],
             'content' => ['required'],
             'type' => ['required', 'string', 'max:255'],
-            'status' => ['required'],
             'location' => ['required', 'string', 'max:255'],
             'date' => ['required', 'date'],
             'image' => ['required', 'mimes:jpg,png,jpeg', 'max:2048'],
@@ -37,7 +36,6 @@ class NewsEventController extends Controller
             'title.required' => 'Title is required',
             'content.required' => 'Content is required',
             'type.required' => 'Type is required',
-            'status.required' => 'Status is required',
             'location.required' => 'Location is required',
             'date.required' => 'Date is required',
             'image.required' => 'Image is required',
@@ -72,13 +70,12 @@ class NewsEventController extends Controller
         $newsEvent->title = $request->title;
         $newsEvent->content = $request->content;
         $newsEvent->type = $request->type;
-        $newsEvent->status = $request->status;
         $newsEvent->location = $request->location;
         $newsEvent->date = $request->date;
 
         $newsEvent->save();
 
-        return redirect()->route('admin.news.event.index')->with('success', 'News event created successfully!');
+        return redirect()->route('admin.news.event.index')->with('message', 'News event created successfully!');
     }
     public function newsEventEdit(Request $request, NewsEvent $newsEvent)
     {
@@ -88,7 +85,6 @@ class NewsEventController extends Controller
     {
         $request->validate([
             'title' => ['required', 'string', 'max:255'],
-            'status' => ['required'],
             'type' => ['required', 'string', 'max:255'],
             'location' => ['required', 'string', 'max:255'],
             'content' => ['required'],
@@ -98,7 +94,6 @@ class NewsEventController extends Controller
             'title.required' => 'Title is required',
             'content.required' => 'Content is required',
             'type.required' => 'Type is required',
-            'status.required' => 'Status is required',
             'location.required' => 'Location is required',
             'date.required' => 'Date is required',
             'image.mimes' => 'Image must be jpg, png, jpeg',
@@ -138,13 +133,12 @@ class NewsEventController extends Controller
         $newsEvent->title = $request->title;
         $newsEvent->content = $request->content;
         $newsEvent->type = $request->type;
-        $newsEvent->status = $request->status;
         $newsEvent->location = $request->location;
         $newsEvent->date = $request->date;
 
         $newsEvent->update();
 
-        return redirect()->route('admin.news.event.index')->with('success', 'News event updated successfully!');
+        return redirect()->route('admin.news.event.index')->with('message', 'News event updated successfully!');
 
     }
     public function newsEventDestroy(Request $request, NewsEvent $newsEvent)
@@ -166,6 +160,6 @@ class NewsEventController extends Controller
 
         $newsEvent->delete();
 
-        return redirect()->route('news_event.index')->with('success', 'News event deleted successfully!');
+        return redirect()->route('admin.news.event.index')->with('message', 'News event deleted successfully!');
     }
 }

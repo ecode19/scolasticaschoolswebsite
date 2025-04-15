@@ -25,6 +25,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+//   toggle admin nav
+const openNavBtn = document.getElementById("open-nav");
+const closeNavBtn = document.getElementById("close-nav");
+const mainNav = document.getElementById("main-nav");
+openNavBtn.addEventListener("click", () => {
+    mainNav.classList.remove("hidden");
+});
+closeNavBtn.addEventListener("click", () => {
+    mainNav.classList.add("hidden");
+});
+
 $(document).ready(function () {
     $(".slider").slick({
         slidesToShow: 4,

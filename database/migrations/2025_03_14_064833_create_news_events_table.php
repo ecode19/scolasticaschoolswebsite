@@ -16,7 +16,6 @@ return new class extends Migration {
             $table->string('title');
             $table->text('content');
             $table->enum('type', ['news', 'event'])->default('news');
-            $table->enum('status', ['ongoing', 'upcoming', 'past'])->default('upcoming');
             $table->string('location')->nullable();
             $table->string('image');
             $table->date('date')->nullable();

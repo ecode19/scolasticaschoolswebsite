@@ -8,7 +8,7 @@
             class="py-1 px-2 bg-green-700 hover:bg-gray-700 text-white rounded-md">Back</a>
     </div>
 
-    <div class="max-w-6xl mx-auto overflow-x-auto pb-10">
+    <div class="w-11/12 max-w-6xl mx-auto overflow-x-auto pb-10">
         <form action="{{ route('admin.news.event.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('POST')
@@ -29,17 +29,6 @@
                 </select>
                 <x-input-error :messages="$errors->get('type')" class="mt-2" />
             </div>
-            {{-- status --}}
-            <div class="mb-4">
-                <label for="status" class="block text-gray-700 font-bold mb-2">Status:</label>
-                <select name="status" id="status" class="w-full p-2 border border-gray-300 rounded-md">
-                    <option value="{{ old('status') }}">Select Status</option>
-                    <option value="upcoming">Upcoming</option>
-                    <option value="past">Past</option>
-                    <option value="featured">Featured</option>
-                </select>
-                <x-input-error :messages="$errors->get('status')" class="mt-2" />
-            </div>
             {{-- location --}}
             <div class="mb-4">
                 <label for="location" class="block text-gray-700 font-bold mb-2">Location:</label>
@@ -58,7 +47,7 @@
             {{-- news event content --}}
             <div class="mb-4">
                 <label for="description" class="block text-gray-700 font-bold mb-2">Description:</label>
-                <textarea name="content" id="content" rows="5" class="w-full p-2 border border-gray-300 rounded-md">{{ old('content') }}</textarea>
+                <textarea name="content" id="content" rows="5" class="editor w-full p-2 border border-gray-300 rounded-md">{{ old('content') }}</textarea>
                 <x-input-error :messages="$errors->get('content')" class="mt-2" />
             </div>
 

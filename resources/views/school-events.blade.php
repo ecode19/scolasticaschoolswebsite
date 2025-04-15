@@ -24,12 +24,13 @@
     <section>
         <div class="container mx-auto py-16 px-6">
             <!-- Featured Events -->
-            @if ($featuredEvents->isNotEmpty())
+            @if ($events->isNotEmpty())
                 <section>
-                    <h2 class="text-4xl font-bold text-green-700 text-center mb-12">Featured Events</h2>
-                    <div class="w-full flex flex-col md:flex-row mt-8 justify-center">
-                        @foreach ($featuredEvents as $event)
-                            <div class="w-full md:w-1/3 my-2 bg-white rounded-2xl shadow-lg p-6">
+                    <h2 class="text-4xl font-bold text-green-700 text-center mb-12">Scolastica News & Events</h2>
+                    <div class="w-full flex flex-col md:flex-row flex-wrap mt-8">
+                        @foreach ($events as $event)
+                        <div class="w-full md:w-1/3 my-2 content-stretch">
+                            <div class="w-11/12 mx-auto my-2 bg-white rounded-2xl shadow-lg p-6">
                                 <img src="{{ $event->image ? Storage::url('images/news_events/images/' . $event->image) : asset('images/classroom2.jpeg') }}"
                                     class="h-60 w-full object-cover rounded-xl">
                                 <h3 class="text-xl font-semibold mt-4">{{ $event->title }}</h3>
@@ -37,92 +38,22 @@
                                 <span class="block mt-2 font-bold text-blue-700">
                                     {{ $event->location }}, {{ $event->date }}
                                 </span>
-                                <a href="{{ route('about-event', $event->title) }}"
-                                    class="mt-4 inline-block px-4 py-2 bg-blue-700 text-white rounded-lg">View
-                                    Details</a>
-                            </div>
-                        @endforeach
-                    </div>
-                </section>
-            @endif
-
-            <!-- Upcoming Events -->
-            @if ($upcomingEvents->isNotEmpty())
-                <section class="mt-20">
-                    <h2 class="text-4xl font-bold text-green-700 text-center mb-12">Upcoming Events</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        @foreach ($upcomingEvents as $event)
-                            <div class="bg-gray-100 rounded-2xl shadow-md p-6 flex">
-                                <img src="{{ $event->image ? Storage::url('images/news_events/images/' . $event->image) : asset('images/classroom2.jpeg') }}"
-                                    class="h-32 w-32 rounded-xl mr-4">
-                                <div>
-                                    <h3 class="text-xl font-semibold">{{ $event->title }}</h3>
-                                    <p class="text-gray-700 py-2">{!! Str::limit($event->content, 100, '...') !!}</p>
-                                    <div class="bg-blue-200 px-3 rounded-lg">
-                                        <span class="text-sm font-bold text-blue-700 block mt-2 py-2">
-                                            <i class="fa-regular fa-calendar"></i> {{ $event->location }},
-                                            {{ $event->date }}
-                                        </span>
-
-                                        <a href="{{ route('about-event', $event->title) }}"
-                                            class="mt-4 inline-block px-4 py-2 bg-blue-700 text-white rounded-lg">View
-                                            Details</a>
-                                    </div>
+                                <div class="flex items-center justify-between my-2">
+                                    <span class="font-semibold text-white bg-green-800 px-2 py-1 rounded-md">{{$event->type}}</span>
+                                    <a href="{{ route('about-event', $event->title) }}"
+                                        class="inline-block px-4 py-2 bg-blue-700 text-white rounded-lg">View
+                                        Details</a>
                                 </div>
                             </div>
+                        </div>
                         @endforeach
                     </div>
                 </section>
-            @endif
-
-            <!-- Past Events -->
-            @if ($pastEvents->isNotEmpty())
-                <section class="mt-20">
-                    <h2 class="text-4xl font-bold text-green-700 text-center mb-12">Past Events</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        @foreach ($pastEvents as $event)
-                            <div class="bg-white rounded-2xl shadow-lg p-6">
-                                <img
-                                    src="{{ $event->image ? Storage::url('images/news_events/images/' . $event->image) : asset('images/classroom2.jpeg') }}">
-                                <h3 class="text-xl font-semibold mt-4">{{ $event->title }}</h3>
-                                <p class="text-gray-700 mt-2">{!! Str::limit($event->content, 100, '...') !!}</p>
-                                <span class="block mt-2 font-bold text-blue-700">
-                                    {{ $event->location }}, {{ $event->date }}
-                                </span>
-
-                                <a href="{{ route('about-event', $event->title) }}"
-                                    class="mt-4 inline-block px-4 py-2 bg-blue-700 text-white rounded-lg">View
-                                    Details</a>
-                            </div>
-                        @endforeach
+                @else
+                <div class="w-10/12 my-4 p-2">
+                    <p class="text-lg text-gray-600">There are cureently no any events. Stay tuned!</p>
                     </div>
-                </section>
             @endif
-        </div>
-    </section>
-
-    {{-- social Medias --}}
-    <section class="py-20 ">
-        <div class="w-11/12 mx-auto">
-            <!-- Section Title -->
-            <h1 class="text-center text-4xl font-extrabold text-green-800 mb-12">
-                Stay Connected with Us
-            </h1>
-
-            <!-- Social Media Icons -->
-            <div class="w-full flex flex-col md:flex-row justify-center items-center gap-10">
-                <a href="#" target="__blank" class="transition-transform transform hover:scale-110">
-                    <i class="fab fa-facebook text-5xl text-blue-600 hover:text-blue-800 transition-all"></i>
-                </a>
-
-                <a href="#" class="transition-transform transform hover:scale-110">
-                    <i class="fab fa-instagram text-5xl text-pink-500 hover:text-pink-600 transition-all"></i>
-                </a>
-
-                <a href="#" class="transition-transform transform hover:scale-110">
-                    <i class="fa-brands fa-square-x-twitter text-5xl text-blue-400 hover:text-blue-500 transition-all"></i>
-                </a>
-            </div>
         </div>
     </section>
 

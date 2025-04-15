@@ -70,7 +70,7 @@ class StaffController extends Controller
 
         $Staff->save();
 
-        return redirect()->route('admin.staff.index')->with('success', 'Successfully added!');
+        return redirect()->route('admin.staff.index')->with('message', 'Successfully added!');
     }
     public function StaffEdit(Request $request, Staff $staff)
     {
@@ -128,7 +128,7 @@ class StaffController extends Controller
 
         $Staff->update();
 
-        return redirect()->route('admin.staff.index')->with('success', 'successfully updated!');
+        return redirect()->route('admin.staff.index')->with('message', 'successfully updated!');
 
     }
     public function StaffDestroy(Request $request, Staff $Staff)
@@ -150,6 +150,6 @@ class StaffController extends Controller
 
         $Staff->delete();
 
-        return redirect()->route('admin.staff.index')->with('success', 'Successfully deleted!');
+        return redirect()->route('admin.staff.index')->with('message', 'Successfully deleted!');
     }
 }

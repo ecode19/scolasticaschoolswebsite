@@ -13,7 +13,7 @@
                         <input type="text" name="search"
                             class="p-2 border border-gree-300 w-10/12 focus:outline-none focus:border focus:border-green-500">
                         <button class="bg-green-800 text-lg text-green-200 p-2 font-semibold"><i
-                                class="fa fa-search mx-2"></i><span class="hidden md:block">search</span></button>
+                                class="fa fa-search mx-2"></i></button>
                     </div>
                 </form>
 
@@ -72,7 +72,7 @@
                 </div>
             </div>
 
-            @if ($otherPosts->count() > 0)
+            @if ($otherPosts->count() > 4)
                 <div class="w-full my-4">
                     <h3 class="text-2xl md:text-4xl text-green-800 mb-4 text-center">More on our blog</h3>
                     <div class="w-full flex flex-col md:flex-row flex-wrap">

@@ -80,6 +80,9 @@
                             <li><a href="{{ route('administration') }}"
                                     class="block px-4 py-2 hover:bg-green-100 transition text-green-950">Administration
                                     & Staff</a></li>
+                                    <li><a href="{{ route('student-achievements') }}"
+                                        class="block px-4 py-2 hover:bg-green-100 transition text-green-950">Legacy &
+                                        Achievements</a></li>
                         </x-dropdown>
                     </div>
 
@@ -122,9 +125,6 @@
                             <li><a href="{{ route('extracurricular-activities') }}"
                                     class="block px-4 py-2 hover:bg-green-100 transition text-green-950">Clubs &
                                     Extracurricular Activities</a></li>
-                            <li><a href="{{ route('student-achievements') }}"
-                                    class="block px-4 py-2 hover:bg-green-100 transition text-green-950">Student
-                                    Achievements</a></li>
                             <li><a href="{{ route('school-events') }}"
                                     class="block px-4 py-2 hover:bg-green-100 transition text-green-950">School
                                     Events</a></li>
@@ -187,9 +187,8 @@
                 <h1 class="text-xl md:text-2xl mb-2">Stay in Touch</h1>
                 <p class="md:text-lg hover:text-green-400"><a href="{{ route('faqs') }}">FAQS</a></p>
                 <div class="flex flex-row space-x-2 md:flex-col md:space-y-2 md:space-x-0 text-2xl text-green-100">
-                    <a href="#"><i class="fab fa-facebook hover:text-blue-700"></i></a>
                     <a href="#"><i class="fab fa-instagram hover:text-red-500"></i></a>
-                    <a href="#"><i class="fab fa-x hover:text-black"></i></a>
+                    <a href="#"><i class="fab fa-facebook hover:text-blue-700"></i></a>
                 </div>
             </div>
             <div class="w-full md:w-1/4 p-4 order-3 md:order-3">

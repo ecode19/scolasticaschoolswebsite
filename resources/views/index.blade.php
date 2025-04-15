@@ -2,16 +2,22 @@
 @section('title', 'Home')
 @section('content')
 
-    <div class="w-full lg:h-[500px] overflow-hidden relative">
-        <img src={{ asset('images/students/students-1.jpg') }} alt="" class="w-full object-cover">
-        <div class="w-full">
-            <div class="absolute bottom-5 left-5 lg:bottom-10 lg:left-10 transparent-bg">
-                <div class="text-white text-center">
-                    <h1 class="oswald text-xl md:text-4xl lg:text-6xl uppercase text-green-200">Scolastica Schools</h1>
-                    <p class="text-md md:text-2xl italic my-2 text-orange-200">Equal Education for All Children</p>
+    <div class="slider4 w-full h-[300px] md:h-[400px] lg:h-[500px]">
+        @foreach ($images as $image)
+            <div class="w-full h-[300px] md:h-[400px] lg:h-[500px] overflow-hidden relative">
+                <img src={{ asset('/storage/images/home-banners/' . $image->image) }} alt=""
+                    class="w-full object-cover h-[300px] md:h-[400px] lg:h-[500px]" oncontextmenu="return false;">
+                <div class="w-full">
+                    <div class="absolute bottom-5 left-5 lg:bottom-10 lg:left-10 transparent-bg">
+                        <div class="text-white text-center">
+                            <h1 class="oswald text-xl md:text-4xl lg:text-6xl uppercase text-green-200">Scolastica Schools
+                            </h1>
+                            <p class="text-md md:text-2xl italic my-2 text-orange-200">Equal Education to All</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        @endforeach
     </div>
 
     {{-- Welcome --}}
@@ -42,13 +48,13 @@
     <section class="w-full  mx-auto p-6 flex flex-wrap items-center bg-green-100">
         <div class="w-full md:w-1/2 lg:w-1/4 my-2">
             <div class="w-11/12 mx-auto p-4 flex flex-col items-center  rounded-md  ">
-                <span class="text-3xl text-green-900">300+</span>
+                <span class="text-3xl text-green-900">2000+</span>
                 <span class="mt-2 text-xl  text-orange-700">Students</span>
             </div>
         </div>
         <div class="w-full md:w-1/2 lg:w-1/4 my-2">
             <div class="w-11/12 mx-auto p-4 flex flex-col items-center  rounded-md  ">
-                <span class="text-3xl text-green-900">40+</span>
+                <span class="text-3xl text-green-900">30+</span>
                 <span class="mt-2 text-xl  text-orange-700">Teachers</span>
             </div>
         </div>
@@ -129,8 +135,8 @@
                     <div class="text-center">
                         <h5 class="merryFont text-center text-green-800 my-4 text-xl">Global Perspective & International
                             Opportunities</h5>
-                        <p class="text-gray-800">Students receive world-class education, preparing them for admission to top
-                            universities in Tanzania and worldwide</p>
+                        <Offering class="text-gray-800">Offering Kiswahili, French, and Chinese (Mandarin) for multilingual
+                            proficiency.</p>
                     </div>
                 </div>
             </div>
@@ -143,6 +149,18 @@
                         </h5>
                         <p class="text-gray-800">Modern classrooms, science & IT labs, well-equipped libraries, and sports
                             complexes.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full md:w-1/4 my-2">
+                <div class="w-11/12 mx-auto flex flex-col items-center bg-green-50 hover:bg-green-100 p-2 h-full">
+                    <i class="fa fa-heart text-green-800 text-5xl my-2"></i>
+                    <div class="text-center">
+                        <h5 class="merryFont text-center text-green-800 my-4 text-xl">A Safe & Supportive Learning
+                            Environment
+                        </h5>
+                        <p class="text-gray-800">Strong mentorship and guidance programs , Zero-tolerance for bullying, An
+                            atmosphere where students feel supported and motivated.</p>
                     </div>
                 </div>
             </div>
@@ -162,7 +180,7 @@
                     <div class="text-center">
                         <h5 class="merryFont text-center text-green-800 my-4 text-xl">Co-Curricular & Talent Development
                         </h5>
-                        <p class="text-gray-800">From football, basketball, and swimming to robotics, debate, art, and
+                        <p class="text-gray-800">From football, basketball, and swimming to debate, art, and
                             music, we nurture every student’s passion and talent.</p>
                     </div>
                 </div>
@@ -195,7 +213,7 @@
     @if ($news->isNotEmpty())
         <section class="w-full md:w-11/12 mx-auto my-2 md:my-8 md:py-4">
             <div class="w-max mx-4">
-                <h1 class="oswald text-4xl text-green-900">News & School highlights</h1>
+                <h1 class="oswald text-4xl text-green-900">News, Events & School highlights</h1>
                 <div class="w-2/5 border-2 border-green-800 mt-2"></div>
             </div>
 
@@ -214,7 +232,7 @@
                                 <div class="overlay absolute inset-0 pb-10 flex items-end">
                                     <div class="p-4 flex flex-col">
                                         <span
-                                            class="text-green-400 group-hover:text-white transition duration-1000 font-bold text-lg">Kindergarten</span>
+                                            class="text-green-400 group-hover:text-white transition duration-1000 font-bold text-lg">{{$item->type}}</span>
                                         <a href="#"
                                             class="merryFont text-2xl text-white group-hover:text-white transition font-bold duration-500">
                                             {{ $item->title }}
@@ -233,6 +251,9 @@
                         </div>
                     </div>
                 @endforeach
+            </div>
+            <div class="my-2 w-fit mx-auto">
+                <a href="{{route('school-events')}}"><button class="bg-green-700 hover:bg-green-800 text-white font-semibold p-2 text-lg rounded-md">More News</button></a>
             </div>
         </section>
     @endif

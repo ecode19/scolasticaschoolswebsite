@@ -28,7 +28,7 @@
                         <div class="border-2 w-16 border-green-700 mt-2"></div>
                         <p class="text-center pt-5 leading-relaxed">
                             To be the leading national school in Tanzania, where happy, well-rounded students achieve
-                            academic success in a diverse and challenging atmosphere, preparing them to become leaders in
+                            academic success in a diverse and challenging atmosphere, preparing students to become leaders in
                             both national and global spheres.
                         </p>
                     </div>
@@ -70,9 +70,9 @@
                 Our Motto
             </h2>
             <p class="text-xl text-gray-700 font-medium mb-10 leading-relaxed">
-                <span class="italic font-semibold text-green-700">Equal Education for All Children</span> – isn't just our
-                motto – it's the heartbeat of our school. This reflects our unwavering commitment to fairness, inclusion,
-                and opportunity. More than just words, it’s a promise that every child, regardless of background or ability,
+                <span class="italic font-semibold text-green-700">Equal Education to All</span> – is not just our
+                motto – it is the heartbeat of our school. This reflects our unwavering commitment to fairness, inclusion,
+                and opportunity. More than just words, it is a promise that every child, regardless of background or ability,
                 receives the same high-quality education and support.
             </p>
         </div>
@@ -125,7 +125,7 @@
 
         <div class="max-w-4xl mx-auto mt-14 text-center">
             <p class="text-lg md:text-xl text-gray-800 italic font-medium leading-loose">
-                “Equal Education for All Children” is our guidepost—fueling compassion, inspiring dreams, and ensuring no
+                “Equal Education to All” is our guidepost—fueling compassion, inspiring dreams, and ensuring no
                 child is left behind. It stands for equity, love, and the power of potential in every learner.
             </p>
         </div>
@@ -149,8 +149,7 @@
                         </li>
 
                         <li class="mb-3">
-                            <i class="fa fa-arrow-right px-4"></i> Exceptional performance in NECTA, IGCSE, and
-                            international
+                            <i class="fa fa-arrow-right px-4"></i> Exceptional performance in NECTA
                             exams.
                         </li>
 
@@ -168,17 +167,6 @@
                             <i class="fa fa-arrow-right px-4"></i> Offering Kiswahili, French, and Chinese (Mandarin) for
                             multilingual proficiency.
                         </li>
-
-                        <li class="mb-3">
-                            <i class="fa fa-arrow-right px-4"></i>Global partnerships for student exchange programs and
-                            international university pathways.
-                        </li>
-
-                        <li class="mb-3">
-                            <i class="fa fa-arrow-right "></i> Preparation for SAT, IELTS, and TOEFL to support global
-                            higher
-                            education.
-                        </li>
                     </ul>
                 </div>
 
@@ -191,7 +179,7 @@
                         </li>
 
                         <li class="mb-3">
-                            <i class="fa fa-arrow-right px-4"></i>Robotics, coding, and STEM innovation programs.
+                            <i class="fa fa-arrow-right px-4"></i>STEM innovation programs.
                         </li>
 
                         <li class="mb-3">
@@ -261,20 +249,6 @@
                         </li>
                     </ul>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    {{-- future Message --}}
-    <section class="py-12">
-        <div class="w-9/12 mx-auto">
-            <h1 class="text-center font-semibold text-4xl text-green-800">Message to the Future Generation</h1>
-            <div class="flex flex-col justify-center items-center mt-6">
-                <p class="text-justify lg:text-center text-lg leading-relaxed italic">Lorem, ipsum dolor sit amet
-                    consectetur adipisicing
-                    elit.
-                    Ipsam, incidunt tempore consequatur ipsum debitis minima mollitia vel aperiam ducimus quia similique
-                    corporis molestiae adipisci aut, ipsa autem sapiente illum voluptatum.</p>
             </div>
         </div>
     </section>

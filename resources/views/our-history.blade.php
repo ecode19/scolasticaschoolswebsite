@@ -25,10 +25,6 @@
                 <img src="{{ asset('images/history/history_pic5-1.PNG') }}" alt="Legacy Image"
                     class="w-full h-full object-cover">
             </div>
-
-            {{-- Enhanced Gradient Overlay --}}
-            {{-- <div class="absolute inset-0 bg-gradient-to-r from-green-900 via-green-700 to-transparent opacity-50"></div> --}}
-
             {{-- Text Content --}}
             <div class="relative text-center px-4 sm:px-8">
                 <h1 class="text-3xl sm:text-4xl lg:text-6xl font-bold text-white leading-tight drop-shadow-md">
@@ -65,11 +61,11 @@
                     and in school. <br> <br>
 
                     Our students are more than learners; they are pioneers, leaders, and visionaries in the making. They are
-                    polite, independent, and eager to explore new horizons. But most importantly, they are happy. Because at
+                    polite, independent, and eager to explore new horizons. Most importantly, students are happy, because at
                     Scolastica, we believe that happiness fuels success—and when children feel valued, they achieve
                     greatness. <br> <br>
 
-                    Scolastica isn’t just a school; it’s a journey of discovery, a hub of excellence, and a family that
+                    Scolastica is not just a school; it is a journey of discovery, a hub of excellence, and a family that
                     nurtures brilliance. Trust us with your child’s future, and we promise to deliver not just achievers,
                     but confident, compassionate, and world-ready individuals.
                 </p>
@@ -81,7 +77,7 @@
 
     {{-- how it started --}}
     <section class="pt-12 relative">
-        <div class="relative flex flex-col justify-center items-center bg-fixed bg-cover bg-center bg-no-repeat h-[600px] overflow-hidden"
+        <div class="relative flex flex-col justify-center items-center bg-fixed bg-cover bg-center bg-no-repeat overflow-hidden py-12"
             style="background-image: url('{{ asset('images/history/history_pic1.PNG') }}')">
             <div class="absolute inset-0 bg-gradient-to-tr from-slate-900 to-gray-800 opacity-85 backdrop-blur-sm"></div>
 
@@ -95,86 +91,37 @@
                     @php
                         $timeline = [
                             [
-                                'year' => ' 1994 –1995 ',
+                                'year' => ' 1994 – 2003 ',
                                 'title' => 'The Beginning',
                                 'desc' =>
-                                    'Scolastica Schools was founded by <span class="text-yellow-400 font-bold">Ms Scolastica and Mr. Edward Shayo</span> with a vision to provide high-quality, values-based education in Tanzania. <br> The first campus was established from the scratch in a living-room home <br> environment with three pupils in kindergarten and the number gradually increased and after two years, the Lower Primary classes.',
+                                    'Since its establishment, the school has demonstrated remarkable growth, both in size and in its commitment to delivering quality education. <br>Between <b>1994 and 2003</b>, the institution began its journey with a modest capacity, catering to just <b>50 children</b>.
+                                    <br>This humble beginning laid the foundation for future expansion driven by the growing demand for quality education in the community.',
                                 'highlight' => true,
                             ],
                             [
-                                'year' => '1996 - 1997',
-                                'title' => 'First Admissions & Early Growth',
+                                'year' => '2004',
+                                'title' => 'Early Growth & Expansion',
                                 'desc' =>
-                                    'The school officially admitted its first batch of students in Kindergarten and Grades 1-3 <br> Emphasis was placed on child-centered learning and foundational literacy and numeracy skills.',
+                                    'In <b>2004</b>, the school took a significant step forward by increasing its capacity to accommodate <b>600 children at the primary school level</b>. <br>This expansion not only reflected the school’s rising reputation but also its commitment to nurturing young learners
+                                    <br> through a comprehensive and supportive academic environment.',
                             ],
                             [
-                                'year' => ' 1997 – 2004',
-                                'title' => 'Expansion to Full Primary School',
-                                'desc' => 'Due to increasing demand, Scolastica expanded to Upper Primary (Grades 4-7). <br>
-                                    Introduction of co-curricular activities such as music, arts, and sports. <br>
-                                    First class seven class graduated <br>
-                                    H. E. The President of the United Republic of Tanzania President Benjamine Wiliam Mkapa commissioned the primary school building
+                                'year' => '2009 - Current',
+                                'title' => 'Furthur Expansion of Facilities & Resources',
+                                'desc' => 'The institution\'s growth reached a new milestone in <b>2009</b>, when it further expanded its facilities and resources
+                                <br> to support <b>2,000 students at the secondary school level</b>.
+                                <br>This development allowed the school to offer continuity in education, ensuring that students could transition smoothly from primary to secondary education
+                                <br> within the same nurturing and academically focused environment.
+                                <br>The Secondary school building was commissioned by H.E. President Jakaya Mrisho Kikwete the President of the United Republic of Tanzania.
+                                <br>H.E also planted a mvule tree and Mama Salma Kikwete too on 20.02.2009.
                                     ',
-                            ],
-                            [
-                                'year' => '2005',
-                                'title' => 'Introduction of Secondary Education (O-Level)',
-                                'desc' => 'The school launched its Secondary School (Ordinary Level), offering Form 1 to Form 4 (Grades 8-11) <br>
-                                   Accredited by the National Examination Council of Tanzania (NECTA) to administer CSEE (Certificate of Secondary Education Examination). <br>
-                                    ',
-                            ],
-                            [
-                                'year' => '2009',
-                                'title' => 'Establishment of High School (A-Level)',
-                                'desc' => 'Advanced Level (A-Level) classes (Form 5 & 6, Grades 12-13) were introduced. <br>
-                                    Specialized subject tracks introduced, including Science, Business, and Arts.
-                                    ',
-                            ],
-                            [
-                                'year' => '2012',
-                                'title' => 'First National Examination Success',
-                                'desc' => 'The first Form 4 (O-Level) cohort graduated, achieving excellent results in the NECTA exams. <br>
-                                    Scolastica became one of the top-performing private schools in the region.
-                                    ',
-                            ],
-
-                            [
-                                'year' => '2018',
-                                'title' => 'Modernization & Digital Learning',
-                                'desc' => 'Integration of smart classrooms, e-learning platforms, and ICT-based learning tools. <br>
-                                Partnership with Microsoft & Google for Education to enhance technology-driven education.
-                                ',
-                            ],
-                            [
-                                'year' => '2020',
-                                'title' => 'STEM & International Language Expansion',
-                                'desc' => 'Launch of STEM programs, including robotics, coding, and science fairs. <br>
-                              Introduction of French and Chinese (Mandarin) language programs for international exposure.
-                                ',
-                            ],
-
-                            [
-                                'year' => '2023',
-                                'title' => 'Global Recognition & University Success',
-                                'desc' => 'The school received recognition for academic excellence and leadership training. <br>
-                              Alumni successfully secured admissions to top universities locally and internationally.
-                                ',
-                            ],
-                            [
-                                'year' => '2025 & Beyond',
-                                'title' => 'The Future of Scolastica Schools',
-                                'desc' => 'Expansion of more advanced co-curricular and International curriculum programs (IGCSE and As/A level)<br>
-                                    Strengthening international collaborations and student exchange programs. <br>
-                                    Continued focus on academic excellence, technology, and global competitiveness.
-                                    ',
-                                'highlight' => true,
                             ],
                         ];
                     @endphp
 
                     @foreach ($timeline as $item)
                         <div
-                            class="snap-center min-w-[280px] sm:min-w-[350px] bg-white/10 backdrop-blur-sm rounded-2xl border border-yellow-500 p-6 flex-shrink-0 hover:scale-105 transition-all duration-500 ease-in-out">
+                            class="snap-center w-full lg:min-w-[350px] bg-white/10 backdrop-blur-sm rounded-2xl border border-yellow-500 p-6 flex-shrink-0 hover:scale-105 transition-all duration-500 ease-in-out">
                             <h3 class="text-white text-4xl font-bold text-center">{{ $item['year'] }}</h3>
                             <p class="text-yellow-400 text-center font-semibold text-xl mt-3">{{ $item['title'] }}</p>
                             <p class="text-white text-sm mt-3 text-center leading-relaxed">{!! $item['desc'] !!}</p>
@@ -184,61 +131,6 @@
 
                 <div class="text-center mt-6">
                     <p class="text-white text-sm opacity-80">Swipe left/right to explore the timeline</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Mission & Vision Section -->
-    <section class="bg-gradient-to-br from-white via-green-50 to-white py-20">
-        <div class="container mx-auto px-6">
-            <!-- Title -->
-            <div class="text-center mb-16">
-                <h2 class="text-5xl lg:text-6xl font-extrabold text-green-800 tracking-tight leading-tight animate-fade-up">
-                    Our Mission & Vision
-                </h2>
-                <p class="mt-4 text-xl text-green-700 opacity-80 max-w-2xl mx-auto animate-fade-up delay-100">
-                    Empowering excellence in every learner — shaping futures with purpose, integrity, and global vision.
-                </p>
-            </div>
-
-            <!-- Mission and Vision Content -->
-            <div class="flex flex-col md:flex-row justify-between gap-16">
-                <!-- Vision Block -->
-                <div
-                    class="w-full md:w-1/2 bg-white border border-green-200 rounded-2xl shadow-xl p-10 text-center transform transition duration-500 hover:-translate-y-1 hover:shadow-2xl animate-fade-up delay-200">
-                    <div class="mb-6">
-                        <i class="fas fa-eye text-5xl text-green-600 drop-shadow-md"></i>
-                    </div>
-                    <h3 class="text-3xl font-semibold text-green-900 mb-4">Our Vision</h3>
-                    <p class="text-lg text-gray-700 leading-relaxed">
-                        To be the leading national school in Tanzania, where happy, well-rounded students achieve academic
-                        success in a diverse and challenging atmosphere, preparing them to become leaders in both national
-                        and global spheres.
-                    </p>
-                </div>
-
-                <!-- Mission Block -->
-                <div
-                    class="w-full md:w-1/2 bg-white border border-green-200 rounded-2xl shadow-xl p-10 text-center transform transition duration-500 hover:-translate-y-1 hover:shadow-2xl animate-fade-up delay-300">
-                    <div class="mb-6">
-                        <i class="fas fa-bullseye text-5xl text-green-600 drop-shadow-md"></i>
-                    </div>
-                    <h3 class="text-3xl font-semibold text-green-900 mb-4">Our Mission</h3>
-                    <ul class="text-left text-lg text-gray-700 leading-relaxed space-y-4">
-                        <li><strong class="text-green-700">•</strong> Honoring our Legacy – Building on past triumphs to
-                            forge a brighter tomorrow.</li>
-                        <li><strong class="text-green-700">•</strong> Innovative Learning – Fueling passion through
-                            creative, student-centered education.</li>
-                        <li><strong class="text-green-700">•</strong> Supportive Environment – Where every learner and
-                            educator thrives in safety and respect.</li>
-                        <li><strong class="text-green-700">•</strong> Integrity & Resilience – Cultivating ethical,
-                            confident, and adaptable individuals.</li>
-                        <li><strong class="text-green-700">•</strong> Global Outlook – Promoting cross-cultural awareness
-                            and international experiences.</li>
-                        <li><strong class="text-green-700">•</strong> Visionary Leadership – Inspiring responsible
-                            change-makers for the world ahead.</li>
-                    </ul>
                 </div>
             </div>
         </div>
@@ -262,14 +154,14 @@
                 class="max-w-8xl mx-auto bg-white border border-green-100 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 p-12 animate-fade-up delay-200">
                 <!-- Names -->
                 <h2 class="text-3xl font-bold text-green-900 mb-6 text-center tracking-tight">
-                    Ms. Scolastica Edward Shayo & Mr. Edward Shayo
+                    Mrs. Scolastica Edward Shayo & Mr. Edward Shayo
                     <br>
                     <span class="text-xl font-medium text-green-600">Founders & Managing Directors</span>
                 </h2>
 
                 <!-- Description -->
                 <p class="text-lg text-gray-700 text-center leading-relaxed mb-10 mx-auto">
-                    Our visionary founders, Ms. Scolastica Edward Shayo and Mr. Edward Shayo established Scolastica Schools
+                    Our visionary founders, Mrs. Scolastica Edward Shayo and Mr. Edward Shayo established Scolastica Schools
                     with the mission to provide a world-class education that nurtures academic excellence, integrity, and
                     leadership. With years of experience in Hospitality and Engineering, have a deep commitment to shaping
                     future leaders, they continue to guide the school towards achieving its vision of being the best
@@ -278,32 +170,33 @@
 
                 <div>
                     <h2 class="text-xl font-bold text-green-900 mb-6 tracking-tight">
-                        A Heartfelt Tribute to Ms. Scolastica Edward Shayo
+                        A Heartfelt Tribute to Mrs. Scolastica Edward Shayo
                     </h2>
                     {{-- condolences --}}
                     <p class="text-lg text-gray-700 text-justify leading-relaxed mb-10 mx-auto">
-                        With deep gratitude and immense admiration, Scolastica School extends our heartfelt thanks to Ms.
+                        With deep gratitude and immense admiration, Scolastica School extends our heartfelt thanks to Mrs.
                         Scolastica Edward Shayo for her extraordinary vision and dedication, in establishing Scolastica
                         Schools. <br><br>
 
-                        Scolastica began in the sitting room of Ms. Scolastica Edward Shayo with just three pupils—a humble
+                        Scolastica began in the sitting room of Mrs. Scolastica Edward Shayo with just three students—a humble
                         yet powerful beginning that blossomed into an institution of excellence. What started as a simple
                         dream has flourished into a beacon of knowledge, shaping young minds and empowering future leaders.
                         <br><br>
 
-                        Your unwavering commitment to education has transformed countless lives, providing a foundation of
-                        excellence, discipline, and opportunity for generations to come. Your passion, resilience, and
+                        Her unwavering commitment to education has transformed countless lives, providing a foundation of
+                        excellence, discipline, and opportunity for generations to come. Her passion, resilience, and
                         relentless pursuit of academic excellence continue to inspire students, teachers, and the entire
-                        community. Because of your efforts, Scolastica Schools stand as a testament to the power of
+                        community. Because of her efforts, Scolastica Schools stand as a testament to the power of
                         education and the impact of a single individual’s dream to create lasting change.
                     </p>
 
-                    <h2 class="italic text-green-800">Thank you, Ms. Scolastica Edward Shayo, for your incredible
+                    <h2 class="italic text-green-800">Thank you Mama Scola and Father Scola, for your incredible
                         legacy and for nurturing the bright minds of tomorrow</h2>
                 </div>
             </div>
         </div>
     </section>
+
 
     {{-- Slider --}}
     <section class="py-20 bg-gradient-to-br from-gray-100 via-white to-gray-100">
@@ -418,6 +311,44 @@
         </div>
     </section>
 
+     {{-- Mlinzi --}}
+     <section class="py-20 bg-gradient-to-br from-gray-100 via-white to-gray-100">
+        <div class="container mx-auto px-6">
+            <!-- Founder Card -->
+            <div
+                class="max-w-8xl mx-auto bg-white border border-green-100 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 p-12 animate-fade-up delay-200">
+                <!-- Names -->
+                <h2 class="text-3xl font-bold text-green-900 mb-6 text-center tracking-tight">
+                    Bwana Daudi Kimaro
+                    <br>
+                    <span class="text-xl font-medium text-green-600">Mlinzi wa Scolastica kwa Miaka 25 ya Uaminifu na Uhodari</span>
+                </h2>
+
+                <div>
+                    <p class="text-lg text-gray-700 text-justify leading-relaxed mb-10 mx-auto">
+                        Tangu mwaka 2000, lango kuu la Shule ya Scolastica limekuwa na sura ileile isiyosahaulika—Bwana Daudi Kimaro. Kwa zaidi ya miaka 25, yeye ndiye amekuwa mlinzi wa kwanza kuona siku inaanza, na mara nyingi wa mwisho kuhakikisha kila kona iko salama kabla ya usiku kuingia. <br><br>
+
+                        Wanafunzi, walimu, na wazazi wote wanamfahamu—si tu kwa sare yake ya kazi, bali kwa tabasamu la kirafiki, macho makini, na nidhamu ya hali ya juu. Amejenga jina lake kupitia kazi yake ya uaminifu, akihakikisha kwamba mazingira ya shule yanabaki kuwa salama kwa kila mmoja anayevuka lango la Scolastica.
+                        <br><br>
+
+                        <i>"Daudi si tu mlinzi; ni sehemu ya roho ya Scolastica,"</i> anasema mwalimu mmoja wa muda mrefu. Kwa hakika, ameona watoto wa darasa la kwanza wakihitimu kidato cha sita, na hata wengine wakirudi kama walimu au wazazi—na wote humkumbuka kwa jina na heshima kuu.
+                        <br><br>
+
+                        Katika kipindi hicho chote, hakujawahi kuwa na tukio ambalo halikuwa chini ya uangalizi wake. Amezuia hatari, akatatua migogoro midogo kabla haijakua, na kila siku—kwa mvua au jua—alihakikisha usalama unatawala.
+                        <br><br>
+
+                        <i>"Unapomuona Bwana Kimaro mlangoni, unajua uko mahali salama,"</i> mwanafunzi mmoja alisema. Uwepo wake una maana kubwa: ni kioo cha utulivu, nguvu ya utamaduni wa shule, na mfano bora wa uadilifu.
+                        <br>
+
+                        Leo hii, tunampongeza na kumshukuru kwa huduma yake ya kipekee kwa familia ya Scolastica. Kwa miaka 25, amekuwa nguzo isiyoyumba, akilinda si tu majengo ya shule, bali pia ndoto, matumaini, na maisha ya maelfu ya vijana.
+                    </p>
+
+                    <h2 class="italic text-green-800">Asante sana Bwana Daudi Kimaro—Scolastica ni salama kwa sababu wewe uko.</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
     {{-- Accredited --}}
     <section class="py-10">
         <div class="w-full">
@@ -487,43 +418,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- International Accreditations -->
-                    <div class="mt-28" data-aos="fade-up" data-aos-duration="2000">
-                        <h1 class="text-white font-bold text-3xl">International Accreditations & Recognitions</h1>
-                        <div class="overflow-x-auto w-full">
-                            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                                <!-- Cambridge -->
-                                <div class="flex flex-col justify-center items-center mt-16">
-                                    <img src="{{ asset('images/cambridge.png') }}" class="w-32 h-32 rounded-full">
-                                    <h2 class="text-white font-semibold text-lg text-center">Cambridge Assessment
-                                        International Education (CAIE)</h2>
-                                    <p class="text-sm text-white italic text-center mt-4">
-                                        Offers Cambridge IGCSE and aligns with global education best practices.
-                                    </p>
-                                </div>
-                                <!-- AISA -->
-                                <div class="flex flex-col justify-center items-center mt-16">
-                                    <img src="{{ asset('images/AISA.png') }}" class="w-32 h-32 rounded-full">
-                                    <h2 class="text-white font-semibold text-lg text-center">Association of International
-                                        Schools in Africa (AISA)</h2>
-                                    <p class="text-sm text-white italic text-center mt-4">
-                                        Collaborates with top international schools to enhance global education exposure.
-                                    </p>
-                                </div>
-                                <!-- SAT & IELTS/TOEFL -->
-                                <div class="flex flex-col justify-center items-center mt-16">
-                                    <img src="{{ asset('images/SAT & IELTSTOEFL.jpeg') }}"
-                                        class="w-32 h-32 rounded-full">
-                                    <h2 class="text-white font-semibold text-lg text-center">SAT & IELTS/TOEFL Test Center
-                                    </h2>
-                                    <p class="text-sm text-white italic text-center mt-4">
-                                        Prepares students for international university entrance exams.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -568,7 +462,7 @@
                 Special Recognitions & Partnerships
             </h1>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12" data-aos="fade-up"
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-12" data-aos="fade-up"
                 data-aos-duration="2000">
 
                 <div class="flex flex-col items-center text-center">
@@ -586,12 +480,6 @@
                 <div class="flex flex-col items-center text-center">
                     <h2 class="text-3xl font-extrabold text-gray-900">
                         Microsoft & Google for Education Partnerships
-                    </h2>
-                </div>
-
-                <div class="flex flex-col items-center text-center">
-                    <h2 class="text-3xl font-extrabold text-gray-900">
-                        Language Proficiency Certifications – DELF & HSK
                     </h2>
                 </div>
             </div>

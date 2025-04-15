@@ -8,7 +8,7 @@
             <span id="current-date" class="italic"></span>
         </div>
 
-        <div class="w-full my-4 flex flex-col md:flex-row flex-wrap p-4">
+        <div class="w-full my-4 flex flex-wrap p-4">
             <div class="w-1/2 md:w-1/3 lg:w-1/4 my-2">
                 <div class="w-11/12 mx-auto rounded-md">
                     <div class="flex items-center justify-between p-2 text-lg text-green-100 bg-green-800">

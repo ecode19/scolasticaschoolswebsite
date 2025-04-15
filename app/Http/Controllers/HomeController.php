@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Image;
 use App\Models\NewsEvent\NewsEvent;
 use App\Models\AcademicLevel;
 use App\Models\Accreditation;
@@ -31,11 +32,12 @@ class HomeController extends Controller
     public function index()
     {
         $academicLevels = AcademicLevel::all();
-        $news = NewsEvent::where('type', 'news')->orderBy('created_at', 'desc')->limit(3)->get();
+        $news = NewsEvent::orderBy('created_at', 'desc')->limit(3)->get();
         $academicLevels = AcademicLevel::all();
         $testimonials = Testimonial::all();
         $accreditations = Accreditation::all();
-        return view('index', ['academicLevels' => $academicLevels, 'testimonials' => $testimonials, 'accreditations' => $accreditations, 'news' => $news]);
+        $images = Image::all();
+        return view('index', ['academicLevels' => $academicLevels, 'testimonials' => $testimonials, 'accreditations' => $accreditations, 'news' => $news, 'images' => $images]);
     }
     public function welcomeMessage()
     {
@@ -84,17 +86,16 @@ class HomeController extends Controller
     {
         (new StudentAchievementsSeo())->apply();
 
-        return view('student-achievements');
+        $achievements = Achievement::orderBy('created_at', 'desc')->get();
+        return view('student-achievements', ['achievements' => $achievements]);
     }
     public function schoolEvents()
     {
         (new SchoolEventsSeo())->apply();
 
-        $featuredEvents = NewsEvent::where('type', 'event')->where('status', 'featured')->orderBy('created_at', 'desc')->get();
-        $pastEvents = NewsEvent::where('type', 'event')->where('status', 'past')->orderBy('created_at', 'desc')->get();
-        $upcomingEvents = NewsEvent::where('type', 'event')->where('status', 'upcoming')->orderBy('created_at', 'desc')->get();
+        $events = NewsEvent::orderBy('created_at', 'desc')->get();
 
-        return view('school-events', compact('featuredEvents', 'pastEvents', 'upcomingEvents'));
+        return view('school-events', compact('events'));
     }
 
     public function aboutEvent($title)

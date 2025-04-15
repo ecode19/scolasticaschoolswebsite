@@ -43,22 +43,22 @@ class FaqsController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Faqs $faqs)
+    public function edit(Faqs $faq)
     {
-        return view('admin.faqs.edit', ['faqs' => $faqs]);
+        return view('admin.faqs.edit', ['faqs' => $faq]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Faqs $faqs)
+    public function update(Request $request, Faqs $faq)
     {
         $updatedFaq = $request->validate([
             'question' => 'required|string',
             'answer' => 'required',
         ]);
 
-        $faqs->update($updatedFaq);
+        $faq->update($updatedFaq);
 
         return to_route('admin.faqs.index')->with('message', 'Faqs updated successfully!');
     }
@@ -66,9 +66,9 @@ class FaqsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Faqs $faqs)
+    public function destroy(Faqs $faq)
     {
-        $faqs->delete();
+        $faq->delete();
 
         return to_route('admin.faqs.index')->with('message', 'Faqs deleted');
     }

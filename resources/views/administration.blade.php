@@ -36,7 +36,7 @@
                     <div class="flex flex-col items-center text-center">
                         <img src="{{ asset('images/user.avif') }}" alt=""
                             class="w-40 h-40 rounded-full mb-6 shadow-lg">
-                        <h2 class="text-3xl font-bold text-green-800">Ms. Scolastica Edward Shayo </h2>
+                        <h2 class="text-3xl font-bold text-green-800">Mrs. Scolastica Edward Shayo </h2>
                         <p class="text-lg text-gray-700 mt-2">Founder & Managing Director</p>
                     </div>
 
@@ -111,7 +111,7 @@
         </div>
     </section>
 
-    @if ($staff)
+    @if ($staff->isNotEmpty())
         {{-- other staff members --}}
         <section class="py-12">
             <div class="container mx-auto">
@@ -130,14 +130,13 @@
                                     Gender </th>
 
                                 <th scope="col" class="px-6 py-3 text-left font-semibold uppercase">
-                                    Bio </th>
+                                    Teaching Level </th>
                             </tr>
                         </thead>
                         <tbody class="divide-y divide-gray-200">
                             @php
                                 $counter = 1;
                             @endphp
-                            @if ($staff->isNotEmpty())
                                 @foreach ($staff as $member)
                                     <tr class="hover:bg-green-100 transiton transform ease-out duration-1000">
                                         <td class="px-6 py-4  text-gray-900">{{ $counter++ }}</td>
@@ -151,7 +150,6 @@
                                         <td class="px-6 py-4  text-gray-500">{{ $member->bio }}</td>
                                     </tr>
                                 @endforeach
-                            @endif
                         </tbody>
                     </table>
                 </div>
@@ -175,8 +173,7 @@
                     <ul class="text-gray-700 text-base space-y-4 text-left">
                         <li><i class="fa fa-arrow-right text-green-700 mr-3"></i> A rigorous curriculum blending academics,
                             leadership, and personal growth.</li>
-                        <li><i class="fa fa-arrow-right text-green-700 mr-3"></i> Exceptional performance in NECTA, IGCSE,
-                            and global assessments.</li>
+                        <li><i class="fa fa-arrow-right text-green-700 mr-3"></i> Exceptional performance in NECTA assessments.</li>
                         <li><i class="fa fa-arrow-right text-green-700 mr-3"></i> Highly qualified teachers applying
                             innovative teaching strategies.</li>
                     </ul>
@@ -190,9 +187,6 @@
                             multilingual fluency.</li>
                         <li><i class="fa fa-arrow-right text-green-700 mr-3"></i> Global partnerships and student exchange
                             programs.</li>
-                        <li><i class="fa fa-arrow-right text-green-700 mr-3"></i> Preparation for SAT, IELTS, TOEFL &
-                            global
-                            university pathways.</li>
                     </ul>
                 </div>
 
@@ -202,10 +196,6 @@
                     <ul class="text-gray-700 text-base space-y-4 text-left">
                         <li><i class="fa fa-arrow-right text-green-700 mr-3"></i> Smart classrooms, science labs & ICT
                             centers.</li>
-                        <li><i class="fa fa-arrow-right text-green-700 mr-3"></i> Robotics, coding & STEM innovation
-                            programs.</li>
-                        <li><i class="fa fa-arrow-right text-green-700 mr-3"></i> Microsoft & Google for Education tools
-                            integration.</li>
                     </ul>
                 </div>
 
@@ -263,31 +253,6 @@
                 <p class="italic text-white text-center font-semibold">
                     Join a school that celebrates excellence, fosters innovation, and shapes leaders for a brighter future.
                 </p>
-            </div>
-        </div>
-    </section>
-
-    {{-- social Medias --}}
-    <section class="py-20 ">
-        <div class="w-11/12 mx-auto">
-            <!-- Section Title -->
-            <h1 class="text-center text-4xl font-extrabold text-green-800 mb-12">
-                Stay Connected with Us
-            </h1>
-
-            <!-- Social Media Icons -->
-            <div class="w-full flex flex-col md:flex-row justify-center items-center gap-10">
-                <a href="#" target="__blank" class="transition-transform transform hover:scale-110">
-                    <i class="fab fa-facebook text-5xl text-blue-600 hover:text-blue-800 transition-all"></i>
-                </a>
-
-                <a href="#" class="transition-transform transform hover:scale-110">
-                    <i class="fab fa-instagram text-5xl text-pink-500 hover:text-pink-600 transition-all"></i>
-                </a>
-
-                <a href="#" class="transition-transform transform hover:scale-110">
-                    <i class="fa-brands fa-square-x-twitter text-5xl text-blue-400 hover:text-blue-500 transition-all"></i>
-                </a>
             </div>
         </div>
     </section>

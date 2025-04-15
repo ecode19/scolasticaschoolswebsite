@@ -6,7 +6,7 @@
             class="py-1 px-5 font-semibold bg-green-700 hover:bg-gray-700 text-white rounded-md">Back</a>
     </div>
     <h1 class="text-3xl text-green-800 mt-6 p-4 text-center">{{ $newsEvent->title }}</h1>
-    <div class="max-w-6xl mx-auto overflow-x-auto pb-10">
+    <div class="w-11/12 max-w-6xl mx-auto overflow-x-auto pb-10">
         <form action="{{ route('admin.news.event.update', $newsEvent->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
@@ -27,17 +27,6 @@
                 </select>
                 <x-input-error :messages="$errors->get('type')" class="mt-2" />
             </div>
-            {{-- status --}}
-            <div class="mb-4">
-                <label for="status" class="block text-gray-700 font-bold mb-2">Status:</label>
-                <select name="status" id="status" class="w-full p-2 border border-gray-300 rounded-md">
-                    <option value="{{ $newsEvent->status }}">{{ $newsEvent->status }}</option>
-                    <option value="upcoming">Upcoming</option>
-                    <option value="past">Past</option>
-                    <option value="featured">Featured</option>
-                </select>
-                <x-input-error :messages="$errors->get('status')" class="mt-2" />
-            </div>
             {{-- date --}}
             <div class="mb-4">
                 <label for="date" class="block text-gray-700 font-bold mb-2">Date:</label>
@@ -56,7 +45,7 @@
             {{-- news event content --}}
             <div class="mb-4">
                 <label for="description" class="block text-gray-700 font-bold mb-2">Description:</label>
-                <textarea name="content" id="content" rows="5" class="w-full p-2 border border-gray-300 rounded-md">{{ $newsEvent->content }}</textarea>
+                <textarea name="content" id="content" rows="5" class="editor w-full p-2 border border-gray-300 rounded-md">{{ $newsEvent->content }}</textarea>
                 <x-input-error :messages="$errors->get('content')" class="mt-2" />
             </div>
             {{-- news event image --}}

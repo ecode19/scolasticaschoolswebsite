@@ -27,8 +27,23 @@
         </div>
     </section>
 
+<section class="py-16 bg-gray-50">
+    <h2 class="text-4xl font-bold text-center text-green-800 mb-6">
+        Welcome to Scolastica – A Place for Every student to Thrive!
+    </h2>
+    <h2 class="text-2xl font-bold text-center text-green-800 mb-6 italic">
+        A Diverse and Inclusive Learning Community
+    </h2>
+    <div class="w-11/12 md:w-8/12 mx-auto">
+        <p class="text-lg text-gray-600 my-2">At Scolastica, we open our doors to students from all backgrounds, fostering a nurturing and inspiring environment for young minds to grow.</p>
+        <p class="text-lg text-gray-600 my-2"><b>Primary School:</b> Ages 3 – 13</p>
+        <p class="text-lg text-gray-600 my-2"><b>Secondary School:</b> Up to 18 years old</p>
+        <p class="text-lg text-gray-600 my-2">While our academic year starts in January, we welcome new students all year round.</p>
+    </div>
+</section>
+
     {{-- registration --}}
-    <section class="py-16 bg-gray-50">
+    <section class="py-8 bg-gray-50">
         <div class="w-11/12 max-w-6xl mx-auto">
             <h2 class="text-4xl font-bold text-center text-green-800 mb-12">
                 Start Your Journey in 3 Simple Steps
@@ -44,7 +59,7 @@
                     </div>
                     <h3 class="text-xl font-semibold mb-4">Visit the School</h3>
                     <p class="text-gray-600 mb-6">
-                        Come to our school in person to collect the application form and get a tour of our learning
+                        Come to our school in person to collect the application form, pay a small application fee and get a tour of our learning
                         environment.
                     </p>
                     <a href="#contact"
@@ -99,6 +114,9 @@
 
         <div class="relative z-10 max-w-5xl mx-auto px-6 text-center text-white">
             <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4 drop-shadow-lg">
+                Your Child’s Future Begins at Scolastica
+            </h1>
+            <h1 class="text-3xl md:text-4xl font-bold leading-tight mb-4 drop-shadow-lg">
                 Contact Us Today
             </h1>
             <div class="w-24 h-1 mx-auto bg-white rounded mb-6"></div>
@@ -111,17 +129,21 @@
                 class="inline-block bg-white text-green-900 font-bold text-lg px-8 py-3 rounded-full shadow-lg hover:bg-gray-100 transition duration-300 ease-in-out transform hover:scale-105 focus:ring-4 ring-white">
                 Enquire Now
             </a>
+
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto my-12">
+                <b>Ready to take the next step?</b> We can’t wait to welcome you to the Scolastica family!
+            </p>
         </div>
     </section>
 
     {{-- Special Recognitions & Partnerships --}}
-    <section class="py-28">
+    <section class="py-14">
         <div class="container mx-auto px-4">
             <h1 class="text-center text-3xl md:text-5xl font-semibold pb-12 text-green-700">
                 Special Recognitions & Partnerships
             </h1>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12" data-aos="fade-up"
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-12" data-aos="fade-up"
                 data-aos-duration="2000">
 
                 <div class="flex flex-col items-center text-center">
@@ -139,12 +161,6 @@
                 <div class="flex flex-col items-center text-center">
                     <h2 class="text-xl md:text-3xl font-extrabold text-gray-900">
                         Microsoft & Google for Education Partnerships
-                    </h2>
-                </div>
-
-                <div class="flex flex-col items-center text-center">
-                    <h2 class="text-xl md:text-3xl font-extrabold text-gray-900">
-                        Language Proficiency Certifications – DELF & HSK
                     </h2>
                 </div>
             </div>

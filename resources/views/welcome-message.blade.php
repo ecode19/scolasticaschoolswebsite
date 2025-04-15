@@ -53,7 +53,7 @@
             Greatness is Forged.
         </p>
         <p class="text-justify md:text-lg text-gray-600 my-2 font-bold">With regards,.</p>
-        <p class="text-justify md:text-lg text-gray-600 my-2 font-bold">Principal</p>
+        <p class="text-justify md:text-lg text-gray-600 my-2 font-bold">Head Teacher/Principal</p>
         <p class="text-justify md:text-lg text-gray-600 my-2 font-bold">Scolastica Schools</p>
     </section>
 
