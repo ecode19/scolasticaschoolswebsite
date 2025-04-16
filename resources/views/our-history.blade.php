@@ -308,6 +308,42 @@
                         class="h-full object-cover">
                 </div>
             </div>
+            <div class="w-full md:w-1/3 my-2">
+                <div class="w-11/12 mx-auto border border-green-400 p-2 rounded-lg overflow-hidden h-80">
+                    <img src="{{ asset('images/history/history-pic19.jpg') }}" alt=""
+                        class="h-full object-cover">
+                </div>
+            </div>
+            <div class="w-full md:w-1/3 my-2">
+                <div class="w-11/12 mx-auto border border-green-400 p-2 rounded-lg overflow-hidden h-80">
+                    <img src="{{ asset('images/history/history-pic20.jpg') }}" alt=""
+                        class="h-full object-cover">
+                </div>
+            </div>
+            <div class="w-full md:w-1/3 my-2">
+                <div class="w-11/12 mx-auto border border-green-400 p-2 rounded-lg overflow-hidden h-80">
+                    <img src="{{ asset('images/history/history-pic21.jpg') }}" alt=""
+                        class="h-full object-cover">
+                </div>
+            </div>
+            <div class="w-full md:w-1/3 my-2">
+                <div class="w-11/12 mx-auto border border-green-400 p-2 rounded-lg overflow-hidden h-80">
+                    <img src="{{ asset('images/history/history-pic22.jpg') }}" alt=""
+                        class="h-full object-cover">
+                </div>
+            </div>
+            <div class="w-full md:w-1/3 my-2">
+                <div class="w-11/12 mx-auto border border-green-400 p-2 rounded-lg overflow-hidden h-80">
+                    <img src="{{ asset('images/history/history-pic23.jpg') }}" alt=""
+                        class="h-full object-cover">
+                </div>
+            </div>
+            <div class="w-full md:w-1/3 my-2">
+                <div class="w-11/12 mx-auto border border-green-400 p-2 rounded-lg overflow-hidden h-80">
+                    <img src="{{ asset('images/history/history-pic24.jpg') }}" alt=""
+                        class="h-full object-cover">
+                </div>
+            </div>
         </div>
     </section>
 

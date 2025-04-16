@@ -43,7 +43,12 @@
 
 </head>
 
-<body>
+<body> {{-- Flash message --}}
+    @session('message')
+    <div id="flash-message" class="w-full bg-green-700 py-2 px-4 text-lg text-white">
+        {{ session('message') }}
+    </div>
+@endsession
     <div class="w-full">
         <nav class="w-full lg:p-2 bg-green-900 flex items-center justify-between lg:justify-normal">
             <div class="w-20 mx-4">

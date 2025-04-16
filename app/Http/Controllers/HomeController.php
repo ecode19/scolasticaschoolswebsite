@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Mail\InquiryMail;
 use App\Models\Image;
 use App\Models\NewsEvent\NewsEvent;
 use App\Models\AcademicLevel;
@@ -26,6 +27,7 @@ use App\Services\SEO\SchoolEventsSeo;
 use App\Services\SEO\StudentAchievementsSeo;
 use App\Services\SEO\TuitionFeesSeo;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class HomeController extends Controller
 {
@@ -199,5 +201,18 @@ class HomeController extends Controller
         $otherCategories = PostCategory::whereNot('category', $category)->get();
 
         return view('blog.category-posts', ['categoryPosts' => $categoryPosts, 'category' => $category, 'otherCategories' => $otherCategories]);
+    }
+
+    public function inquiries(Request $request) {
+        $contact = $request->validate([
+            'name' => 'required|string',
+            'email' => 'required|email',
+            'message' => 'required|string',
+        ]);
+
+        // send email to admin
+        Mail::to('seniorsuleiman2901@gmail.com')->send(new InquiryMail($contact));
+
+        return back()->with(['message' => 'Inquiry sent successfully!']);
     }
 }

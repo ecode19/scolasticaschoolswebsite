@@ -24,7 +24,7 @@
 
     <section class="w-full mx-auto p-2 flex flex-col md:flex-row my-8">
         <div class="w-full md:w-1/2 p-2 md:p-4 lg:p-8 overflow-hidden order-1 md:order-1">
-            <img src={{ asset('images/students/students-4.jpg') }} alt="students photo" class="w-full object-cover rounded-md">
+            <img src={{ asset('images/students/students-15.png') }} alt="students photo" class="w-full object-cover rounded-md">
         </div>
         <div class="w-full md:w-1/2 p-2 md:p-4 lg:p-8 order-2 md:order-2">
             <div class="w-max">
@@ -51,9 +51,9 @@
                 @if ($club->category === 'Academic & Leadership')
                     <div class="w-full md:w-1/3 my-2">
                         <div class="w-11/12 mx-auto">
-                            <div class="w-full h-58 overflow-hidden">
+                            <div class="w-full h-96 overflow-hidden">
                                 <img src={{ asset('/storage/images/clubs/' . $club->primary_img) }} alt="level photo"
-                                    class="object-cover w-full">
+                                    class="object-cover w-full h-full">
                             </div>
                             <div class="my-2">
                                 <h5 class="text-green-800 text-center text-xl md:text-3xl my-2">{{ $club->name }}</h5>
@@ -79,9 +79,9 @@
                 @if ($club->category === 'Arts & Creativity')
                     <div class="w-full md:w-1/3 my-2">
                         <div class="w-11/12 mx-auto">
-                            <div class="w-full h-58 overflow-hidden">
+                            <div class="w-full h-96 overflow-hidden">
                                 <img src={{ asset('/storage/images/clubs/' . $club->primary_img) }} alt="level photo"
-                                    class="object-cover w-full">
+                                    class="object-cover w-full h-full">
                             </div>
                             <div class="my-2">
                                 <h5 class="text-green-800 text-center text-xl md:text-3xl my-2">{{ $club->name }}</h5>
@@ -107,9 +107,9 @@
                 @if ($club->category === 'Sports & Physical')
                     <div class="w-full md:w-1/3 my-2">
                         <div class="w-11/12 mx-auto">
-                            <div class="w-full h-58 overflow-hidden">
+                            <div class="w-full h-96 overflow-hidden">
                                 <img src={{ asset('/storage/images/clubs/' . $club->primary_img) }} alt="level photo"
-                                    class="object-cover w-full">
+                                    class="object-cover w-full h-full">
                             </div>
                             <div class="my-2">
                                 <h5 class="text-green-800 text-center text-xl md:text-3xl my-2">{{ $club->name }}</h5>
@@ -135,9 +135,9 @@
                 @if ($club->category === 'Community & Special Interest')
                     <div class="w-full md:w-1/3 my-2">
                         <div class="w-11/12 mx-auto">
-                            <div class="w-full h-58 overflow-hidden">
+                            <div class="w-full h-96 overflow-hidden">
                                 <img src={{ asset('/storage/images/clubs/' . $club->primary_img) }} alt="level photo"
-                                    class="object-cover w-full">
+                                    class="object-cover w-full h-full">
                             </div>
                             <div class="my-2">
                                 <h5 class="text-green-800 text-center text-xl md:text-3xl my-2">{{ $club->name }}</h5>

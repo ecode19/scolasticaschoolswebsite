@@ -3,7 +3,7 @@
     {{-- Hero Section --}}
     <section class="bg-gray-400 relative">
         <div class="relative flex justify-center items-center h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden bg-fixed bg-cover bg-center"
-            style="background-image: url('{{ asset('images/DSC_4191.jpg') }}')">
+            style="background-image: url('{{ asset('images/management.jpg') }}')">
 
             {{-- Gradient Overlay --}}
             <div class="absolute inset-0 bg-gradient-to-tr from-gray-800 via-gray-900 to-transparent opacity-40"></div>

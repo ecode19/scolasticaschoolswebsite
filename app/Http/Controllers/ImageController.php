@@ -32,7 +32,7 @@ class ImageController extends Controller
     public function store(Request $request)
     {
         $newImage = $request->validate([
-            'image' => 'required|file|mimes:png,jpg,jpeg,avif,webp|max:3072',
+            'image' => 'required|file|mimes:png,jpg,jpeg,avif,webp|max:5120',
         ]);
 
         if ($request->hasFile('image')) {
@@ -62,7 +62,7 @@ class ImageController extends Controller
     public function update(Request $request, Image $image)
     {
         $updatedImage = $request->validate([
-            'image' => 'file|mimes:png,jpg,jpeg,avif,webp|max:3072',
+            'image' => 'file|mimes:png,jpg,jpeg,avif,webp|max:5120',
         ]);
 
         $imagename = $image->image;

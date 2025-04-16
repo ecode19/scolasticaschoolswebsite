@@ -39,7 +39,7 @@
             class="max-w-8xl mx-auto bg-white border border-green-100 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 py-6 px-12 animate-fade-up delay-200 my-4">
             <!-- Names -->
             <div class="w-fit mx-auto flex flex-col md:flex-row md:space-x-2 space-y-2 items-center">
-                <img src="{{ asset('images/user.avif') }}" alt=""
+                <img src="{{ asset('images/history/First_Head_Teacher.PNG') }}" alt=""
                                 class="w-28 h-28 md:w-40 md:h-40 rounded-full mb-6 shadow-lg">
                 <h2 class="text-3xl font-bold text-green-900 mb-6 text-center tracking-tight">
                     Mr. Thobias Lyimo (1995–2000)
@@ -67,7 +67,7 @@
             class="max-w-8xl mx-auto bg-white border border-green-100 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 py-6 px-12 animate-fade-up delay-200 my-4">
             <!-- Names -->
             <div class="w-fit mx-auto flex flex-col md:flex-row md:space-x-2 space-y-2 items-center">
-                <img src="{{ asset('images/user.avif') }}" alt=""
+                <img src="{{ asset('images/history/Second_Head_Teacher.PNG') }}" alt=""
                                 class="w-28 h-28 md:w-40 md:h-40 rounded-full mb-6 shadow-lg">
                 <h2 class="text-3xl font-bold text-green-900 mb-6 text-center tracking-tight">
                     Mr. Michael (2004–2023)

@@ -24,8 +24,8 @@
             @foreach ($methods as $method)
                 <div class="w-full md:w-1/3 my-2">
                     <div class="w-11/12 mx-auto border-2 border-orange-400">
-                        <div class="w-full h-58 overflow-hidden">
-                            <img src={{ asset('/storage/images/learning-approaches/' . $method->primary_img) }} alt="level photo" class="object-cover w-full">
+                        <div class="w-full h-60 overflow-hidden">
+                            <img src={{ asset('/storage/images/learning-approaches/' . $method->primary_img) }} alt="level photo" class="object-cover w-full h-full">
                         </div>
                         <div class="my-2 p-2">
                             <h5 class="text-green-800 text-center text-xl md:text-3xl my-2">{{$method->name}}</h5>

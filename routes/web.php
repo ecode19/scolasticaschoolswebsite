@@ -29,6 +29,7 @@ Route::controller(HomeController::class)->group(function () {
     Route::get('/study-levels/{level}', 'studyLevel')->name('study-level');
     Route::get('/teaching-methods', 'teachingMethods')->name('teaching-methods');
     Route::get('/contact-us', 'contactUs')->name('contact-us');
+    Route::post('/inquiries', 'inquiries')->name('inquiries');
     Route::get('/extracurricular-activities', 'extracurricularActivities')->name('extracurricular-activities');
     Route::get('our-history', 'ourHistory')->name('our-history');
     Route::get('our-mission-and-vision', 'missionVision')->name('mission-vision');

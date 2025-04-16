@@ -23,7 +23,7 @@
     {{-- Welcome --}}
     <section class="w-full md:w-11/12 mx-auto p-2 flex flex-col md:flex-row my-8">
         <div class="w-full md:w-1/2 p-2 md:p-4 lg:p-8 overflow-hidden order-2 md:order-1">
-            <img src={{ asset('images/students/students-2.jpg') }} alt="students photo"
+            <img src={{ asset('images/students/students-14.jpg') }} alt="students photo"
                 class="w-full object-cover rounded-md">
         </div>
         <div class="w-full md:w-1/2 p-2 md:p-4 lg:p-8 order-1 md:order-2">

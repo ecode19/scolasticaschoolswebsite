@@ -54,18 +54,20 @@
             </div>
             <div class="w-full md:w-1/2 md:p-4">
                 <h1 class="oswald text-2xl text-green-900 mx-6 mb-4">Send us a Message</h1>
-                <form action="#" method="POST" class="w-full md:w-11/12 mx-auto border-2 border-orange-400 p-4">
+                <form action="{{ route('inquiries') }}" method="POST"
+                    class="w-full md:w-11/12 mx-auto border-2 border-orange-400 p-4">
+                    @csrf
                     <div class="w-full flex flex-col">
                         <label for="name" class="defaultText text-lg">Name</label>
-                        <input type="text" name="name" id="name" class="defaultInput" required>
+                        <input type="text" name="name" class="defaultInput" required>
                     </div>
                     <div class="w-full flex flex-col my-4">
                         <label for="email" class="defaultText text-lg">Email</label>
-                        <input type="email" name="email" id="email" class="defaultInput" required>
+                        <input type="email" name="email" class="defaultInput" required>
                     </div>
                     <div class="w-full flex flex-col my-4">
                         <label for="message" class="defaultText text-lg">Message</label>
-                        <textarea name="message" id="message" class="defaultInput" rows="5" required></textarea>
+                        <textarea name="message" class="defaultInput" rows="5" required></textarea>
                     </div>
                     <div class="w-full flex justify-center">
                         <button
@@ -73,6 +75,10 @@
                             type="submit">Send Message</button>
                     </div>
                 </form>
+                {{-- Flash message --}}
+                @session('message')
+                    <p id="flash-message" class="w-full text-green-700 my-2 mx-4 text-lg font-semibold">{{ session('message') }}</p>
+                @endsession
             </div>
         </div>
 
@@ -89,7 +95,7 @@
                     </details>
                 @endforeach
             </div>
-            <a href="{{route('faqs')}}">
+            <a href="{{ route('faqs') }}">
                 <button class="my-4 p-2 text-white bg-green-800 rounded-md font-semibold">More FAQs</button>
             </a>
         </section>
