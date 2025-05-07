@@ -25,6 +25,11 @@
             <p class="text-gray-600 pt-5 text-center leading-relaxed">
                 {!! $event->content !!}
             </p>
+            @if ($event->attachment)
+                <a href="{{ $fileUrl }}" target="_blank"><button
+                        class="bg-green-700 hover:bg-green-800 p-2 text-white font-semibold rounded-md my-4">View
+                        Attachment</button></a>
+            @endif
         </div>
     </section>
     {{-- call to action --}}

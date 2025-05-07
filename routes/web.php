@@ -9,6 +9,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ClubController;
 use App\Http\Controllers\CocurricularActivitiesController;
 use App\Http\Controllers\FaqsController;
+use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\NewsEvent\NewsEventController;
@@ -47,6 +48,7 @@ Route::controller(HomeController::class)->group(function () {
     Route::get('/blog/{post}', 'blogPost')->name('blog-post');
     Route::get('/blog/category/{category}', 'categoryPosts')->name('blog-category-posts');
     Route::post('/blog/search', 'searchPostStore')->name('blog-post-search');
+    Route::get('/gallery-images', 'gallery')->name('gallery');
 });
 
 Route::middleware('auth')->group(function () {
@@ -64,6 +66,7 @@ Route::middleware('auth')->group(function () {
         Route::resource('/faqs', FaqsController::class);
         Route::resource('/clubs', ClubController::class);
         Route::resource('/image', ImageController::class);
+        Route::resource('/gallery', GalleryController::class);
         Route::get('/dashboard', [AdminController::class, 'Dashboard'])->name('dashboard');
     });
 

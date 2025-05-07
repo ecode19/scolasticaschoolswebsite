@@ -39,8 +39,12 @@
                     <p class="defaultText">+255 754 783 311</p>
                 </div>
                 <div class="flex items-center md:text-lg my-2">
+                    <i class="fa fa-phone text-orange-600 mr-4"></i>
+                    <p class="defaultText">+255 679 383 311</p>
+                </div>
+                <div class="flex items-center md:text-lg my-2">
                     <i class="fa fa-envelope text-orange-600 mr-4"></i>
-                    <p class="defaultText">info@scolasticaschools.sc.tz</p>
+                    <p class="defaultText">scolasticaschool@yahoo.com</p>
                 </div>
             </div>
         </div>
@@ -54,7 +58,8 @@
             </div>
             <div class="w-full md:w-1/2 md:p-4">
                 <h1 class="oswald text-2xl text-green-900 mx-6 mb-4">Send us a Message</h1>
-                <form action="{{ route('inquiries') }}" method="POST"
+                {{-- route('inquiries') --}}
+                <form action="#" method="POST"
                     class="w-full md:w-11/12 mx-auto border-2 border-orange-400 p-4">
                     @csrf
                     <div class="w-full flex flex-col">

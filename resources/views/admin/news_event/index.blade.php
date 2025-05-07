@@ -2,7 +2,7 @@
 @section('title', 'Admin Dashboard')
 @section('content')
 
-<div class="flex items-center justify-between p-2 my-2">
+    <div class="flex items-center justify-between p-2 my-2">
         <h1 class="text-3xl text-green-800">Manage News Events</h1>
         <a href="{{ route('admin.news.event.create') }}"
             class="py-1 px-2 bg-green-700 hover:bg-gray-700 text-white rounded-md"><i class="fa fa-plus mx-2"></i> Add New</a>
@@ -38,15 +38,21 @@
                             <td class="p-2 border border-gray-400 hidden md:table-cell">{{ $data->type }}</td>
                             <td class="p-2 border border-gray-400 hidden lg:table-cell">
                                 {!! Str::limit($data->content, 50) !!} </td>
-                            <td class="p-2 border border-gray-400">2022-01-01</td>
+                            <td class="p-2 border border-gray-400">{{ $data->date }}</td>
                             <td class="p-2 border border-gray-400">
-                                <div class="flex space-x-1 items-center">
+                                <div class="w-fit mx-auto flex space-x-1 items-center">
+                                    @if ($data->attachment)
+                                        <a href="{{ asset('storage/'. $data->attachment) }}"
+                                            class="py-1 px-2 bg-green-800 hover:bg-gray-700 text-white rounded-md">
+                                            Attachment
+                                        </a>
+                                    @endif
                                     <a href="{{ route('admin.news.event.edit', $data->id) }}"
                                         class="py-1 px-2 bg-orange-600 hover:bg-gray-700 text-white rounded-md">
                                         Edit
                                     </a>
                                     <!-- Delete Form -->
-                                    <form action="{{route('admin.news.event.destroy', $data)}}" method="POST">
+                                    <form action="{{ route('admin.news.event.destroy', $data) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit"

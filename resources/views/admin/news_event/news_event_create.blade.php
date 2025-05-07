@@ -57,6 +57,13 @@
                 <input type="file" name="image" id="image" class="w-full p-2 border border-gray-300 rounded-md">
                 <x-input-error :messages="$errors->get('image')" class="mt-2" />
             </div>
+
+            {{-- news event image --}}
+            <div class="mb-4">
+                <label for="attachment" class="block text-gray-700 font-bold mb-2">Document Attachment:</label>
+                <input type="file" name="attachment" class="w-full p-2 border border-gray-300 rounded-md">
+                <x-input-error :messages="$errors->get('attachment')" class="mt-2" />
+            </div>
             <button type="submit" class="py-2 px-4 bg-green-700 hover:bg-gray-700 text-white rounded-md">Create</button>
         </form>
     </div>

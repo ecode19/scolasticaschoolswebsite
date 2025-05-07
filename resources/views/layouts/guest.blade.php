@@ -135,6 +135,8 @@
                                     Events</a></li>
                             <li><a href="{{ route('blog') }}"
                                     class="block px-4 py-2 hover:bg-green-100 transition text-green-950">Blog</a></li>
+                            <li><a href="{{ route('gallery') }}"
+                                    class="block px-4 py-2 hover:bg-green-100 transition text-green-950">Gallery</a></li>
                         </x-dropdown>
                     </div>
 
@@ -191,6 +193,7 @@
             <div class="w-full md:w-1/4 p-4 order-4 md:order-2 flex flex-col md:items-center">
                 <h1 class="text-xl md:text-2xl mb-2">Stay in Touch</h1>
                 <p class="md:text-lg hover:text-green-400"><a href="{{ route('faqs') }}">FAQS</a></p>
+                <p class="md:text-lg hover:text-green-400"><a href="{{ route('gallery') }}">Gallery</a></p>
                 <div class="flex flex-row space-x-2 md:flex-col md:space-y-2 md:space-x-0 text-2xl text-green-100">
                     <a href="#"><i class="fab fa-instagram hover:text-red-500"></i></a>
                     <a href="#"><i class="fab fa-facebook hover:text-blue-700"></i></a>
@@ -218,8 +221,12 @@
                         <p class="mx-2">+255 754 783 311</p>
                     </div>
                     <div class="flex items-center">
+                        <i class="fa fa-phone"></i>
+                        <p class="mx-2">+255 679 383 311</p>
+                    </div>
+                    <div class="flex items-center">
                         <i class="fa fa-envelope"></i>
-                        <p class="mx-2">info@scolasticaschools.sc.tz</p>
+                        <p class="mx-2">scolasticaschool@yahoo.com</p>
                     </div>
                 </div>
             </div>

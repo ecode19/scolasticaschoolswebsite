@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Mail\InquiryMail;
+use App\Models\Gallery;
 use App\Models\Image;
 use App\Models\NewsEvent\NewsEvent;
 use App\Models\AcademicLevel;
@@ -95,7 +96,7 @@ class HomeController extends Controller
     {
         (new SchoolEventsSeo())->apply();
 
-        $events = NewsEvent::orderBy('created_at', 'desc')->get();
+        $events = NewsEvent::orderBy('created_at', 'desc')->paginate(9);
 
         return view('school-events', compact('events'));
     }
@@ -103,8 +104,10 @@ class HomeController extends Controller
     public function aboutEvent($title)
     {
         $event = NewsEvent::where('title', $title)->first();
+        $fileUrl = asset('storage/' . $event->attachment);
+
         (new AboutEventSeo())->apply($event);
-        return view('about-event', compact('event'));
+        return view('about-event', compact('event', 'fileUrl'));
     }
 
     public function curriculum()
@@ -210,9 +213,14 @@ class HomeController extends Controller
             'message' => 'required|string',
         ]);
 
-        // send email to admin
-        Mail::to('seniorsuleiman2901@gmail.com')->send(new InquiryMail($contact));
+        // send email
+        Mail::to('scolasticaschool@yahoo.com')->send(new InquiryMail($contact));
 
         return back()->with(['message' => 'Inquiry sent successfully!']);
+    }
+
+    public function gallery(){
+        $gallery = Gallery::orderBy('created_at', 'desc')->paginate(30);
+        return view('gallery', ['images' => $gallery]);
     }
 }

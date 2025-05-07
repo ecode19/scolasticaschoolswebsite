@@ -32,6 +32,7 @@ class NewsEventController extends Controller
             'location' => ['required', 'string', 'max:255'],
             'date' => ['required', 'date'],
             'image' => ['required', 'mimes:jpg,png,jpeg', 'max:2048'],
+            'attachment' => 'nullable|mimes:pdf,doc,docx,jpg,png|max:2048',
         ], [
             'title.required' => 'Title is required',
             'content.required' => 'Content is required',
@@ -40,6 +41,7 @@ class NewsEventController extends Controller
             'date.required' => 'Date is required',
             'image.required' => 'Image is required',
             'image.mimes' => 'Image must be jpg, png, jpeg',
+            'attachment.mimes' => 'Document must be pdf, doc, docx, jpg, or png',
         ]);
 
         $newsEvent = new NewsEvent();
@@ -67,6 +69,11 @@ class NewsEventController extends Controller
             }
         }
 
+        if($request->hasFile('attachment')) {
+            $filePath = $request->file('attachment')->store('news_documents', 'public');
+            $newsEvent->attachment = $filePath;
+        }
+
         $newsEvent->title = $request->title;
         $newsEvent->content = $request->content;
         $newsEvent->type = $request->type;
@@ -90,6 +97,7 @@ class NewsEventController extends Controller
             'content' => ['required'],
             'date' => ['required', 'date'],
             'image' => ['mimes:jpg,png,jpeg', 'max:2048'],
+            'attachment' => 'nullable|mimes:pdf,doc,docx,jpg,png|max:2048',
         ], [
             'title.required' => 'Title is required',
             'content.required' => 'Content is required',
@@ -97,10 +105,12 @@ class NewsEventController extends Controller
             'location.required' => 'Location is required',
             'date.required' => 'Date is required',
             'image.mimes' => 'Image must be jpg, png, jpeg',
+            'attachment.mimes' => 'Document must be pdf, doc, docx, jpg, or png',
         ]);
 
         // News event Image processing
         $imageName = $newsEvent->image;
+        $attachment = $newsEvent->attachment;
 
         if ($request->hasFile('image')) {
             $image = $request->file('image');
@@ -130,11 +140,17 @@ class NewsEventController extends Controller
             }
         }
 
+        if($request->hasFile('attachment')) {
+            $filePath = $request->file('attachment')->store('news_documents', 'public');
+            $attachment = $filePath;
+        }
+
         $newsEvent->title = $request->title;
         $newsEvent->content = $request->content;
         $newsEvent->type = $request->type;
         $newsEvent->location = $request->location;
         $newsEvent->date = $request->date;
+        $newsEvent->attachment = $attachment;
 
         $newsEvent->update();
 
@@ -146,7 +162,7 @@ class NewsEventController extends Controller
         // delete existing image
         $imageStoragePath = "images/news_events/images/";
         $existingImagePath = $imageStoragePath . $newsEvent->image;
-
+        $existingDocument = $newsEvent->attachment;
         try {
             if (Storage::disk('public')->exists($existingImagePath)) {
                 Storage::disk('public')->delete($existingImagePath);
@@ -156,6 +172,10 @@ class NewsEventController extends Controller
             return redirect()->back()
                 ->with('error', 'Image delete failed!')
                 ->with('error_message', $e->getMessage());
+        }
+
+        if ($newsEvent->attachment && Storage::disk('public')->exists($existingDocument)) {
+            Storage::disk('public')->delete($existingDocument);
         }
 
         $newsEvent->delete();

@@ -18,6 +18,7 @@ return new class extends Migration {
             $table->enum('type', ['news', 'event'])->default('news');
             $table->string('location')->nullable();
             $table->string('image');
+            $table->string('attachment')->nullable();
             $table->date('date')->nullable();
             $table->timestamps();
         });

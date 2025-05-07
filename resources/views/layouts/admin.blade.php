@@ -101,7 +101,12 @@
                         <a href="{{ route('admin.image.index') }}"
                             class="w-full flex items-center text-lg font-semibold hover:bg-green-300 rounded-sm"><i
                                 class="fa fa-image mx-1 p-2 my-2"></i>
-                            <li>banner Images</li>
+                            <li>Home Slider Images</li>
+                        </a>
+                        <a href="{{ route('admin.gallery.index') }}"
+                            class="w-full flex items-center text-lg font-semibold hover:bg-green-300 rounded-sm"><i
+                                class="fa fa-image mx-1 p-2 my-2"></i>
+                            <li>Gallery</li>
                         </a>
                         <a href="{{ route('admin.post.index') }}"
                             class="w-full flex items-center text-lg font-semibold hover:bg-green-300 rounded-sm"><i

@@ -14,6 +14,7 @@ class NewsEvent extends Model
         'location',
         'content',
         'image',
+        'attachment',
         'date',
     ];
 }
