@@ -4,10 +4,10 @@ on:
   push:
     branches:
       - master
-      - '*.x'
+      - "*.x"
   pull_request:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: "0 0 * * *"
 
 permissions:
   contents: read
@@ -44,4 +44,8 @@ jobs:
         run: php artisan key:generate
 
       - name: Execute tests
+<<<<<<< HEAD
         run: ./vendor/bin/pest
+=======
+        run: ./vendor/bin/pest # Changed from vendor/bin/phpunit
+>>>>>>> d41c9d924a1ea8a12b2408e4a05b0bec501f0bba

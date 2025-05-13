@@ -36,6 +36,13 @@
     background: rgba(0, 0, 0, 0.6);
 }
 
+.transparent-bg {
+    width: fit-content;
+    border-top: 6px solid rgb(253, 75, 10);
+    padding: 16px;
+    background: rgba(0, 0, 0, 0.6);
+}
+
 .center-div {
     display: flex;
     justify-content: center;
@@ -45,7 +52,7 @@
 
 /* slider */
 .slick-slide {
-    margin: 0 5px;
+    margin: 0;
 }
 
 .slick-track {
@@ -67,3 +74,4 @@
     background-color: #8f09dd;
     border-color: #8f09dd;
 }
+
